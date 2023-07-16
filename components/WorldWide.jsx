@@ -6,8 +6,8 @@ import Active from '@/public/images/Active.png'
 
 function WorldWide() {
   return (
-    <div className='my-5 h-[160vh]'>
-      <h1 className="text-[#c5a47e] text-9xl font-bold tracking-widest text-center absolute left-[10px] mt-[220px] opacity-10 ">
+    <div className="my-5 h-[160vh]">
+      <h1 className="text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-widest text-center absolute left-[10px] mt-[220px] opacity-10 ">
         venues
       </h1>
       <div className="flex flex-col justify-center items-center mt-10">
@@ -66,7 +66,7 @@ function WorldWide() {
             className="custom-shadow absolute right-[37%] top-[53%] hover:animate-pulse cursor-pointer"
           />
 
-          <div className="w-[1030px] flex flex-col justify-left items-left ml-[50px] mt-[24rem] ">
+          <div className="md:w-[1030px] flex flex-col justify-left items-left ml-[50px] mt-[24rem] ">
             <h1 className="text-white text-[42px] font-[500]  leading-[1] my-10">
               Our vision is to quickly scale the <br />
               concept by launching affiliate venues

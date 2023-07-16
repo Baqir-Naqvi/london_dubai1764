@@ -7,6 +7,7 @@ import Member from "@/components/Member";
 import WorldWide from "@/components/WorldWide";
 import FAQs from "@/components/FAQs";
 import Membership from "@/components/Membership";
+import Team from "@/components/Team";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <WorldWide/>
         <FAQs/>
         <Membership/>
+        <Team/>
     </main>
   );
 }

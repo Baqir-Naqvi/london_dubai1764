@@ -7,9 +7,9 @@ import Vertical from '@/public/Images/VerticalLine.png'
 import Image from 'next/image'
 function SideDiv() {
   return (
-    <div className="absolute left-0 top-[160px] w-[190px] h-[680px] bg-black ">
+    <div className="absolute left-0 top-[160px] md:w-[190px] w-[30px] h-[680px] bg-black ">
       <div
-        className="absolute text-center w-max bottom-[10px] left-10 px-8 flex-col flex h-[300px] 
+        className="absolute text-center w-max bottom-[10px] md:left-10  -left-2 px-8 flex-col flex h-[300px] 
       justify-evenly
       "
       >

@@ -9,7 +9,7 @@ function Membership() {
         lifetime <span className="text-[#c5a47e]">membership</span>
       </h2>
       <button className="bg-[#c5a47e]  uppercase z-10 w-max p-5 rounded-[15px]">
-        <p className="z-10 text-[20px] px-[20px] font-[600] text-white tracking-widest">
+        <p className="z-10 md:text-[20px] text-[12px] md:px-[20px] font-[600] text-white md:tracking-widest">
           click here to Immediately Mint a Lifetime Membership NFT
         </p>
       </button>
@@ -17,7 +17,7 @@ function Membership() {
         It's in your MetaMask wallet in seconds - give it a go
       </p>
 
-      <div className="flex flex-row justify-center mt-[5rem] ">
+      <div className="flex md:flex-row flex-col justify-center mt-[5rem] ">
         <div className="flex flex-col justify-start items-center">
           <h2 className=" uppercase text-[30px] font-normal tracking-[4px] text-white text-start">
             Over
@@ -34,11 +34,11 @@ function Membership() {
             <br /> Represented
           </h2>
         </div>
-        <h1 className="text-[#c5a47e] text-9xl font-bold  text-center absolute right-[10px] mt-[0px] opacity-10 ">
+        <h1 className="text-[#c5a47e] md:flex hidden text-9xl font-bold  text-center absolute right-[10px] mt-[0px] opacity-10 ">
           represented
         </h1>
       </div>
-      <p className="text-[18px] text-white opacity-60 my-10 pt-[50px] px-[20%] text-center">
+      <p className="text-[18px] text-white opacity-60 my-10 pt-[50px] md:px-[20%] text-center">
         Appold, Alteri-Enigma, Greengage, InCryptoHub, JadeVault, Crypto A.M.,
         Blockdaemon, House of Block, CEX.IO, Coinbase, Coinpass.com, Kraken,
         Archax, Deribit, Swissborg, Finserv Experts, British Business Bank,

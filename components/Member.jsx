@@ -13,7 +13,7 @@ function Member() {
       <h3 className="text-[30px] mt-5 mb-10 font-[600]">
         limited to <span className="text-[#c5a47e]">1000</span>
       </h3>
-      <p className='text-white text-center opacity-60 text-[22px] w-[800px]'>
+      <p className='text-white text-center opacity-60 text-[22px] md:w-[800px]'>
         Your Diamond Lifetime Membership NFT provides unlimited access to Blacks
         in Soho, London. It’s your 21st Century membership card. By contrast to
         all other private members’ clubs, which charge a considerable

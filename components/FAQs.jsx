@@ -39,10 +39,10 @@ function FAQs() {
 
   const FAQtab = ({ question, index ,answer}) => {
     return (
-      <div className="h-max w-[800px]">
+      <div className="h-max md:w-[800px]">
         {" "}
         <div
-          className={`h-[60px] w-[800px] my-2 hover:bg-[#c5a47e]  hover:cursor-pointer  hover:text-black border-[1px] border-[#c5a47e] rounded-[10px]
+          className={`h-[60px] md:w-[800px] my-2 hover:bg-[#c5a47e]  hover:cursor-pointer  hover:text-black border-[1px] border-[#c5a47e] rounded-[10px]
             flex justify-between items-center px-10
             ${index==active?"text-black bg-[#c5a47e]":"text-white"}
             `}
@@ -51,13 +51,13 @@ function FAQs() {
             else setActive(index);
           }}
         >
-          <h3 className=" text-[20px] font-normal">{question}</h3>
-          <h3 className=" text-[20px] font-normal">
+          <h3 className=" md:text-[20px] font-normal">{question}</h3>
+          <h3 className=" md:text-[20px] font-normal">
             {active == index ? "+" : "-"}
           </h3>
         </div>
         <div
-          className={`text-[20px] font-normal text-white pl-10 opacity-60 py-10 overflow-hidden transition-all duration-500 ease-in-out
+          className={`md:text-[20px] font-normal text-white pl-10 opacity-60 py-10 overflow-hidden transition-all duration-500 ease-in-out
           
   ${active == index ? "h-max" : "hidden"}`}
         >
@@ -70,7 +70,7 @@ function FAQs() {
 
 
   return (
-    <div className="flex flex-col justify-center items-center mt-[10rem]">
+    <div className="flex flex-col justify-center items-center mt-[10rem] pt-[80em] md:pt-[10px]">
       <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
         What you need to <span className="text-[#c5a47e]">know</span>
       </h2>
@@ -83,13 +83,13 @@ function FAQs() {
         })}
       </div>
 
-      <dic className="flex flex-row justify-evenly items-center mt-[10rem] bg-[#c5a47e] w-full px-20 py-20">
-        <h1 className="text-black text-[80px] font-[700] w-[30%] leading-[1] text-end">
+      <dic className="flex md:flex-row flex-col justify-evenly items-center mt-[10rem] bg-[#c5a47e] w-full md:px-20 md:py-20">
+        <h1 className="text-black text-[80px] font-[700] md:w-[30%] leading-[1] text-end">
           A question <br />
           for you<span className="text-white">?</span>
         </h1>
 
-        <p className="text-[20px] font-[500] opacity-60 text-black w-[35%] leading-[1.2]">
+        <p className="text-[20px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2]">
           Isn't this the club that you wanted to exist and to which you always
           dreamed of being a member? Act now, before the club's full. Otherwise,
           there'll still always be space for you, but you'll have to wait until

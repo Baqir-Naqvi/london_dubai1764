@@ -8,19 +8,20 @@ export default function HeroSection() {
       <div className="absolute bg-cover bg-center w-full h-screen bg-image opacity-50" />
 
       <div className="flex flex-col items-center justify-center h-screen pt-40">
-        <h1 className="text-[50px] tracking-widest uppercase z-10 ">
+        <h1 className="md:text-[50px] text-[20px] text-center tracking-widest uppercase z-10 ">
           The Home of Digital Assets
           <br /> and Disruptive Innovation
         </h1>
 
-        <h3 className="text-[24px] z-10 opacity-70 mb-8">
+        <h3 className="md:text-[24px] text-[14px] text-center z-10 opacity-70 mb-8 px-5 md:px-0">
           The World’s first Private Members' Club dedicated to Web3 and the
           World’s
-          <br /> first Private Members' Club to innovate NFTs as Membership
+          <div className="md:block hidden h-1"><br/> </div> 
+           first Private Members' Club to innovate NFTs as Membership
           Tokens
         </h3>
-        <button className="bg-[#c5a47e]  uppercase z-10 w-[355px] h-[57px] rounded-[30px]">
-          <p className="z-10 text-[14px] tracking-wider font-[600] text-white">
+        <button className="bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-max md:h-[57px] h-[40px] md:px-0 px-2 rounded-[30px]">
+          <p className="z-10 md:text-[14px] text-[10px] tracking-wider font-[600] text-white">
             Enquire about membership
           </p>
         </button>
