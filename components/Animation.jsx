@@ -21,7 +21,7 @@ export default function Animation() {
     }
   }, [textRef.current]);
   return (
-    <div textRef={textRef} className=' border text-9xl line-1 anim-typewriter'>
+    <div textref={textRef} className=' border text-9xl line-1 anim-typewriter'>
       hey
       {/* <TypeIt>2023 </TypeIt> */}
     </div>

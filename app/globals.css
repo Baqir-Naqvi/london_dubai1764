@@ -7,7 +7,45 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+.bg-image {
+  background-image: url('/Images/DubHero.png');
+}
 
+
+.nasa-bg-image{
+  background-image: url('/Images/EarthNasa.png');
+  height: max-content;
+  
+}
+
+.bg-world-map {
+  position: relative;
+  width: 90%;
+  height: 100vh;
+}
+
+.custom-shadow {
+  filter: drop-shadow(0 0px 6px rgba(197, 164, 126, 0.8)) drop-shadow(0 2px 4px rgba(197, 164, 126, 0.5));
+}
+
+*{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.bg-world-map::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/Images/map.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -25,3 +63,4 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
