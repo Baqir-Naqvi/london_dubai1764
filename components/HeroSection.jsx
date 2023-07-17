@@ -13,7 +13,7 @@ export default function HeroSection() {
           <br /> and Disruptive Innovation
         </h1>
 
-        <h3 className="md:text-[24px] text-[14px] text-center z-10 opacity-70 mb-8 px-5 md:px-0">
+        <h3 className="md:text-[24px] text-[12px] text-center z-10 opacity-60 mb-8 px-12 md:px-0">
           The World’s first Private Members' Club dedicated to Web3 and the
           World’s
           <div className="md:block hidden h-1"><br/> </div> 

@@ -6,22 +6,22 @@ export default function () {
   return (
     <div className="flex flex-col items-center justify-center h-max bg-black mt-[50px]">
       <div>
-        <h1 className="text-[#c5a47e] md:text-9xl md:flex hidden font-bold tracking-widest text-center absolute left-[130px] mt-[120px] opacity-10">
+        <h1 className="text-[#c5a47e] md:text-9xl md:flex hidden font-bold tracking-widest text-center absolute md:left-[130px] mt-[120px] opacity-10">
           welcome
         </h1>
-        <h2 className="text-[54px] font-normal tracking-widest text-center text-white">
+        <h2 className="md:text-[54px] text-[24px] font-normal tracking-widest text-center text-white">
           Welcome to <span className="text-[#c5a47e]">1764</span>
         </h2>
       </div>
 
       <div className="flex md:flex-row flex-col items-center justify-center pt-[120px] md:w-[1050px]">
-        <div className="flex flex-col items-left justify-center w-max">
-          <p className="text-[#FEFEFE] text-[42px] font-[500] absolute mb-[250px] leading-[0.75]">
+        <div className="flex flex-col md:items-left items-center justify-center md:w-max">
+          <p className="text-[#FEFEFE] md:text-[42px] text-[24px] font-[500] absolute mb-[250px] leading-[0.75]">
             A modern twist to the traditional
             <br /> private members' club
           </p>
 
-          <p className="text-[#FEFEFE] text-[22px] font-[400] opacity-70 w-[420px] mt-[80px]">
+          <p className="text-[#FEFEFE] md:text-[22px] text-[14px] font-[400] opacity-70 md:w-[420px] w-[100%] mt-[80px]">
             As the proud Owner of Blacks Club, Soho, London (est. 1764) we are
             London’s premier Community Hub for Web3 & Tech Professionals &
             Enthusiasts with our First Satellite to Open in Dubai 2023.
@@ -38,13 +38,13 @@ export default function () {
         <h1 className="text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-wider text-center absolute right-[50px] opacity-10 pt-20">
           our story
         </h1>
-        <h1 className="text-white text-[42px] font-[500] text-center leading-[1] my-10">
+        <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
           The UK's first venue dedicated to <br /> supporting the tech sector
         </h1>
 
         {/* text container */}
         <div className="md:px-[15rem]  items-center ">
-          <p className="text-[22px] text-white opacity-60 text-center">
+          <p className="md:text-[22px] text-[14px] text-white opacity-60 text-center">
             In November 2021 we embarked on a mission to add a modern twist to
             the traditional private members' club, <br /> by launching the UK's
             first venue dedicated to supporting the tech sector, where founders,
@@ -54,7 +54,7 @@ export default function () {
           </p>
 
           <div className="flex md:flex-row flex-col items-center justify-center mt-10">
-            <p className="text-[22px] text-white opacity-60 ">
+            <p className="md:text-[22px] text-[14px] text-white opacity-60 ">
               In May 2022 we purchased Blacks Club (www.blacksclub.com), which
               could not possibly be a more perfect flagship. This vibrant and
               historic private members’ club, located at 67 Dean Street in Soho,
@@ -62,7 +62,7 @@ export default function () {
               gentlemen’s clubs and is steeped in anti-establishment history.
             </p>
 
-            <p className="text-[22px] text-white opacity-60 md:pl-[40px] md:mt-0 mt-10">
+            <p className="md:text-[22px] text-[14px] text-white opacity-60 md:pl-[40px] md:mt-0 mt-10">
               The home of Charles Fortnum (of Fortnum & Mason), <br />
               it’s where the first Supper Clubs were established (by Samuel
               Johnson, Joshua Reynolds & David Garrick) and was a hang-out of
@@ -75,7 +75,7 @@ export default function () {
           </div>
 
           <div className="flex flex-col items-center justify-center mt-10">
-            <h1 className="text-white text-[42px] font-[500] text-center leading-[1] my-10">
+            <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
               Inclusion is via the ownership of one of the club’s 3,500
               Membership NFTs, which bestow the possessor with lifetime
               membership of Blacks. By contrast to all other private members’
@@ -83,7 +83,7 @@ export default function () {
               cost.
             </h1>
 
-            <button className="bg-[#c5a47e]  uppercase z-10 w-[355px] h-[57px] rounded-[30px]">
+            <button className="bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-full h-[57px] rounded-[30px]">
               <p className="z-10 text-[14px] tracking-wider font-[600] text-white">
                 Enquire about membership
               </p>

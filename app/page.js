@@ -11,6 +11,8 @@ import FAQs from "@/components/FAQs";
 import Membership from "@/components/Membership";
 import Team from "@/components/Team";
 import ChooseCity from "@/components/ChooseCity";
+import Association from "@/components/Association";
+import Clubs from "@/components/Clubs";
 
 export default function Home() {
   const chooseCityRef = useRef(null);
@@ -18,10 +20,10 @@ export default function Home() {
   return (
     <main >
     
-        <div className="flex bg-black min-h-screen flex-col items-start justify-start ">
+        {/* <div className="flex bg-black min-h-screen flex-col items-start justify-start ">
         <Animation chooseCityRef={chooseCityRef} />
         <ChooseCity chooseCityRef={chooseCityRef} />
-      </div>
+      </div> */}
       <Navbar />
       <HeroSection />
       <AboutUs />
@@ -30,6 +32,8 @@ export default function Home() {
       <FAQs />
       <Membership />
       <Team />
+      <Association />
+      <Clubs />
     
     </main>
   );

@@ -8,12 +8,12 @@ function Membership() {
       <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
         lifetime <span className="text-[#c5a47e]">membership</span>
       </h2>
-      <button className="bg-[#c5a47e]  uppercase z-10 w-max p-5 rounded-[15px]">
-        <p className="z-10 md:text-[20px] text-[12px] md:px-[20px] font-[600] text-white md:tracking-widest">
+      <button className="bg-[#c5a47e]  uppercase z-10 w-max md:py-5 md:px-5 py-5 rounded-[15px]">
+        <p className="z-10 md:text-[20px] text-[10px] md:px-[20px] font-[600] text-white md:tracking-widest">
           click here to Immediately Mint a Lifetime Membership NFT
         </p>
       </button>
-      <p className="text-[20px] text-white opacity-60 my-10">
+      <p className="md:text-[20px] text-[14px] text-white opacity-60 my-10">
         It's in your MetaMask wallet in seconds - give it a go
       </p>
 
@@ -38,7 +38,7 @@ function Membership() {
           represented
         </h1>
       </div>
-      <p className="text-[18px] text-white opacity-60 my-10 pt-[50px] md:px-[20%] text-center">
+      <p className="md:text-[18px] text-[14px] text-white opacity-60 my-10 md:pt-[50px] pt-[20px] md:px-[20%] text-center">
         Appold, Alteri-Enigma, Greengage, InCryptoHub, JadeVault, Crypto A.M.,
         Blockdaemon, House of Block, CEX.IO, Coinbase, Coinpass.com, Kraken,
         Archax, Deribit, Swissborg, Finserv Experts, British Business Bank,

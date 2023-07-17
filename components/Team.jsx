@@ -12,6 +12,8 @@ import P10 from "@/public/Images/P10.png";
 import Image from "next/image";
 import LinkedInIcon from '@/public/Svgs/linkedin.svg'
 
+import Feature_1 from '@/public/Svgs/Feature_1.svg'
+
 const Members = [
   {
     image: P1,
@@ -65,6 +67,14 @@ const Members = [
   },
 ];
 
+const FeaturesArray=[
+  '@public/Svgs/Feature_1.svg',
+  '@public/Svgs/Feature_1.svg',
+  '@public/Svgs/Feature_1.svg',
+  '@public/Svgs/Feature_1.svg',
+  '@public/Svgs/Feature_1.svg',
+
+]
 const ProfileCard = ({ image, name, position }) => {
   return (
     <div className="flex flex-col items-center justify-center w-[300px] md:mx-2">
@@ -123,7 +133,30 @@ function Team() {
         <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
           as <span className="text-[#c5a47e]">featured</span>
         </h2>
+
+      
+
+        <div className="flex flex-wrap gap-10 justify-center items-center mt-20">
+
+          {FeaturesArray.map((item,index)=>{
+            return(
+              <div key={index} className="bg-[#fff] w-[302px]">
+                <Image
+                  src={Feature_1}
+                  alt="Feature"
+                  height={300}
+                  width={300}
+                  className="
+                relative -left-1 bottom-[4px]
+                "
+                />
+              </div>
+            )
+          } 
+          )}
+          
       </div>
+    </div>
     </>
   );
 }
