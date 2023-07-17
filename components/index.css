@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'kepler';
+    src: url('/Fonts/Kepler Std Extended.itf') format('opentype');
+}
+
+
+
+.anim-typewriter {
+    font-family: 'kepler';
+}
+
+
+
+.dubai_section {
+    -webkit-clip-path: polygon(0 0, 100% 0, 66% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 66% 100%, 0% 100%);
+    flex: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 60vw;
+    height: 100vh;
+    transition: 1s ease-in-out all;
+    background-image: url('/images/dubai.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.dubai_section:hover {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    flex: 2;
+    height: 100vh;
+    width: 100vw;
+
+
+    z-index: 2;
+
+}
+
+.london_section {
+    -webkit-clip-path: polygon(34% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(34% 0, 100% 0, 100% 100%, 0% 100%);
+    flex: 1;
+    position: absolute;
+    width: 60vw;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 100vh;
+    background-image: url('/images/london.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: 1s ease-in-out all;
+    background-color: rgba(0, 0, 0, 1) !important;
+}
+
+.london_section:hover {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.left-triangle {
+    -webkit-clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.right-triangle {
+    -webkit-clip-path: polygon(100% 1%, 100% 1%, 100% 100%, 0% 100%);
+    clip-path: polygon(100% 1%, 100% 1%, 100% 100%, 0% 100%);
+}
