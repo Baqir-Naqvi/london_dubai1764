@@ -9,10 +9,19 @@ import P7 from "@/public/Images/P7.png";
 import P8 from "@/public/Images/P8.png";
 import P9 from "@/public/Images/P9.png";
 import P10 from "@/public/Images/P10.png";
+
+import M5 from "@/public/Images/M5.png";
+import M6 from "@/public/Images/M6.png";
+import M7 from "@/public/Images/M7.png";
+import M8 from "@/public/Images/M8.png";
 import Image from "next/image";
 import LinkedInIcon from '@/public/Svgs/linkedin.svg'
 
-import Feature_1 from '@/public/Svgs/Feature_1.svg'
+import Feature_1 from '@/public/Images/Feature_1.png'
+import Feature_2 from '@/public/Images/Feature_2.png'
+import Feature_3 from '@/public/Images/Feature_3.png'
+import Feature_4 from '@/public/Images/Feature_4.png'
+import Feature_5 from '@/public/Svgs/Feature_5.svg'
 
 const Members = [
   {
@@ -22,59 +31,80 @@ const Members = [
   },
   {
     image: P2,
-    name: "Jonathan Willis",
-    position: "Blacks Club & 1764.io",
-  },
-  {
-    image: P3,
-    name: "Jonathan Willis",
-    position: "Blacks Club & 1764.io",
-  },
-  {
-    image: P4,
-    name: "Jonathan Willis",
-    position: "Blacks Club & 1764.io",
-  },
-  {
-    image: P5,
-    name: "Jonathan Willis",
-    position: "Blacks Club & 1764.io",
-  },
-  {
-    image: P6,
-    name: "Jonathan Willis",
-    position: "Blacks Club & 1764.io",
-  },
-  {
-    image: P7,
-    name: "Jonathan Willis",
-    position: "Blacks Club & 1764.io",
-  },
-  {
-    image: P8,
-    name: "Jonathan Willis",
-    position: "Blacks Club & 1764.io",
-  },
-  {
-    image: P9,
-    name: "Jonathan Willis",
+    name: "Veselin Velkov",
     position: "Blacks Club & 1764.io",
   },
   {
     image: P10,
-    name: "Jonathan Willis",
+    name: "Adam Leon",
     position: "Blacks Club & 1764.io",
+  },
+  {
+    image: P9,
+    name: "Dan Collingridge-Padbury",
+    position: "Blacks Club & 1764.io",
+  },
+  {
+    image: M5,
+    name: "Rob Gaskell",
+    position: "Appold",
+  },
+  {
+    image: M6,
+    name: "Justin Thorogood",
+    position: "CMO, Alteri-Enigma & YC Capital",
+  },
+  {
+    image: M7,
+    name: "Jenny Knott",
+    position: "FinTech Advisory",
+  },
+  {
+    image: M8,
+    name: "Chris Mason",
+    position: "InCryptoHub & JadeVault",
+  },
+
+  {
+    image: P8,
+    name: "Jason Tucker-Feltham",
+    position: "Global Head of Crypto & Fintech - IDnow",
+  },
+
+  {
+    image: P4,
+    name: "Ché L Feenie",
+    position: "Migrant Help",
+  },
+  {
+    image: P5,
+    name: "Adam Funnell",
+    position: "Accubits",
+  },
+  {
+    image: P6,
+    name: "Shelley Schachter-Cahm",
+    position: "CEX.io",
+  },
+  {
+    image: P3,
+    name: "Simon Smith",
+    position: "Excalibur.FM",
+  },
+  {
+    image: P7,
+    name: "Danny Powell",
+    position: "The Labz",
   },
 ];
 
-const FeaturesArray=[
-  '@public/Svgs/Feature_1.svg',
-  '@public/Svgs/Feature_1.svg',
-  '@public/Svgs/Feature_1.svg',
-  '@public/Svgs/Feature_1.svg',
-  '@public/Svgs/Feature_1.svg',
-
-]
+const FeaturesArray = [
+  Feature_1,
+  Feature_2,
+  Feature_3,
+  Feature_5,
+  Feature_4,
+];
 const ProfileCard = ({ image, name, position }) => {
   return (
     <div className="flex flex-col items-center justify-center w-[300px] md:mx-2">
@@ -96,8 +126,8 @@ const ProfileCard = ({ image, name, position }) => {
         "
         />
       </div>
-      <h3 className="text-white text-2xl font-bold">{name}</h3>
-      <p className="text-white text-[18px] opacity-60 font-normal">
+      <h3 className="text-white text-[20px] font-bold mt-1">{name}</h3>
+      <p className="text-white  text-center text-[18px] opacity-60 font-normal">
         {position}
       </p>
     </div>
@@ -140,15 +170,13 @@ function Team() {
 
           {FeaturesArray.map((item,index)=>{
             return(
-              <div key={index} className="bg-[#fff] w-[302px]">
+              <div key={index} className=" w-[302px]">
                 <Image
-                  src={Feature_1}
+                  src={item}
                   alt="Feature"
                   height={300}
                   width={300}
-                  className="
-                relative -left-1 bottom-[4px]
-                "
+                 
                 />
               </div>
             )
