@@ -21,21 +21,25 @@ const Assoications = [
 function Association() {
   return (
     <>
-      <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-[100px] ">
-        in <span className="text-[#c5a47e]">Association</span> with
-      </h2>
-      <div className="flex flex-wrap gap-10 justify-center items-center mt-20 mx-20">
-        {Assoications.map((item, index) => {
-          return (
-            <div key={index}>
-                
-              <Image src={item.name} alt="Feature" height={200} 
-              width={item.size}
-              className='md:mx-5'
-              />
-            </div>
-          );
-        })}
+      <div className="flex flex-col justify-center items-center mt-20 ">
+        <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white mt-[100px]">
+          in <span className="text-[#c5a47e]">Association</span> with
+        </h2>
+        <div className="flex md:flex-row flex-col  justify-evenly items-center flex-wrap  md:w-[90%]">
+          {Assoications.map((item, index) => {
+            return (
+              <div key={index}>
+                <Image
+                  src={item.name}
+                  alt="Feature"
+                  height={200}
+                  width={item.size}
+                  className="md:mx-10 mt-10"
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </>
   );

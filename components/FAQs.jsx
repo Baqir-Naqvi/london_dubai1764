@@ -72,7 +72,7 @@ function FAQs() {
 
 
   return (
-    <div className="flex flex-col justify-center items-center md:mt-[10rem] md:pt-[80em] pt-[32em]">
+    <div className="flex flex-col justify-center items-center md:pt-10 pt-[20em]">
       <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
         What you need to <span className="text-[#c5a47e]">know</span>
       </h2>

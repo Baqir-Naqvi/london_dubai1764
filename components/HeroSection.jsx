@@ -4,7 +4,7 @@ import SideDiv from "./SideDiv";
 
 export default function HeroSection() {
   return (
-    <div className="w-[100%] bg-[#1a1a1a] flex flex-col  items-center z-50 bg-opacity-40">
+    <div className="w-[100%] bg-[#131313] flex flex-col  items-center bg-opacity-0">
       <div className="absolute bg-cover bg-center w-full h-screen bg-image opacity-50" />
 
       <div className="flex flex-col items-center justify-center h-screen pt-40">
