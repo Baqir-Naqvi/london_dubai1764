@@ -85,7 +85,7 @@ function FAQs() {
         })}
       </div>
 
-      <dic className="flex md:flex-row flex-col justify-evenly items-center mt-[10rem] bg-[#c5a47e] w-full md:px-20 md:py-20">
+      <div className="flex md:flex-row flex-col justify-evenly items-center mt-[10rem] bg-[#c5a47e] w-full md:px-20 md:py-20">
         <h1 className="text-black md:text-[80px] text-[30px] font-[700] md:w-[30%] leading-[1] text-end">
           A question <br />
           for you<span className="text-white">?</span>
@@ -99,7 +99,7 @@ function FAQs() {
           you will have to pay a considerable premium (our Founder memberships,
           which quickly sold out, have traded for as much as an 18x multiple.)
         </p>
-      </dic>
+      </div>
     </div>
   );
 }

@@ -9,31 +9,55 @@ import Image from 'next/image'
 function SideDiv() {
   return (
     <>
-    <Image 
-    height={700}
-    width={55}
-    src={SideBar}
-    alt='mobileBar'
-    className='flex absolute left-0 top-[200px] md:hidden'
-    />
-    <div className="hidden md:flex absolute left-0 mt-[160px] md:w-[190px] w-[30px] h-[680px] bg-black ">
-      <div
-        className="absolute text-center md:w-max bottom-[10px] md:left-10  -left-2 px-8 flex-col flex h-[300px] 
+      <Image
+        height={700}
+        width={55}
+        src={SideBar}
+        alt="mobileBar"
+        className="flex absolute left-0 top-[200px] md:hidden"
+      />
+      <div className="hidden md:flex absolute left-0 mt-[160px] md:w-[190px] w-[30px] h-[680px] bg-black ">
+        <div
+          className="absolute text-center md:w-max bottom-[10px] md:left-10  -left-2 px-8 flex-col flex h-[300px] 
         justify-evenly
         "
         >
-        <p className="transform -rotate-90 origin-left uppercase md:text-[10px] text-[8px] text-white font-[600] tracking-[10px] w-max">
-          1764 by blacks, london
-        </p>
+          <p className="transform -rotate-90 origin-left uppercase md:text-[10px] text-[8px] text-white font-[600] tracking-[10px] w-max">
+            1764 by blacks, london
+          </p>
 
-        <Image width={2} height={10} src={Vertical} />
-        <Image width={20} height={10} src={InstaIcon} className="-ml-2" />
-        <Image width={20} height={10} src={TwitterIcon} className="-ml-2" />
-        <Image width={20} height={10} src={BehaIcon} className="-ml-2" />
-        <Image width={10} height={10} src={FbIcon} className="-ml-2" />
+          <Image width={2} height={10} src={Vertical} alt="v_" />
+          <Image
+            width={20}
+            height={10}
+            src={InstaIcon}
+            className="-ml-2"
+            alt="i_"
+          />
+          <Image
+            width={20}
+            height={10}
+            src={TwitterIcon}
+            className="-ml-2"
+            alt="t_"
+          />
+          <Image
+            width={20}
+            height={10}
+            src={BehaIcon}
+            className="-ml-2"
+            alt="b_"
+          />
+          <Image
+            width={10}
+            height={10}
+            src={FbIcon}
+            className="-ml-2"
+            alt="f_"
+          />
+        </div>
       </div>
-    </div>
-        </>
+    </>
   );
 }
 

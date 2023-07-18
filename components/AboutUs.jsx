@@ -27,7 +27,7 @@ export default function () {
             Enthusiasts with our First Satellite to Open in Dubai 2023.
           </p>
         </div>
-        <Image width={776} height={401} src={GalleryImage} />
+        <Image width={776} height={401} src={GalleryImage} alt='AboutUS' />
       </div>
 
       {/* Lower Section */}
