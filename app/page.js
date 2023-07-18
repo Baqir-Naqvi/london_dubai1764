@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Animation from "../components/Animation";
 import HeroSection from "@/components/HeroSection";
@@ -14,27 +14,51 @@ import ChooseCity from "@/components/ChooseCity";
 import Association from "@/components/Association";
 import Clubs from "@/components/Clubs";
 import ContactUs from "@/components/ContactUs";
+import { gsap } from "gsap";
 
 export default function Home() {
   const chooseCityRef = useRef(null);
+  const landerRef = useRef(null);
+  const contentRef = useRef(null);
+  const [city, setCity] = useState(null);
+  useEffect(() => {
+    if (city) {
+      gsap.to(contentRef.current, {
+        x: 0,
+        duration: 1.5,
+      });
+      gsap.to(landerRef.current, {
+        x: "100%",
+        duration: 1.5,
+      });
+    }
+  }, [city]);
 
   return (
-    <main>
-      {/* <div className="flex bg-black min-h-screen flex-col items-start justify-start ">
+    <main className='relative w-screen overflow-x-hidden'>
+      <div
+        ref={landerRef}
+        className='flex bg-black  min-h-screen flex-col items-start justify-start '
+      >
         <Animation chooseCityRef={chooseCityRef} />
-        <ChooseCity chooseCityRef={chooseCityRef} />
-      </div> */}
-      <Navbar />
-      <HeroSection />
-      <AboutUs />
-      <Member />
-      <WorldWide />
-      <FAQs />
-      <Membership />
-      <Team />
-      <Association />
-      <Clubs />
-      <ContactUs />
+        <ChooseCity setCity={setCity} chooseCityRef={chooseCityRef} />
+      </div>
+      <div
+        ref={contentRef}
+        className={`absolute top-0 translate-x-[100%] ${!city && "hidden"}`}
+      >
+        <Navbar />
+        <HeroSection />
+        <AboutUs />
+        <Member />
+        <WorldWide />
+        <FAQs />
+        <Membership />
+        <Team />
+        <Association />
+        <Clubs />
+        <ContactUs />
+      </div>
     </main>
   );
 }
