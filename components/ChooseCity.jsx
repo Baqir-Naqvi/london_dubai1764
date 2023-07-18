@@ -1,13 +1,16 @@
 import React from "react";
 
-export default function ChooseCity({ chooseCityRef }) {
+export default function ChooseCity({ chooseCityRef, setCity }) {
   return (
     <div
       ref={chooseCityRef}
       className='h-[50vh]  relative w-full hidden flex-row  justify-between items-center'
     >
       <div className='h-full absolute left-0 flex items-end justify-start w-[25%] p-16  z-20 left-triangle   bg-[#C5A47E]'>
-        <span className='text-white text-[1.5rem] leading-8 text-center uppercase tracking-wider hover:scale-110 cursor-pointer transition-all duration-500'>
+        <span
+          onClick={() => setCity("Dubai")}
+          className='text-white text-[1.5rem] leading-8 text-center uppercase tracking-wider hover:scale-110 cursor-pointer transition-all duration-500'
+        >
           Enter <br />
           <span className='text-[2.5rem] text-center '>Dubai</span>
         </span>
@@ -31,7 +34,10 @@ export default function ChooseCity({ chooseCityRef }) {
         </span>
       </div>
       <div className='h-full flex items-end justify-end p-16 absolute w-[25%] right-0  z-20 right-triangle bg-[#C5A47E] '>
-        <span className='text-white text-[1.5rem] leading-8 text-center uppercase tracking-wider hover:scale-110 cursor-pointer transition-all duration-500'>
+        <span
+          onClick={() => setCity("London")}
+          className='text-white text-[1.5rem] leading-8 text-center uppercase tracking-wider hover:scale-110 cursor-pointer transition-all duration-500'
+        >
           Enter <br />
           <span className='text-[2.5rem] text-center '>London</span>
         </span>

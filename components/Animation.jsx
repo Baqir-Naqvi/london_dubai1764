@@ -60,7 +60,7 @@ export default function Animation({ chooseCityRef }) {
           textHeaderRef.current.style.opacity = 1;
         }, 400)
       }
-      className='h-screen relative w-full overflow-hidden flex items-center justify-center '
+      className='h-[90vh] relative w-full  overflow-hidden flex items-center justify-center '
     >
       <div
         style={{
@@ -75,12 +75,7 @@ export default function Animation({ chooseCityRef }) {
         />
         <span
           ref={textHeaderRef}
-          style={{
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%,-50%)",
-          }}
-          className='absolute  z-10 text-3xl text-white choose_city_text'
+          className='absolute top-[55%] left-[50%] translate-x-[-50%] translate-y-[-45%]  z-10 text-2xl text-white choose_city_text'
         >
           CHOOSE YOUR CITY
         </span>
@@ -91,7 +86,7 @@ export default function Animation({ chooseCityRef }) {
                 textHeaderRef.current.style.opacity = 0;
               }, 200)
             }
-            className='h-full w-full flex items-center justify-center bg-[#c5a47eb0]'
+            className='h-full w-full flex items-center justify-center '
           >
             <div
               onPointerOver={(e) =>
@@ -99,9 +94,11 @@ export default function Animation({ chooseCityRef }) {
                   textHeaderRef.current.style.opacity = 0;
                 }, 200)
               }
-              className='h-14 w-full flex items-center justify-center opacity-100 bg-[#c5a47edc]'
+              className='h-14 w-full flex items-center justify-center  bg-[#c5a47ebc]'
             >
-              <span className='text-white text-4xl'>DUBAI</span>
+              <span className='text-white text-[2rem] tracking-widest'>
+                DUBAI
+              </span>
             </div>
           </div>
         </div>
@@ -112,7 +109,7 @@ export default function Animation({ chooseCityRef }) {
                 textHeaderRef.current.style.opacity = 0;
               }, 200)
             }
-            className='h-full w-full flex items-center justify-center bg-[#2b2b2bd9] '
+            className='h-full w-full flex items-center justify-center  '
           >
             <div
               onPointerOver={(e) =>
@@ -120,9 +117,11 @@ export default function Animation({ chooseCityRef }) {
                   textHeaderRef.current.style.opacity = 0;
                 }, 200)
               }
-              className='h-14 w-full flex items-center justify-center opacity-100 bg-[#2b2b2bbe]'
+              className='h-14 w-full flex items-center justify-center  bg-[#000000bc]'
             >
-              <span className='text-white text-4xl '>LONDON</span>
+              <span className='text-white text-[2rem] font-extralight tracking-widest '>
+                LONDON
+              </span>
             </div>
           </div>
         </div>
