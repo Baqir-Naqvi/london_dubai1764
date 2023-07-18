@@ -70,7 +70,7 @@ export default function Animation({ chooseCityRef }) {
       >
         <img
           className='h-24 left-[50%] top-2 translate-x-[-50%] mt-3  object-contain absolute z-20'
-          src='/images/logo.png'
+          src='/Images/logo.png'
           alt=''
         />
         <span
