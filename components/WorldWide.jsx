@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
-import Ellipse from '@/public/images/Ellipse.png'
-import Active from '@/public/images/Active.png'
+import Ellipse from '@/public/Images/Ellipse.png'
+import Active from '@/public/Images/Active.png'
 
 
 function WorldWide() {
