@@ -13,6 +13,11 @@
   background-blend-mode: saturation  ;
 }
 
+.bg-dubai {
+  background-image: url('/Images/dubai_home.png');
+}
+
+
 
 .nasa-bg-image{
   background-image: url('/Images/EarthNasa.png');
