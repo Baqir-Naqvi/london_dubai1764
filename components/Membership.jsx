@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import hundredimg from "@/public/Images/onehundred.png";
+import { useGlobalContext } from "@/utils/ContextProvider";
 
 function Membership() {
+  const { city } = useGlobalContext();
   return (
     <div className="flex flex-col justify-center items-center ">
       <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
@@ -29,14 +31,22 @@ function Membership() {
         </div>
 
         <div className="flex flex-col justify-end items-center ml-5">
-          <h2 className=" uppercase text-[30px] font-normal tracking-[4px] text-center text-white ">
-            Key Businesses
-            <br /> Represented
-          </h2>
+          {!city === "Dubai" ? (
+            <h2 className=" uppercase text-[30px] font-normal tracking-[4px] text-center text-white ">
+              Key Businesses
+              <br /> Represented
+            </h2>
+          ) : (
+            <h2 className=" uppercase text-[30px] font-normal tracking-[1px] text-center text-white ">
+              Key Businesses Represented <br/>in london already
+            </h2>
+          )}
         </div>
-        <h1 className="text-[#c5a47e] md:flex hidden text-[105px] font-bold  text-center absolute right-[10px] mt-[0px] opacity-10
+        <h1
+          className="text-[#c5a47e] md:flex hidden text-[105px] font-bold  text-center absolute right-[10px] mt-[0px] opacity-10
         tracking-[0px]
-        ">
+        "
+        >
           represented
         </h1>
       </div>

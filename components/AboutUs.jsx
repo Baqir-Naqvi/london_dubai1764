@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import GalleryImage from "@/public/Images/gallery.png";
+import DubaiGalleryImage from "@/public/Images/Dubai_GalleryImage.png";
 import { useGlobalContext } from "@/utils/ContextProvider";
 
-
 export default function () {
-  const { state, setState } = useGlobalContext();
+  const { city } = useGlobalContext();
   return (
     <div className="flex flex-col items-center justify-center h-max bg-black mt-[50px]">
       <div>
@@ -30,7 +30,16 @@ export default function () {
             Enthusiasts with our First Satellite to Open in Dubai 2023.
           </p>
         </div>
-        <Image width={776} height={401} src={GalleryImage} alt='AboutUS' />
+        {city === "Dubai" ? (
+          <Image
+            width={776}
+            height={401}
+            src={DubaiGalleryImage}
+            alt="AboutUS"
+          />
+        ) : (
+          <Image width={776} height={401} src={GalleryImage} alt="AboutUS" />
+        )}
       </div>
 
       {/* Lower Section */}
@@ -41,9 +50,16 @@ export default function () {
         <h1 className="text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-wider text-center absolute right-[50px] opacity-10 pt-20">
           our story
         </h1>
-        <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
-          The UK's first venue dedicated to <br /> supporting the tech sector
-        </h1>
+        {city === "Dubai" ? (
+          <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
+            Soon, we are to open our first satellite, in Dubai, as part
+            <br /> of a global roll-out plan of the now-proven concept.
+          </h1>
+        ) : (
+          <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
+            The UK's first venue dedicated to <br /> supporting the tech sector
+          </h1>
+        )}
 
         {/* text container */}
         <div className="md:px-[10%]  items-center ">
@@ -57,8 +73,10 @@ export default function () {
           </p>
 
           <div className="flex md:flex-row flex-col justify-center mt-20">
-            <p className="md:text-[22px] text-[14px] text-white opacity-60
-            ">
+            <p
+              className="md:text-[22px] text-[14px] text-white opacity-60
+            "
+            >
               In May 2022 we purchased Blacks Club (www.blacksclub.com), which
               could not possibly be a more perfect flagship. This vibrant and
               historic private members’ club, located at 67 Dean Street in Soho,
@@ -79,13 +97,22 @@ export default function () {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
-              Inclusion is via the ownership of one of the club’s 3,500
-              Membership NFTs, which bestow the possessor with lifetime
-              membership of Blacks. By contrast to all other private members’
-              clubs, membership is tradable and <br /> never represents a sunk
-              cost.
-            </h1>
+            {!city === "Dubai" ? (
+              <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
+                Inclusion is via the ownership of one of the club’s 3,500
+                Membership NFTs, which bestow the possessor with lifetime
+                membership of Blacks. By contrast to all other private members’
+                clubs, membership is tradable and <br /> never represents a sunk
+                cost.
+              </h1>
+            ) : (
+              <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
+                Inclusion is via the ownership of one of the club's Membership
+                NFTs, which bestow the possessor with lifetime membership of
+                1764 Dubai. By contrast to all other private members’ clubs,
+                membership is tradable and never represents a sunk cost.
+              </h1>
+            )}
 
             <button className="bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-full h-[57px] rounded-[30px]">
               <p className="z-10 text-[14px] tracking-wider font-[600] text-white">

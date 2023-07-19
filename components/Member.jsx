@@ -2,14 +2,17 @@ import React from "react";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
+import { useGlobalContext } from "@/utils/ContextProvider";
 
 const DynamicReactPlayer = dynamic(() => import("react-player"), {
   ssr: false,
 });
 
 function Member() {
+  const { city } = useGlobalContext();
   const [hover, setHover] = useState(false);
-  const [videourl, setVideourl] = useState("/Videos/LondonNFT.mp4");
+  const videourl= city==='Dubai'?"/Videos/Dubai_NFT.mp4":"/Videos/LondonNFT.mp4"
+  const [dubaiurl, setDubaiurl] = useState("");
 
   // if the div is in screen view then setHover(true) else setHover(false)
   useEffect(() => {
@@ -64,9 +67,14 @@ function Member() {
         </div>
       </div>
 
-      <h3 className="text-[30px] mt-5 mb-10 font-[600]">
+      {!city === "Dubai"&&<h3 className="text-[30px] mt-5 mb-10 font-[600]">
         limited to <span className="text-[#c5a47e]">1000</span>
       </h3>
+}
+      {city === "Dubai" ? (
+        <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px] md:mt-4">
+          Your Diamond Lifetime Membership NFT provides lifetime membership of 1764 Dubai. It’s your 21st Century membership card.
+          </p>):(
       <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px]">
         Your Diamond Lifetime Membership NFT provides unlimited access to Blacks
         in Soho, London. It’s your 21st Century membership card. By contrast to
@@ -74,6 +82,7 @@ function Member() {
         non-refundable joining fee, your membership is tradable and never
         represents a sunk cost.
       </p>
+          )}
     </div>
   );
 }

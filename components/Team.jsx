@@ -23,6 +23,25 @@ import Feature_3 from '@/public/Images/Feature_3.png'
 import Feature_4 from '@/public/Images/Feature_4.png'
 import Feature_5 from '@/public/Svgs/Feature_5.svg'
 
+import { useGlobalContext } from "@/utils/ContextProvider";
+
+const Dubai_Memers = [
+  {
+    image: P1,
+    name: "Jonathan Willis",
+    position: "Blacks Club & 1764.io",
+  },
+  {
+    image: P2,
+    name: "Veselin Velkov",
+    position: "Blacks Club & 1764.io",
+  },
+  {
+    image: P7,
+    name: "Danny Powell",
+    position: "The Labz",
+  },
+];
 const Members = [
   {
     image: P1,
@@ -115,14 +134,14 @@ const ProfileCard = ({ image, name, position }) => {
           height={60}
           width={50}
           alt="LinkedIn"
-        />
+          />
         <Image
           src={image}
           alt={name}
           height={300}
           width={300}
           className="
-        relative -left-1 bottom-[4px]
+          relative -left-1 bottom-[4px]
         "
         />
       </div>
@@ -135,6 +154,7 @@ const ProfileCard = ({ image, name, position }) => {
 };
 
 function Team() {
+  const { city } = useGlobalContext();
   return (
     <>
       <h1 className="text-[#c5a47e] md:flex hidden md:text-9xl font-bold  text-center tracking-wider absolute right-[10px] mt-[200px] opacity-10 ">
@@ -148,16 +168,30 @@ function Team() {
         {/* Profile Cards Container  */}
 
         <div className="flex flex-wrap gap-10 justify-center items-center mt-20">
-          {Members.map((item, index) => {
-            return (
-              <ProfileCard
+          {city === "Dubai"?
+    (
+      Dubai_Memers.map((item, index) => {
+        return (
+           <ProfileCard
                 key={index}
                 image={item.image}
                 name={item.name}
                 position={item.position}
               />
             );
-          })}
+          })
+
+    ):(Members.map((item, index) => {
+      return (
+
+        <ProfileCard
+          key={index}
+          image={item.image}
+          name={item.name}
+          position={item.position}
+        />
+      );
+    }))}
         </div>
 
         <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
