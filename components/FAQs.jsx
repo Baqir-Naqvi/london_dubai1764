@@ -72,11 +72,11 @@ function FAQs() {
 
 
   return (
-    <div className="flex flex-col justify-center items-center md:pt-10 pt-[20em]">
+    <div className="flex flex-col justify-center items-center md:pt-10 pt-[10em]">
       <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 pt-[5em]">
         What you need to <span className="text-[#c5a47e]">know</span>
       </h2>
-
+     
       <div className="flex flex-col ">
         {questions.map((que, index) => {
           return (
@@ -86,7 +86,7 @@ function FAQs() {
       </div>
 
       <div className="flex md:flex-row flex-col justify-evenly items-center mt-[10rem] bg-[#c5a47e] w-full md:px-20 md:py-20">
-        <h1 className="text-black md:text-[80px] text-[30px] font-[700] md:w-[30%] leading-[1] text-end">
+        <h1 className="text-black md:text-[80px] text-[30px] font-[700] md:w-[35%] leading-[1] text-end">
           A question <br />
           for you<span className="text-white">?</span>
         </h1>

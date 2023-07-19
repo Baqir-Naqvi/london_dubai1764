@@ -9,13 +9,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 .bg-image {
-  background-image: url('/Images/DubHero.png');
+  background-image: url('/Images/DubHero.png'),url('/Images/outdated.png');
+  background-blend-mode: saturation  ;
 }
 
 
 .nasa-bg-image{
   background-image: url('/Images/EarthNasa.png');
-  height: max-content;
   
 }
 

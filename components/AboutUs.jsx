@@ -1,12 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import GalleryImage from "@/public/Images/gallery.png";
+import { useGlobalContext } from "@/utils/ContextProvider";
+
 
 export default function () {
+  const { state, setState } = useGlobalContext();
   return (
     <div className="flex flex-col items-center justify-center h-max bg-black mt-[50px]">
       <div>
-        <h1 className="text-[#c5a47e] md:text-9xl md:flex hidden font-bold tracking-widest text-center absolute md:left-[130px] mt-[120px] opacity-10">
+        <h1 className="text-[#c5a47e] md:text-[105px] md:flex hidden font-bold tracking-widest text-center absolute md:left-[100px] mt-[120px] opacity-10">
           welcome
         </h1>
         <h2 className="md:text-[54px] text-[24px] font-normal tracking-widest text-center text-white">
@@ -14,9 +17,9 @@ export default function () {
         </h2>
       </div>
 
-      <div className="flex md:flex-row flex-col items-center justify-center pt-[120px] md:w-[1050px]">
-        <div className="flex flex-col md:items-left items-center justify-center md:w-max">
-          <p className="text-[#FEFEFE] md:text-[42px] text-[24px] font-[500] absolute mb-[250px] leading-[0.75]">
+      <div className="flex md:flex-row flex-col items-center pt-[120px] md:w-[1050px]">
+        <div className="flex flex-col  items-center justify-center md:w-max">
+          <p className="text-[#FEFEFE] md:text-[42px] text-[24px] font-[500] absolute mb-[250px] md:ml-[250px] leading-[0.75] md:w-max">
             A modern twist to the traditional
             <br /> private members' club
           </p>
@@ -31,7 +34,7 @@ export default function () {
       </div>
 
       {/* Lower Section */}
-      <div className="nasa-bg-image bg-cover bg-center w-full h-screen bg-image">
+      <div className="nasa-bg-image bg-cover bg-center  bg-image">
         <h2 className=" uppercase text-[35px] font-normal tracking-[10px] text-center text-white mt-20 ">
           Our<span className="text-[#c5a47e] ml-5">Story</span>
         </h2>
@@ -43,7 +46,7 @@ export default function () {
         </h1>
 
         {/* text container */}
-        <div className="md:px-[15rem]  items-center ">
+        <div className="md:px-[10%]  items-center ">
           <p className="md:text-[22px] text-[14px] text-white opacity-60 text-center">
             In November 2021 we embarked on a mission to add a modern twist to
             the traditional private members' club, <br /> by launching the UK's
@@ -53,8 +56,9 @@ export default function () {
             Crypto, NFTs, Web3, AI & Tech.
           </p>
 
-          <div className="flex md:flex-row flex-col items-center justify-center mt-10">
-            <p className="md:text-[22px] text-[14px] text-white opacity-60 ">
+          <div className="flex md:flex-row flex-col justify-center mt-20">
+            <p className="md:text-[22px] text-[14px] text-white opacity-60
+            ">
               In May 2022 we purchased Blacks Club (www.blacksclub.com), which
               could not possibly be a more perfect flagship. This vibrant and
               historic private members’ club, located at 67 Dean Street in Soho,
@@ -74,7 +78,7 @@ export default function () {
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center mt-10">
+          <div className="flex flex-col items-center justify-center">
             <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
               Inclusion is via the ownership of one of the club’s 3,500
               Membership NFTs, which bestow the possessor with lifetime

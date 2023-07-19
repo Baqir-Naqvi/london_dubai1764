@@ -99,6 +99,9 @@ function WorldWide() {
           </div>
         </div>
       </div>
+      <h1 className="text-[#c5a47e] md:flex hidden md:text-9xl font-bold tracking-wider absolute mt-[4.7em] right-[1em] opacity-10 ">
+        faqs
+      </h1>
     </div>
   );
 }

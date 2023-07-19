@@ -166,11 +166,11 @@ function Team() {
 
       
 
-        <div className="flex flex-wrap gap-10 justify-center items-center mt-20">
+        <div className="flex md:flex-row flex-wrap gap-10 justify-center items-center mt-20">
 
           {FeaturesArray.map((item,index)=>{
             return(
-              <div key={index} className=" w-[302px]">
+              <div key={index} className=" w-[250px]">
                 <Image
                   src={item}
                   alt="Feature"

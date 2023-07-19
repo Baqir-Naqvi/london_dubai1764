@@ -6,15 +6,31 @@ import TwitterIcon from '@/public/Svgs/twitter.svg'
 import Vertical from '@/public/Images/VerticalLine.png'
 import SideBar from '@/public/Images/sidepng.png'
 import Image from 'next/image'
+import Logo from '@/public/Svgs/logo.svg'
 function SideDiv() {
   return (
     <>
       <Image
         height={700}
+        width={120}
+        src={Logo}
+        alt="logo"
+        className="absolute left-[30px] top-[40px] hidden md:flex"
+      />
+       <Image
+        height={700}
+        width={60}
+        src={Logo}
+        alt="logo"
+        className="absolute left-[0px] top-[50px] flex md:hidden"
+      />
+
+      <Image
+        height={700}
         width={55}
         src={SideBar}
         alt="mobileBar"
-        className="flex absolute left-0 top-[200px] md:hidden"
+        className="flex absolute left-0 top-[150px] md:hidden"
       />
       <div className="hidden md:flex absolute left-0 mt-[160px] md:w-[190px] w-[30px] h-[680px] bg-black ">
         <div

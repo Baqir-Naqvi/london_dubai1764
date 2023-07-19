@@ -15,12 +15,14 @@ import Association from "@/components/Association";
 import Clubs from "@/components/Clubs";
 import ContactUs from "@/components/ContactUs";
 import { gsap } from "gsap";
+import { useGlobalContext } from "@/utils/ContextProvider";
 
 export default function Home() {
   const chooseCityRef = useRef(null);
   const landerRef = useRef(null);
   const contentRef = useRef(null);
-  const [city, setCity] = useState(null);
+  const { city, setCity } = useGlobalContext();
+
   useEffect(() => {
     if (city) {
       gsap.to(contentRef.current, {
@@ -33,6 +35,8 @@ export default function Home() {
       });
     }
   }, [city]);
+
+  
 
   return (
     <main className='relative w-screen overflow-x-hidden'>

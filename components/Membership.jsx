@@ -34,7 +34,9 @@ function Membership() {
             <br /> Represented
           </h2>
         </div>
-        <h1 className="text-[#c5a47e] md:flex hidden text-9xl font-bold  text-center absolute right-[10px] mt-[0px] opacity-10 ">
+        <h1 className="text-[#c5a47e] md:flex hidden text-[105px] font-bold  text-center absolute right-[10px] mt-[0px] opacity-10
+        tracking-[0px]
+        ">
           represented
         </h1>
       </div>
