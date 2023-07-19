@@ -7,7 +7,10 @@ import Vertical from '@/public/Images/VerticalLine.png'
 import SideBar from '@/public/Images/sidepng.png'
 import Image from 'next/image'
 import Logo from '@/public/Svgs/logo.svg'
+import { useGlobalContext } from '@/utils/ContextProvider'
 function SideDiv() {
+   const { city } = useGlobalContext();
+
   return (
     <>
       <Image
@@ -17,7 +20,7 @@ function SideDiv() {
         alt="logo"
         className="absolute left-[30px] top-[40px] hidden md:flex"
       />
-       <Image
+      <Image
         height={700}
         width={60}
         src={Logo}
@@ -39,7 +42,8 @@ function SideDiv() {
         "
         >
           <p className="transform -rotate-90 origin-left uppercase md:text-[10px] text-[8px] text-white font-[600] tracking-[10px] w-max">
-            1764 by blacks, london
+            1764 by blacks,
+            {city==='Dubai'?"Dubai":"london"}
           </p>
 
           <Image width={2} height={10} src={Vertical} alt="v_" />
