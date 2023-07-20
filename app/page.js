@@ -27,16 +27,14 @@ export default function Home() {
     if (city) {
       gsap.to(contentRef.current, {
         x: 0,
-        duration: 1.5,
+        duration: 1,
       });
       gsap.to(landerRef.current, {
         x: "100%",
-        duration: 1.5,
+        duration: 1,
       });
     }
   }, [city]);
-
-  
 
   return (
     <main className='relative w-screen overflow-x-hidden'>
@@ -44,8 +42,7 @@ export default function Home() {
         ref={landerRef}
         className='flex bg-black  min-h-screen flex-col items-start justify-start '
       >
-        <Animation chooseCityRef={chooseCityRef} />
-        <ChooseCity setCity={setCity} chooseCityRef={chooseCityRef} />
+        <Animation />
       </div>
       <div
         ref={contentRef}

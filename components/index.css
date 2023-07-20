@@ -29,7 +29,7 @@
 
 .dubai_section {
     -webkit-clip-path: polygon(0 0, 100% 0, 66% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 66% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
     flex: 2;
     position: absolute;
     top: 0;
@@ -45,7 +45,7 @@
 
 }
 
-.dubai_section:hover {
+.dubai_section_fullscreen {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     flex: 2;
@@ -74,7 +74,7 @@
 
 .london_section {
     -webkit-clip-path: polygon(33% 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(28% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
     flex: 1;
     position: absolute;
     width: 60vw;
@@ -91,7 +91,7 @@
 
 }
 
-.london_section:hover {
+.london_section_fullscreen {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     width: 100vw;
