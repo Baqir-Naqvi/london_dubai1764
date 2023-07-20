@@ -42,8 +42,7 @@ function SideDiv() {
         "
         >
           <p className="transform -rotate-90 origin-left uppercase md:text-[10px] text-[8px] text-white font-[600] tracking-[10px] w-max">
-            1764 by blacks,
-            {city==='Dubai'?"Dubai":"london"}
+            1764 ,{city === "Dubai" ? "Dubai" : "by blacks london"}
           </p>
 
           <Image width={2} height={10} src={Vertical} alt="v_" />

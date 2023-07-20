@@ -87,14 +87,14 @@ export default function Animation() {
 
         <div
           className={`dubai_section cursor-pointer ${
-            makeFullScreen === "dubai" && " dubai_section_fullscreen"
+            makeFullScreen === "Dubai" && " dubai_section_fullscreen"
           } `}
-          onClick={() => handleClick("dubai")}
+          onClick={() => handleClick("Dubai")}
         >
           <div className='h-full w-full flex items-center justify-center '>
             <div
               className={`h-14 w-full flex items-center justify-start md:justify-center px-10  bg-[#c5a47ebc] ${
-                makeFullScreen === "dubai" && " justify-center"
+                makeFullScreen === "Dubai" && " justify-center"
               }`}
             >
               <span className='text-white  text-lg sm:text-[1.5rem] lg:text-[2rem] tracking-widest'>

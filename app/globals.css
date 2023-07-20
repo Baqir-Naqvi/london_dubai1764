@@ -2,6 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -15,6 +16,10 @@
 
 .bg-dubai {
   background-image: url('/Images/dubai_home.png');
+}
+
+h1{
+font-family: 'Oswald', sans-serif !important;
 }
 
 

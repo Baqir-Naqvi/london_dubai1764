@@ -30,16 +30,19 @@ const Dubai_Memers = [
     image: P1,
     name: "Jonathan Willis",
     position: "Blacks Club & 1764.io",
+    linkedin: "https://www.linkedin.com/in/jonathan-willis-5591291b5/",
   },
   {
     image: P2,
     name: "Veselin Velkov",
     position: "Blacks Club & 1764.io",
+    linkedin: "https://www.linkedin.com/in/veselin-velkov-493977190/",
   },
   {
     image: P7,
     name: "Danny Powell",
     position: "The Labz",
+    linkedin: "https://www.linkedin.com/company/thelabz/",
   },
 ];
 const Members = [
@@ -47,73 +50,87 @@ const Members = [
     image: P1,
     name: "Jonathan Willis",
     position: "Blacks Club & 1764.io",
+    linkedin: "https://www.linkedin.com/in/jonathan-willis-5591291b5/",
   },
   {
     image: P2,
     name: "Veselin Velkov",
     position: "Blacks Club & 1764.io",
+    linkedin: "https://www.linkedin.com/in/veselin-velkov-493977190/",
   },
   {
     image: P10,
     name: "Adam Leon",
     position: "Blacks Club & 1764.io",
+    linkedin: "https://www.linkedin.com/in/adam-leon-74090b14/",
   },
   {
     image: P9,
     name: "Dan Collingridge-Padbury",
     position: "Blacks Club & 1764.io",
+    linkedin: "https://www.linkedin.com/in/dan-collingridge-padbury/",
   },
   {
     image: M5,
     name: "Rob Gaskell",
     position: "Appold",
+    linkedin: "https://www.linkedin.com/in/robgaskell/",
   },
   {
     image: M6,
     name: "Justin Thorogood",
     position: "CMO, Alteri-Enigma & YC Capital",
+    linkedin: "https://www.linkedin.com/in/justinthorogood/",
   },
   {
     image: M7,
     name: "Jenny Knott",
     position: "FinTech Advisory",
+    linkedin: "https://www.linkedin.com/in/jenny-knott-fcca-29185710/",
   },
   {
     image: M8,
     name: "Chris Mason",
     position: "InCryptoHub & JadeVault",
+    linkedin: "https://www.linkedin.com/in/cvmason/",
   },
 
   {
     image: P8,
     name: "Jason Tucker-Feltham",
     position: "Global Head of Crypto & Fintech - IDnow",
+    linkedin: "https://www.linkedin.com/in/jacecrypto/",
   },
 
   {
     image: P4,
     name: "Ché L Feenie",
     position: "Migrant Help",
+    linkedin: "https://www.linkedin.com/in/ch%C3%A9-l-f-29304b15/",
   },
   {
     image: P5,
     name: "Adam Funnell",
     position: "Accubits",
+    linkedin: "https://www.linkedin.com/in/techandinnovations/",
   },
   {
     image: P6,
     name: "Shelley Schachter-Cahm",
     position: "CEX.io",
+    linkedin: "#",
   },
   {
     image: P3,
     name: "Simon Smith",
     position: "Excalibur.FM",
+    linkedin: "https://www.linkedin.com/in/simon-smith-a860885/",
   },
   {
     image: P7,
     name: "Danny Powell",
     position: "The Labz",
+    linkedin: "https://www.linkedin.com/company/thelabz/",
   },
 ];
 
@@ -124,7 +141,7 @@ const FeaturesArray = [
   Feature_5,
   Feature_4,
 ];
-const ProfileCard = ({ image, name, position }) => {
+const ProfileCard = ({ image, name, position, linkedin }) => {
   return (
     <div className="flex flex-col items-center justify-center w-[300px] md:mx-2">
       <div className="bg-[#c5a47e] w-[302px] h-[302px]">
@@ -134,7 +151,10 @@ const ProfileCard = ({ image, name, position }) => {
           height={60}
           width={50}
           alt="LinkedIn"
-          />
+          onClick={() => {
+            window.open(linkedin);
+          }}
+        />
         <Image
           src={image}
           alt={name}
@@ -172,23 +192,24 @@ function Team() {
     (
       Dubai_Memers.map((item, index) => {
         return (
-           <ProfileCard
-                key={index}
-                image={item.image}
-                name={item.name}
-                position={item.position}
-              />
-            );
+          <ProfileCard
+            key={index}
+            image={item.image}
+            name={item.name}
+            position={item.position}
+            linkedin={item.linkedin}
+          />
+        );
           })
 
     ):(Members.map((item, index) => {
       return (
-
         <ProfileCard
           key={index}
           image={item.image}
           name={item.name}
           position={item.position}
+          linkedin={item.linkedin}
         />
       );
     }))}
