@@ -108,3 +108,13 @@
     -webkit-clip-path: polygon(100% 1%, 100% 1%, 100% 100%, 0% 100%);
     clip-path: polygon(100% 1%, 100% 1%, 100% 100%, 0% 100%);
 }
+
+.map-card {
+    background-image: url('/Images/CompositeLayer.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5rem;
+    height: 6rem;
+
+}
