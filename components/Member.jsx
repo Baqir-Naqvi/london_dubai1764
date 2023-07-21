@@ -35,7 +35,7 @@ function Member() {
 
 
   return (
-    <div className="flex flex-col justify-center items-center mt-10">
+    <div className="flex flex-col justify-center items-center   ">
       <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
         become a <span className="text-[#c5a47e]">Member</span>
       </h2>
@@ -50,7 +50,7 @@ function Member() {
             url={videourl}
             width={700}
             height={700}
-            playing={hover}
+            playing={true}
             loop={true}
             muted={true}
           />
@@ -60,7 +60,7 @@ function Member() {
             url={videourl}
             width={390}
             height={700}
-            playing={hover}
+            playing={true}
             loop={true}
             muted={true}
           />

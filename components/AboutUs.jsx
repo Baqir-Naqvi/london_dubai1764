@@ -7,7 +7,7 @@ import { useGlobalContext } from "@/utils/ContextProvider";
 export default function () {
   const { city } = useGlobalContext();
   return (
-    <div className="flex flex-col items-center justify-center h-max bg-black mt-[50px]" id="about">
+    <div className="flex flex-col items-center justify-center h-max bg-black md:mt-[80px]" id="about">
       <div>
         <h1 className="text-[#c5a47e] md:text-[105px] md:flex hidden font-bold tracking-widest text-center absolute md:left-[100px] mt-[120px] opacity-10">
           welcome
@@ -43,7 +43,7 @@ export default function () {
       </div>
 
       {/* Lower Section */}
-      <div className="nasa-bg-image bg-cover bg-center  bg-image" id="ourstory">
+      <div className="nasa-bg-image bg-cover bg-center  bg-image md:mt-[30px]" id="ourstory">
         <h2 className=" uppercase text-[35px] font-normal tracking-[10px] text-center text-white mt-20 ">
           Our<span className="text-[#c5a47e] ml-5">Story</span>
         </h2>
@@ -63,7 +63,7 @@ export default function () {
 
         {/* text container */}
         <div className="md:px-[10%]  items-center ">
-          <p className="md:text-[22px] text-[14px] text-white opacity-60 text-center">
+          <p className="md:text-[22px] md:mt-[70px] text-[14px] text-white opacity-60 text-center">
             In November 2021 we embarked on a mission to add a modern twist to
             the traditional private members' club, <br /> by launching the UK's
             first venue dedicated to supporting the tech sector, where founders,
@@ -96,7 +96,7 @@ export default function () {
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center md:mt-[50px]">
             {!city === "Dubai" ? (
               <h1 className="text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10">
                 Inclusion is via the ownership of one of the club’s 3,500
@@ -114,7 +114,7 @@ export default function () {
               </h1>
             )}
 
-            <button className="bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-full h-[57px] rounded-[30px]">
+            <button className="bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-full h-[57px] rounded-[30px] md:mt-[30px]">
               <p className="z-10 text-[14px] tracking-wider font-[600] text-white">
                 Enquire about membership
               </p>

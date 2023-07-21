@@ -7,7 +7,7 @@ function WorldWide() {
   const [showDubai, setShowDubai] = useState(false);
   const [showLondon, setShowLondon] = useState(false);
   return (
-    <div className='my-5 h-[160vh]'>
+    <div className='mb-[50px]'>
       <h1 className='text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-widest text-center absolute left-[10px] mt-[220px] opacity-10 '>
         venues
       </h1>
@@ -101,7 +101,7 @@ function WorldWide() {
           />
 
           <div className='md:w-[1030px] flex flex-col justify-left items-left md:ml-[50px] mt-[24rem] '>
-            <h1 className='text-white md:text-[42px] text-[24px] font-[500]  leading-[1] my-10'>
+            <h1 className='text-white md:text-[42px] text-[24px] font-[500]  leading-[1] '>
               Our vision is to quickly scale the <br />
               concept by launching affiliate venues
             </h1>
