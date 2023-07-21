@@ -209,7 +209,7 @@ function WorldWide() {
             </p>
           </div>
 
-          <div className="flex flex-row w-full justify-content justify-end h-full ">
+          <div className="flex flex-row w-full justify-content justify-end h-max ">
             <h1 className="text-white md:text-[42px] text-[24px] font-[500]  leading-[1] my-10 text-right md:mr-10">
               Importantly, we promote inclusivity <br />
               instead of exclusivity
@@ -218,13 +218,13 @@ function WorldWide() {
         </div>
       </div>
       <h1
-        className="text-[#c5a47e] md:flex hidden md:text-9xl font-bold tracking-wider absolute mt-[4.7em] right-[1em] opacity-10 "
+        className="text-[#c5a47e] md:flex hidden md:text-9xl font-bold tracking-wider absolute mt-[11em] right-[2em] opacity-10 h-max -z-10"
         id="faq"
       >
         faqs
       </h1>
 
-      <div className="flex flex-col justify-center items-center md:pt-10">
+      <div className="flex flex-col justify-center items-center md:pt-10 z-100">
         <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white">
           What you need to <span className="text-[#c5a47e]">know</span>
         </h2>
