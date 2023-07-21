@@ -36,12 +36,12 @@ function Member() {
 
   return (
     <div className="flex flex-col justify-center items-center   ">
-      <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
+      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white my-20 ">
         become a <span className="text-[#c5a47e]">Member</span>
       </h2>
       <div
       id="member"
-        className="flex flex-col justify-center items-center mt-10 w-max"
+        className="flex flex-col justify-center items-center md:mt-10 w-max"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
@@ -58,8 +58,8 @@ function Member() {
         <div className="md:hidden block">
           <DynamicReactPlayer
             url={videourl}
-            width={390}
-            height={700}
+            width={310}
+            height={410}
             playing={true}
             loop={true}
             muted={true}
@@ -72,7 +72,7 @@ function Member() {
       </h3>
 }
       {city === "Dubai" ? (
-        <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px] md:mt-4">
+        <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2">
           Your Diamond Lifetime Membership NFT provides lifetime membership of 1764 Dubai. It’s your 21st Century membership card.
           </p>):(
       <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px]">

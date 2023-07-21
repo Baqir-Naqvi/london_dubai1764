@@ -3,10 +3,10 @@ import React from 'react'
 function Clubs() {
   return (
     <div
-      className="flex flex-col items-center justify-center mt-20"
+      className="flex flex-col items-center justify-center mt-20 "
       id="globalclubs"
     >
-      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white">
+      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:flex flex-grow">
         reciprocal <span className="text-[#c5a47e]">clubs</span>
       </h2>
 

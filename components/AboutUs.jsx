@@ -7,7 +7,7 @@ import { useGlobalContext } from "@/utils/ContextProvider";
 export default function () {
   const { city } = useGlobalContext();
   return (
-    <div className="flex flex-col items-center justify-center h-max bg-black md:mt-[80px]" id="about">
+    <div className="flex flex-col items-center justify-center h-max bg-black md:mt-[80px] mt-10" id="about">
       <div>
         <h1 className="text-[#c5a47e] md:text-[105px] md:flex hidden font-bold tracking-widest text-center absolute md:left-[100px] mt-[120px] opacity-10">
           welcome
@@ -19,12 +19,12 @@ export default function () {
 
       <div className="flex md:flex-row flex-col items-center pt-[120px] md:w-[1050px]">
         <div className="flex flex-col  items-center justify-center md:w-max">
-          <p className="text-[#FEFEFE] md:text-[42px] text-[24px] font-[500] absolute mb-[250px] md:ml-[250px] leading-[0.75] md:w-max">
+          <p className="text-[#FEFEFE] md:text-[42px] text-[24px] font-[500] absolute md:mb-[250px] mb-[210px] md:ml-[250px] leading-[0.75] md:w-max">
             A modern twist to the traditional
             <br /> private members' club
           </p>
 
-          <p className="text-[#FEFEFE] md:text-[22px] text-[14px] font-[400] opacity-70 md:w-[420px] w-[100%] mt-[80px]">
+          <p className="text-[#FEFEFE] md:text-[22px] text-[14px] font-[400] opacity-70 md:w-[420px] w-[100%] md:mt-[80px] mt-[10px]">
             As the proud Owner of Blacks Club, Soho, London (est. 1764) we are
             London’s premier Community Hub for Web3 & Tech Professionals &
             Enthusiasts with our First Satellite to Open in Dubai 2023.
@@ -44,7 +44,7 @@ export default function () {
 
       {/* Lower Section */}
       <div className="nasa-bg-image bg-cover bg-center  bg-image md:mt-[30px]" id="ourstory">
-        <h2 className=" uppercase text-[35px] font-normal tracking-[10px] text-center text-white mt-20 ">
+        <h2 className=" uppercase md:text-[35px]  text-[24px] font-normal tracking-[10px] text-center text-white md:mt-20 mt-10 ">
           Our<span className="text-[#c5a47e] ml-5">Story</span>
         </h2>
         <h1 className="text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-wider text-center absolute right-[50px] opacity-10 pt-20">
@@ -63,7 +63,7 @@ export default function () {
 
         {/* text container */}
         <div className="md:px-[10%]  items-center ">
-          <p className="md:text-[22px] md:mt-[70px] text-[14px] text-white opacity-60 text-center">
+          <p className="md:text-[22px] md:mt-[70px] text-[14px] text-white opacity-60 md:text-center md:px-0 px-2">
             In November 2021 we embarked on a mission to add a modern twist to
             the traditional private members' club, <br /> by launching the UK's
             first venue dedicated to supporting the tech sector, where founders,
@@ -72,7 +72,7 @@ export default function () {
             Crypto, NFTs, Web3, AI & Tech.
           </p>
 
-          <div className="flex md:flex-row flex-col justify-center mt-20">
+          <div className="flex md:flex-row flex-col justify-center md:mt-20 mt-10 md:px-0 px-2">
             <p
               className="md:text-[22px] text-[14px] text-white opacity-60
             "
@@ -114,7 +114,7 @@ export default function () {
               </h1>
             )}
 
-            <button className="bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-full h-[57px] rounded-[30px] md:mt-[30px]">
+            <button className="bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-full h-[57px] rounded-[30px] md:mt-[30px] ">
               <p className="z-10 text-[14px] tracking-wider font-[600] text-white">
                 Enquire about membership
               </p>

@@ -54,7 +54,7 @@ export default function Home() {
         <AboutUs />
         <Member />
         <WorldWide />
-        <FAQs />
+        {/* <FAQs /> */}
         <Membership />
         <Team />
         <Association />

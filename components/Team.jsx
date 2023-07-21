@@ -182,7 +182,7 @@ function Team() {
       </h1>
       <div className="flex flex-col items-center justify-center h-max bg-black mt-[0px]">
         <h2
-          className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 "
+          className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:my-20 "
           id="founders"
         >
           our <span className="text-[#c5a47e]">team</span>
@@ -216,7 +216,7 @@ function Team() {
               })}
         </div>
 
-        <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
+        <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mt-10 ">
           as <span className="text-[#c5a47e]">featured</span>
         </h2>
 

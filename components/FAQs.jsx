@@ -73,8 +73,8 @@ function FAQs() {
 
 
   return (
-    <div className="flex flex-col justify-center items-center md:pt-10 pt-[10em]">
-      <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 pt-[5em]">
+    <div className="flex flex-col justify-center items-center md:pt-10">
+      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white">
         What you need to <span className="text-[#c5a47e]">know</span>
       </h2>
 
@@ -86,14 +86,14 @@ function FAQs() {
         })}
       </div>
 
-      <div className="flex md:flex-row flex-col justify-evenly items-center mt-[10rem] bg-[#c5a47e] w-full md:px-20 md:py-20">
+      <div className="flex md:flex-row flex-col justify-evenly items-center md:mt-[10rem] mt-10 bg-[#c5a47e] w-full md:px-20 md:py-20">
         <h1 className="text-black md:text-[80px] text-[30px] font-[700] md:w-[35%] leading-[1] text-end">
           A question <br />
           for you<span className="text-white">?</span>
         </h1>
 
         {!city === "Dubai" ? (
-          <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2]">
+          <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2] px-2">
             Isn't this the club that you wanted to exist and to which you always
             dreamed of being a member? Act now, before the club's full.
             Otherwise, there'll still always be space for you, but you'll have
@@ -103,7 +103,7 @@ function FAQs() {
             as an 18x multiple.)
           </p>
         ) : (
-          <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2]">
+          <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2] px-2">
             Isn't this the club that you’ve wanted to exist in Dubai and to
             which you always dreamed of being a member? Act now, before the
             club's full. Otherwise, there'll still always be space for you, but

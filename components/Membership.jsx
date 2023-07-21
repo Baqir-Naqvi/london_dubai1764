@@ -7,7 +7,7 @@ function Membership() {
   const { city } = useGlobalContext();
   return (
     <div className="flex flex-col justify-center items-center " id="membership">
-      <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
+      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:my-20 my-10 ">
         lifetime <span className="text-[#c5a47e]">membership</span>
       </h2>
       <button className="bg-[#c5a47e]  uppercase z-10 w-max md:py-5 md:px-5 py-5 rounded-[15px]">
@@ -51,7 +51,7 @@ function Membership() {
           represented
         </h1>
       </div>
-      <p className="md:text-[18px] text-[14px] text-white opacity-60 my-10 md:pt-[50px] pt-[20px] md:px-[20%] text-center">
+      <p className="md:text-[18px] text-[14px] text-white opacity-60 my-10 md:pt-[50px] pt-[20px] md:px-[20%] text-center px-2">
         Appold, Alteri-Enigma, Greengage, InCryptoHub, JadeVault, Crypto A.M.,
         Blockdaemon, House of Block, CEX.IO, Coinbase, Coinpass.com, Kraken,
         Archax, Deribit, Swissborg, Finserv Experts, British Business Bank,

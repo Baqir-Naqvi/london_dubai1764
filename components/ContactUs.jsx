@@ -42,11 +42,11 @@ function ContactUs() {
             </div>
           </div>
 
-          <div className="flex flex-col  md:items-end gap-5 md:mt-0 mt-2 md:justify-end justify-center">
+          <div className="flex flex-col md:w-max w-[80%]  md:items-end gap-5 md:mt-0 mt-2 md:justify-end justify-center">
             <input
               type="text"
               placeholder="Name"
-              className="w-[350px] px-2 rounded-[10px] h-[110px] bg-[#323232]  border-white text-white font-normal opacity-60"
+              className="md:w-[350px] w-[100%] px-2 rounded-[10px] h-[110px] bg-[#323232]  border-white text-white font-normal opacity-60"
             />
             <button className="bg-[#c5a47e]  uppercase z-10 w-max md:py-2 md:px-5 py-2 rounded-full">
               <p className="z-10 md:text-[18px] text-[10px] px-[20px] font-[600] text-white md:tracking-widest">

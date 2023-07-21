@@ -1,56 +1,134 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Ellipse from "@/public/Images/Ellipse.png";
 import Active from "@/public/Images/Active.png";
+import { useGlobalContext } from "@/utils/ContextProvider";
+import { useMediaQuery } from "react-responsive";
 
 function WorldWide() {
   const [showDubai, setShowDubai] = useState(false);
   const [showLondon, setShowLondon] = useState(false);
+  const [active, setActive] = useState(null);
+  const [citySize, setCitySize] = useState(10);
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+  useEffect(() => {
+    // use media query
+    if (isMobile) {
+      setCitySize(10);
+    } else {
+      setCitySize(20);
+    }
+  }, []);
+
+  const { city } = useGlobalContext();
+  const questions = [
+    {
+      q: "Why is this needed?",
+      a: "Before we purchased Blacks and proved the model, there were no such clubs around the world dedicated to the space, let alone a global network of them. We strongly feel that the deep tech & disruptive innovation communities both need and deserve permanent venues. Our aim is to create a worldwide community of physical and virtual venues, where enthusiasts who share an interest in the space can socialise and network, meet like-minded individuals, engage and present, offer collaborations, get funded, become educated, provide instruction and guidance and share valuable information and knowledge. Its virtual and physical spaces offer the ideal environment and opportunity for members to interact face-to-face, to share their ideas and work together on future projects, creating entities greater than the sum of their parts.",
+    },
+    {
+      q: "Why should I buy an NFT?",
+      a: " Originated by us ahead of anyone globally, it’s your 21st Century membership card. It represents access to the respective physical clubhouse for as long as you own it. By contrast to all other private members’ clubs, which charge a considerable non-refundable joining fee, your membership is tradable and never represents a sunk cost.",
+    },
+    {
+      q: "How many NFTs are in the collection? ",
+      a: " There are approximately 5,000 NFTs per clubhouse, depending on venue size. This represents the typical membership for private members clubs, which are usually oversubscribed, with a long waiting list. It is important to us to ensure we have enough members to add real value to the community, without having so many that the exclusivity of being a member is diluted. Once memberships are sold out, the only way to become a member is to purchase one on the secondary market, whenever any become available. ",
+    },
+    {
+      q: "Where are the NFTs listed? ",
+      a: " As an Ethereum-based collection, London NFTs are listed on LooksRare & OpenSea, which are the largest NFT marketplaces, with arguably the easiest user interface to buy and sell. ",
+    },
+    {
+      q: "How long will it take to open other clubhouses across the globe? ",
+      a: " We opened our London flagship club, Blacks, in May 2022, which was 7 months ahead of schedule. Our current plan is to open in Dubai in 2023 and possibly also Stockholm and roll-out further, more quickly through 2024 and beyond.",
+    },
+    {
+      q: "What are the main benefits of being a member of Blacks, Soho? ",
+      a: " To join a fraternity of the smartest minds and most successful business people in the space today. We have already witnessed multiple ventures launched, capital raised, folk recruited and collaborations achieved all within the confines of the club, between people who might well have never otherwise met. A phenomenal amount of opportunities exist within the club and its membership for personal/career development and business expansion. ",
+    },
+    {
+      q: "Do you accept payments for all services and membership in crypto? ",
+      a: " Yes. Blacks Club became the first private members’ club in the world to accept Bitcoin as payment.",
+    },
+  ];
+
+  const FAQtab = ({ question, index, answer }) => {
+    return (
+      <div className="h-max md:w-[800px]">
+        {" "}
+        <div
+          className={`h-[60px] md:w-[800px] my-2 hover:bg-[#c5a47e]  hover:cursor-pointer  hover:text-black border-[1px] border-[#c5a47e] rounded-[10px]
+            flex justify-between items-center px-10
+            ${index == active ? "text-black bg-[#c5a47e]" : "text-white"}
+            `}
+          onClick={() => {
+            if (index == active) setActive(null);
+            else setActive(index);
+          }}
+        >
+          <h3 className=" md:text-[20px] text-[14px] font-normal">
+            {question}
+          </h3>
+          <h3 className=" md:text-[20px] text-[14px] font-normal">
+            {active == index ? "+" : "-"}
+          </h3>
+        </div>
+        <div
+          className={`md:text-[20px] text-[14px] font-normal text-white pl-10 opacity-60 py-10 overflow-hidden transition-all duration-500 ease-in-out
+          
+  ${active == index ? "h-max" : "hidden"}`}
+        >
+          {answer}
+        </div>
+      </div>
+    );
+  };
   return (
-    <div className='mb-[50px]'>
-      <h1 className='text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-widest text-center absolute left-[10px] mt-[220px] opacity-10 '>
+    <div className="mb-[50px] flex flex-col h-max">
+      <h1 className="text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-widest text-center absolute left-[10px] mt-[220px] opacity-10 ">
         venues
       </h1>
-      <div className='flex flex-col justify-center items-center md:mt-10'>
-        <h2 className=' uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 '>
-          we are <span className='text-[#c5a47e]'>WorldWide</span>
+      <div className="flex flex-col justify-center items-center md:mt-10">
+        <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white my-20 ">
+          we are <span className="text-[#c5a47e]">WorldWide</span>
         </h2>
 
-        <div className='bg-world-map bg-center w-[90%] h-screen md:mt-0 -mt-40'>
+        <div className="bg-world-map bg-center w-[90%] md:mt-0 -mt-40">
           <Image
             src={Ellipse}
-            alt='Ellipse'
-            height={20}
-            width={20}
-            className='custom-shadow relative top-[40%] left-[27%] hover:animate-pulse cursor-pointer'
+            alt="Ellipse"
+            height={citySize}
+            width={citySize}
+            className="custom-shadow relative top-[40%] left-[27%] hover:animate-pulse cursor-pointer"
           />
           <Image
             src={Ellipse}
-            alt='Ellipse'
-            height={20}
-            width={20}
-            className='custom-shadow relative top-[45%] left-[24%] hover:animate-pulse cursor-pointer'
+            alt="Ellipse"
+            height={citySize}
+            width={citySize}
+            className="custom-shadow relative top-[45%] left-[24%] hover:animate-pulse cursor-pointer"
           />
           <Image
             src={Ellipse}
-            alt='Ellipse'
-            height={20}
-            width={20}
-            className='custom-shadow relative top-[35%] left-[43%] hover:animate-pulse cursor-pointer'
+            alt="Ellipse"
+            height={citySize}
+            width={citySize}
+            className="custom-shadow relative top-[35%] left-[43%] hover:animate-pulse cursor-pointer"
           />
           <Image
             src={Ellipse}
-            alt='Ellipse'
-            height={20}
-            width={20}
-            className='custom-shadow relative top-[41%] left-[59%] hover:animate-pulse cursor-pointer'
+            alt="Ellipse"
+            height={citySize}
+            width={citySize}
+            className="custom-shadow relative top-[41%] left-[59%] hover:animate-pulse cursor-pointer"
           />
           <Image
             src={Ellipse}
-            alt='Ellipse'
-            height={20}
-            width={20}
-            className='custom-shadow absolute right-[23%] bottom-[32%] hover:animate-pulse cursor-pointer'
+            alt="Ellipse"
+            height={citySize}
+            width={citySize}
+            className="custom-shadow absolute right-[23%] bottom-[32%] hover:animate-pulse cursor-pointer"
           />
 
           <div
@@ -58,14 +136,14 @@ function WorldWide() {
               showLondon ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div className='mb-2'>
-              <span className='capitalize font-medium text-sm tracking-wider '>
+            <div className="mb-2">
+              <span className="capitalize font-medium text-sm tracking-wider ">
                 LONDON
               </span>
               <hr />
             </div>
 
-            <span className='tracking-wider text-[.6rem] text-white'>
+            <span className="tracking-wider text-[.6rem] text-white">
               67 Dean St London WID 4QH
             </span>
           </div>
@@ -73,11 +151,14 @@ function WorldWide() {
           <Image
             onPointerEnter={() => setShowLondon(true)}
             onPointerLeave={() => setShowLondon(false)}
+            onClick={() => {
+              () => setShowLondon(true);
+            }}
             src={Active}
-            alt='Active'
-            height={20}
-            width={20}
-            className='custom-shadow absolute left-[45%] top-[32%] hover:animate-pulse cursor-pointer'
+            alt="Active"
+            height={citySize}
+            width={citySize}
+            className="custom-shadow absolute left-[45%] top-[32%] hover:animate-pulse cursor-pointer"
           />
 
           <div
@@ -85,28 +166,31 @@ function WorldWide() {
               showDubai ? "opacity-100" : "opacity-0"
             }`}
           >
-            <span className='capitalize text-sm font-medium tracking-wider'>
+            <span className="capitalize text-sm font-medium tracking-wider">
               DUBAI
             </span>
           </div>
 
           <Image
             src={Active}
-            alt='Active'
-            height={20}
-            width={20}
+            alt="Active"
+            height={citySize}
+            width={citySize}
+            onClick={() => {
+              () => setShowDubai(true);
+            }}
             onPointerEnter={() => setShowDubai(true)}
             onPointerLeave={() => setShowDubai(false)}
-            className='custom-shadow absolute right-[37%] top-[53%] hover:animate-pulse cursor-pointer show-on-hover'
+            className="custom-shadow absolute right-[37%] top-[53%] hover:animate-pulse cursor-pointer show-on-hover"
           />
 
-          <div className='md:w-[1030px] flex flex-col justify-left items-left md:ml-[50px] mt-[24rem] '>
-            <h1 className='text-white md:text-[42px] text-[24px] font-[500]  leading-[1] '>
+          <div className="md:w-[1030px] flex flex-col justify-left items-left md:ml-[50px] md:mt-[24rem] mt-[19rem] ">
+            <h1 className="text-white md:text-[42px] text-[24px] font-[500]  leading-[1] ">
               Our vision is to quickly scale the <br />
               concept by launching affiliate venues
             </h1>
 
-            <p className='md:text-[22px] text-[14px] text-white opacity-60 mt-10'>
+            <p className="md:text-[22px] text-[14px] text-white opacity-60 mt-10">
               Venues which share the same ethos and are dedicated to the same
               sector in major cities across the globe, starting with Dubai and
               then adding Stockholm, Singapore, Miami, New York, Riyadh, Abu
@@ -125,17 +209,68 @@ function WorldWide() {
             </p>
           </div>
 
-          <div className='flex flex-row w-full justify-content justify-end h-max '>
-            <h1 className='text-white md:text-[42px] text-[24px] font-[500]  leading-[1] my-10 text-right md:mr-10'>
+          <div className="flex flex-row w-full justify-content justify-end h-full ">
+            <h1 className="text-white md:text-[42px] text-[24px] font-[500]  leading-[1] my-10 text-right md:mr-10">
               Importantly, we promote inclusivity <br />
               instead of exclusivity
             </h1>
           </div>
         </div>
       </div>
-      <h1 className='text-[#c5a47e] md:flex hidden md:text-9xl font-bold tracking-wider absolute mt-[4.7em] right-[1em] opacity-10 ' id="faq">
+      <h1
+        className="text-[#c5a47e] md:flex hidden md:text-9xl font-bold tracking-wider absolute mt-[4.7em] right-[1em] opacity-10 "
+        id="faq"
+      >
         faqs
       </h1>
+
+      <div className="flex flex-col justify-center items-center md:pt-10">
+        <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white">
+          What you need to <span className="text-[#c5a47e]">know</span>
+        </h2>
+
+        <div className="flex flex-col ">
+          {questions.map((que, index) => {
+            return (
+              <FAQtab
+                key={index}
+                answer={que.a}
+                question={que.q}
+                index={index}
+              />
+            );
+          })}
+        </div>
+
+        <div className="flex md:flex-row flex-col justify-evenly items-center md:mt-[10rem] mt-10 bg-[#c5a47e] w-full md:px-20 md:py-20">
+          <h1 className="text-black md:text-[80px] text-[30px] font-[700] md:w-[35%] leading-[1] text-end">
+            A question <br />
+            for you<span className="text-white">?</span>
+          </h1>
+
+          {!city === "Dubai" ? (
+            <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2] px-2">
+              Isn't this the club that you wanted to exist and to which you
+              always dreamed of being a member? Act now, before the club's full.
+              Otherwise, there'll still always be space for you, but you'll have
+              to wait until a membership NFT appears on the secondary market,
+              for which, perhaps, you will have to pay a considerable premium
+              (our Founder memberships, which quickly sold out, have traded for
+              as much as an 18x multiple.)
+            </p>
+          ) : (
+            <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2] px-2">
+              Isn't this the club that you’ve wanted to exist in Dubai and to
+              which you always dreamed of being a member? Act now, before the
+              club's full. Otherwise, there'll still always be space for you,
+              but you'll have to wait until a membership NFT appears on the
+              secondary market, for which you perhaps will have to pay a
+              considerable premium (our London Founder memberships, which
+              quickly sold out, have traded for as much as an 18x multiple.)
+            </p>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
