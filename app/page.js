@@ -42,7 +42,8 @@ export default function Home() {
         ref={landerRef}
         className='flex bg-black  min-h-screen flex-col items-start justify-start '
       >
-        <Animation />
+        <Animation chooseCityRef={chooseCityRef} />
+        <ChooseCity chooseCityRef={chooseCityRef} />
       </div>
       <div
         ref={contentRef}

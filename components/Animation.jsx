@@ -6,7 +6,7 @@ import TypeIt from "typeit-react";
 import "./index.css";
 import { useGlobalContext } from "@/utils/ContextProvider";
 
-export default function Animation() {
+export default function Animation({ chooseCityRef }) {
   const textRef = useRef();
   const textHeaderRef = useRef();
   const headerRef = useRef();
@@ -18,13 +18,16 @@ export default function Animation() {
       paused: true,
     });
     tl.to(textRef.current, {
-      y: -280,
+      y: -300,
       duration: 1,
       delay: 4.5,
       onStart: () => {},
       onComplete: () => {
         textRef.current.style.opacity = 0;
         headerRef.current.style.opacity = 1;
+        //add class to cityRef
+        chooseCityRef.current.classList.remove("hidden");
+        chooseCityRef.current.classList.add("flex");
       },
     });
     if (textRef.current) {
@@ -63,7 +66,15 @@ export default function Animation() {
     setCity(city);
   };
 
-  console.log(makeFullScreen);
+  const handleBack = () => {
+    setMakeFullScreen("");
+    gsap.to(textHeaderRef.current, {
+      opacity: 1,
+      duration: 1,
+      delary: 0.3,
+    });
+  };
+
   return (
     <div className='h-screen relative w-full  overflow-hidden flex items-center justify-center '>
       <div
@@ -72,6 +83,18 @@ export default function Animation() {
         }}
         ref={headerRef}
       >
+        <button
+          onClick={handleBack}
+          className={`z-50 absolute py-3 px-5 rounded-lg top-5 text-white left-5 ${
+            makeFullScreen === ""
+              ? " hidden"
+              : makeFullScreen === "London"
+              ? " bg-[#c7a47c]"
+              : " bg-black"
+          } `}
+        >
+          Back
+        </button>
         <img
           className=' h-12 md:lg-18 lg:h-24 left-[50%] top-2 translate-x-[-50%] mt-3  object-contain absolute z-20'
           src='/Images/logo.png'
@@ -80,15 +103,17 @@ export default function Animation() {
 
         <span
           ref={textHeaderRef}
-          className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-45%]  z-10 text-sm sm:text-xl lg:text-2xl  text-white choose_city_text'
+          className='absolute top-[50%] z-40 left-[50%] translate-x-[-50%] translate-y-[-45%]  text-sm sm:text-xl lg:text-2xl  text-white choose_city_text'
         >
           CHOOSE YOUR CITY
         </span>
 
         <div
-          className={`dubai_section cursor-pointer ${
-            makeFullScreen === "Dubai" && " dubai_section_fullscreen"
-          } `}
+          className={`dubai_section cursor-pointer transition-all duration-100 ${
+            makeFullScreen === "Dubai"
+              ? " dubai_section_fullscreen"
+              : makeFullScreen === "London" && " !w-[0px]"
+          }  `}
           onClick={() => handleClick("Dubai")}
         >
           <div className='h-full w-full flex items-center justify-center '>
@@ -104,15 +129,17 @@ export default function Animation() {
           </div>
         </div>
         <div
-          className={`london_section cursor-pointer ${
-            makeFullScreen === "london" && " london_section_fullscreen"
+          className={`london_section cursor-pointer transition-all duration-100 ${
+            makeFullScreen === "London"
+              ? " london_section_fullscreen"
+              : makeFullScreen === "Dubai" && " !w-[0px]"
           }`}
-          onClick={() => handleClick("london")}
+          onClick={() => handleClick("London")}
         >
           <div className='h-full w-full flex items-center justify-center  '>
             <div
               className={`h-14 w-full flex items-center justify-end md:justify-center p-5  bg-[#000000bc] ${
-                makeFullScreen === "london" && " justify-center"
+                makeFullScreen === "London" && " justify-center"
               }`}
             >
               <span className='text-white text-lg sm:text-[1.5rem] lg:text-[2rem]  font-extralight tracking-widest '>
