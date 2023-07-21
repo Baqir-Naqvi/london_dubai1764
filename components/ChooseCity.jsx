@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useGlobalContext } from "@/utils/ContextProvider";
 export default function ChooseCity({ chooseCityRef }) {
+  const { setCity } = useGlobalContext();
   return (
     <div
       ref={chooseCityRef}

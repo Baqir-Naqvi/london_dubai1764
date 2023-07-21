@@ -181,65 +181,55 @@ function Team() {
         founders
       </h1>
       <div className="flex flex-col items-center justify-center h-max bg-black mt-[0px]">
-        <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
+        <h2
+          className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 "
+          id="founders"
+        >
           our <span className="text-[#c5a47e]">team</span>
         </h2>
 
         {/* Profile Cards Container  */}
 
         <div className="flex flex-wrap gap-10 justify-center items-center mt-20">
-          {city === "Dubai"?
-    (
-      Dubai_Memers.map((item, index) => {
-        return (
-          <ProfileCard
-            key={index}
-            image={item.image}
-            name={item.name}
-            position={item.position}
-            linkedin={item.linkedin}
-          />
-        );
-          })
-
-    ):(Members.map((item, index) => {
-      return (
-        <ProfileCard
-          key={index}
-          image={item.image}
-          name={item.name}
-          position={item.position}
-          linkedin={item.linkedin}
-        />
-      );
-    }))}
+          {city === "Dubai"
+            ? Dubai_Memers.map((item, index) => {
+                return (
+                  <ProfileCard
+                    key={index}
+                    image={item.image}
+                    name={item.name}
+                    position={item.position}
+                    linkedin={item.linkedin}
+                  />
+                );
+              })
+            : Members.map((item, index) => {
+                return (
+                  <ProfileCard
+                    key={index}
+                    image={item.image}
+                    name={item.name}
+                    position={item.position}
+                    linkedin={item.linkedin}
+                  />
+                );
+              })}
         </div>
 
         <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
           as <span className="text-[#c5a47e]">featured</span>
         </h2>
 
-      
-
         <div className="flex md:flex-row flex-wrap gap-10 justify-center items-center mt-20">
-
-          {FeaturesArray.map((item,index)=>{
-            return(
+          {FeaturesArray.map((item, index) => {
+            return (
               <div key={index} className=" w-[250px]">
-                <Image
-                  src={item}
-                  alt="Feature"
-                  height={300}
-                  width={300}
-                 
-                />
+                <Image src={item} alt="Feature" height={300} width={300} />
               </div>
-            )
-          } 
-          )}
-          
+            );
+          })}
+        </div>
       </div>
-    </div>
     </>
   );
 }

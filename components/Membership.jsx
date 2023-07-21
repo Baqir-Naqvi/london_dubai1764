@@ -6,7 +6,7 @@ import { useGlobalContext } from "@/utils/ContextProvider";
 function Membership() {
   const { city } = useGlobalContext();
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <div className="flex flex-col justify-center items-center " id="membership">
       <h2 className=" uppercase text-[35px] font-normal tracking-[8px] text-center text-white my-20 ">
         lifetime <span className="text-[#c5a47e]">membership</span>
       </h2>
@@ -38,7 +38,8 @@ function Membership() {
             </h2>
           ) : (
             <h2 className=" uppercase text-[30px] font-normal tracking-[1px] text-center text-white ">
-              Key Businesses Represented <br/>in london already
+              Key Businesses Represented <br />
+              in london already
             </h2>
           )}
         </div>

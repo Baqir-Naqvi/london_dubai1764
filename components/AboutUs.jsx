@@ -7,7 +7,7 @@ import { useGlobalContext } from "@/utils/ContextProvider";
 export default function () {
   const { city } = useGlobalContext();
   return (
-    <div className="flex flex-col items-center justify-center h-max bg-black mt-[50px]">
+    <div className="flex flex-col items-center justify-center h-max bg-black mt-[50px]" id="about">
       <div>
         <h1 className="text-[#c5a47e] md:text-[105px] md:flex hidden font-bold tracking-widest text-center absolute md:left-[100px] mt-[120px] opacity-10">
           welcome
@@ -43,7 +43,7 @@ export default function () {
       </div>
 
       {/* Lower Section */}
-      <div className="nasa-bg-image bg-cover bg-center  bg-image">
+      <div className="nasa-bg-image bg-cover bg-center  bg-image" id="ourstory">
         <h2 className=" uppercase text-[35px] font-normal tracking-[10px] text-center text-white mt-20 ">
           Our<span className="text-[#c5a47e] ml-5">Story</span>
         </h2>
