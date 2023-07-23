@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar() {
   return (
     <div
-      className="absolute flex-row justify-center items-center h-16 bg-transparent text-white  font-mono w-full z-30"
+      className="absolute flex-row justify-center items-center h-16 bg-transparent text-white  font-mono w-full z-50"
       role="navigation"
     >
       <ul className="md:flex flex-row justify-center items-center md:h-16 text-white  font-mono w-full h-0 overflow-hidden">
