@@ -18,7 +18,7 @@ export default function Animation({ chooseCityRef }) {
       paused: true,
     });
     tl.to(textRef.current, {
-      y: -300,
+      y: -320,
       duration: 1,
       delay: 4.5,
       onStart: () => {},
@@ -88,7 +88,7 @@ export default function Animation({ chooseCityRef }) {
           className={`z-50 absolute py-3 px-5 rounded-lg top-5 text-white left-5 ${
             makeFullScreen === ""
               ? " hidden"
-              : makeFullScreen === "London"
+              : makeFullScreen === "Dubai"
               ? " bg-[#c7a47c]"
               : " bg-black"
           } `}

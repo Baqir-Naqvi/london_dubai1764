@@ -5,7 +5,7 @@ export default function ChooseCity({ chooseCityRef }) {
   return (
     <div
       ref={chooseCityRef}
-      className="h-[20vh] md:h-[50vh]  relative w-full  flex flex-row  justify-between items-center"
+      className="h-[20vh] md:h-[50vh]  relative w-full  hidden flex-row  justify-between items-center"
     >
       <div className="h-full absolute left-0 flex items-end justify-end md:justify-start w-[15%] md:w-[25%] p-16  z-20 left-triangle   bg-[#C5A47E]">
         <span
