@@ -54,7 +54,7 @@ function Membership() {
           </h1>
         </Parallax>
       </div>
-      <p className='md:text-[18px] text-[14px] text-white opacity-60 my-10 md:pt-[50px] pt-[20px] md:px-[20%] md:text-center px-2'>
+      <p className='md:text-[18px] text-[14px] text-white opacity-60 my-10 md:pt-[50px] pt-[20px] md:px-[20%] md:text-center px-3'>
         Appold, Alteri-Enigma, Greengage, InCryptoHub, JadeVault, Crypto A.M.,
         Blockdaemon, House of Block, CEX.IO, Coinbase, Coinpass.com, Kraken,
         Archax, Deribit, Swissborg, Finserv Experts, British Business Bank,

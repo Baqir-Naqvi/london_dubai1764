@@ -17,63 +17,64 @@ function SideDiv() {
         height={700}
         width={120}
         src={Logo}
-        alt='logo'
-        className='absolute left-[30px] top-[40px] hidden md:flex cursor-pointer z-50'
+        alt="logo"
+        className="absolute left-[30px] top-[40px] hidden md:flex cursor-pointer z-50"
         onClick={() => window.location.reload()}
       />
       <Image
         height={700}
         width={60}
         src={Logo}
-        alt='logo'
-        className='absolute left-[0px] top-[50px] flex md:hidden'
+        alt="logo"
+        className="absolute left-[0px] top-[50px] flex md:hidden"
+        onClick={() => window.location.reload()}
       />
 
       <Image
         height={700}
         width={55}
         src={SideBar}
-        alt='mobileBar'
-        className='flex absolute left-0 top-[150px] md:hidden'
+        alt="mobileBar"
+        className="flex absolute left-0 top-[150px] md:hidden"
       />
-      <div className='hidden md:flex absolute left-0 mt-[160px] md:w-[190px] w-[30px] h-[680px] bg-black '>
+      <div className="hidden md:flex absolute left-0 mt-[160px] md:w-[190px] w-[30px] h-[680px] bg-black ">
         <div
-          className='absolute text-center md:w-max bottom-[10px] md:left-10  -left-2 px-8 flex-col flex h-[300px] 
+          className="absolute text-center md:w-max bottom-[10px] md:left-10  -left-2 px-8 flex-col flex h-[300px] 
         justify-evenly
-        '
+        "
         >
-          <p className='transform -rotate-90 origin-left uppercase md:text-[10px] text-[8px] text-white font-[600] tracking-[10px] w-max'>
+          <p className="transform -rotate-90 origin-left uppercase md:text-[10px] text-[8px] text-white font-[600] tracking-[10px] w-max">
             1764 ,{city === "Dubai" ? "Dubai" : "by blacks london"}
           </p>
 
-          <Image width={2} height={10} src={Vertical} alt='v_' />
+          <Image width={2} height={10} src={Vertical} alt="v_" />
           <Image
             width={20}
             height={10}
             src={InstaIcon}
-            className='-ml-2'
-            alt='i_'
+            className="-ml-2"
+            alt="i_"
           />
           <Image
             width={20}
             height={10}
             src={TwitterIcon}
-            className='-ml-2'
-            alt='t_'
+            className="-ml-2"
+            alt="t_"
           />
           <Image
             width={20}
             height={10}
             src={BehaIcon}
-            className='-ml-2'
-            alt='b_'
+            className="-ml-2"
+            alt="b_"
           />
           <Image
             width={10}
             height={10}
             src={FbIcon}
-            className='-ml-2'
-            alt='f_'
+            className="-ml-2"
+            alt="f_"
           />
         </div>
       </div>
