@@ -249,7 +249,7 @@ function WorldWide() {
           </h1>
 
           {!city === "Dubai" ? (
-            <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2] px-2">
+            <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] md:leading-[1.2] leading-[10px] px-2">
               Isn't this the club that you wanted to exist and to which you
               always dreamed of being a member? Act now, before the club's full.
               Otherwise, there'll still always be space for you, but you'll have
@@ -259,7 +259,7 @@ function WorldWide() {
               as much as an 18x multiple.)
             </p>
           ) : (
-            <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2] px-2">
+            <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:leading-[1.2] leading-5 md:w-[35%]  px-2">
               Isn't this the club that you’ve wanted to exist in Dubai and to
               which you always dreamed of being a member? Act now, before the
               club's full. Otherwise, there'll still always be space for you,

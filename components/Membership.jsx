@@ -15,7 +15,7 @@ function Membership() {
           click here to Immediately Mint a Lifetime Membership NFT
         </p>
       </button>
-      <p className="md:text-[20px] text-[14px] text-white opacity-60 my-10">
+      <p className="md:text-[20px] text-[14px] text-white opacity-60 mt-10">
         It's in your MetaMask wallet in seconds - give it a go
       </p>
 
@@ -37,7 +37,7 @@ function Membership() {
               <br /> Represented
             </h2>
           ) : (
-            <h2 className=" uppercase text-[30px] font-normal tracking-[1px] text-center text-white ">
+            <h2 className=" uppercase text-[30px] font-normal tracking-[1px] text-center text-white leading-none md:mt-0 mt-5">
               Key Businesses Represented <br />
               in london already
             </h2>
@@ -51,7 +51,7 @@ function Membership() {
           represented
         </h1>
       </div>
-      <p className="md:text-[18px] text-[14px] text-white opacity-60 my-10 md:pt-[50px] pt-[20px] md:px-[20%] md:text-center px-2">
+      <p className="md:text-[18px] text-[14px] text-white opacity-60 my-10 md:pt-[50px] md:px-[20%] md:text-center px-2">
         Appold, Alteri-Enigma, Greengage, InCryptoHub, JadeVault, Crypto A.M.,
         Blockdaemon, House of Block, CEX.IO, Coinbase, Coinpass.com, Kraken,
         Archax, Deribit, Swissborg, Finserv Experts, British Business Bank,
