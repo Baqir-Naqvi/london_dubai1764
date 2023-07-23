@@ -9,43 +9,46 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
 .bg-image {
-  background-image: url('/Images/DubHero.png'),url('/Images/outdated.png');
-  background-blend-mode: saturation  ;
+  background-image: url('/Images/DubHero.png'), url('/Images/outdated.png');
+  background-blend-mode: saturation;
 }
 
 .bg-dubai {
   background-image: url('/Images/dubai_home.png');
 }
 
-h1{
-font-family: 'Oswald', sans-serif !important;
+h1 {
+  font-family: 'Oswald', sans-serif !important;
 }
 
 
 
-.nasa-bg-image{
+.nasa-bg-image {
   background-image: url('/Images/EarthNasa.png');
-  
+
 }
 
 .bg-world-map {
   position: relative;
   width: 90%;
   height: 100vh;
-  margin-bottom:300px;
+  margin-bottom: 300px;
 }
 
 .custom-shadow {
   filter: drop-shadow(0 0px 6px rgba(197, 164, 126, 0.8)) drop-shadow(0 2px 4px rgba(197, 164, 126, 0.5));
 }
 
-*{
+/* *{
     -ms-overflow-style: none;
 }
-::-webkit-scrollbar {
-    display: none;
-}
+ */
+
+ ::-webkit-scrollbar {
+   display: none;
+ }
 .bg-world-map::before {
   content: "";
   position: absolute;
@@ -58,6 +61,7 @@ font-family: 'Oswald', sans-serif !important;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -76,37 +80,37 @@ body {
 
 @media (max-width: 768px) {
   .bg-world-map {
-  position: relative;
-  width: 95%;
-  height:70vh;
-  margin-bottom:550px;
-}
+    position: relative;
+    width: 95%;
+    height: 70vh;
+    margin-bottom: 550px;
+  }
 }
 
 /* medium mobile*/
 @media (max-width: 376px) {
   .bg-world-map {
-  position: relative;
-  width: 90%;
-  height: 70vh;
-  margin-bottom:680px;
-}
+    position: relative;
+    width: 90%;
+    height: 70vh;
+    margin-bottom: 680px;
+  }
 }
 
 @media (max-width: 322px) {
   .bg-world-map {
-  position: relative;
-  width: 95%;
-  height: 50vh;
-  margin-bottom:850px;
-}
+    position: relative;
+    width: 95%;
+    height: 50vh;
+    margin-bottom: 850px;
+  }
 }
 
 @media (min-width: 390px) and (max-width: 414px) {
   .bg-world-map {
-  position: relative;
-  width: 95%;
-  height: 50vh;
-  margin-bottom:600px;
-}
+    position: relative;
+    width: 95%;
+    height: 50vh;
+    margin-bottom: 600px;
+  }
 }

@@ -16,6 +16,7 @@ import Clubs from "@/components/Clubs";
 import ContactUs from "@/components/ContactUs";
 import { gsap } from "gsap";
 import { useGlobalContext } from "@/utils/ContextProvider";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 export default function Home() {
   const chooseCityRef = useRef(null);
@@ -25,12 +26,16 @@ export default function Home() {
 
   useEffect(() => {
     if (city) {
+      // landerRef.current.style.position = "absolute";
+      gsap.to(landerRef.current, {
+        x: "150%",
+        duration: 1,
+        display: "none",
+
+        onStart: () => {},
+      });
       gsap.to(contentRef.current, {
         x: 0,
-        duration: 1,
-      });
-      gsap.to(landerRef.current, {
-        x: "100%",
         duration: 1,
       });
     }
@@ -45,22 +50,26 @@ export default function Home() {
         <Animation chooseCityRef={chooseCityRef} />
         <ChooseCity chooseCityRef={chooseCityRef} />
       </div>
-      <div
-        ref={contentRef}
-        className={`absolute top-0 translate-x-[100%] ${!city && "hidden"}`}
-      >
-        <Navbar />
-        <HeroSection />
-        <AboutUs />
-        <Member />
-        <WorldWide />
-        {/* <FAQs /> */}
-        <Membership />
-        <Team />
-        <Association />
-        <Clubs />
-        <ContactUs />
-      </div>
+      <ParallaxProvider>
+        <div
+          ref={contentRef}
+          className={` transition-all duration-700 translate-x-[100%] ${
+            !city && "hidden"
+          }`}
+        >
+          <Navbar />
+          <HeroSection />
+          <AboutUs />
+          <Member />
+          <WorldWide />
+          {/* <FAQs /> */}
+          <Membership />
+          <Team />
+          <Association />
+          <Clubs />
+          <ContactUs />
+        </div>
+      </ParallaxProvider>
     </main>
   );
 }
