@@ -145,6 +145,10 @@ function Member() {
             </div>
           )}
           {city === "London" && (
+            < div
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            >
             <DynamicReactPlayer
               url={videourl}
               width={700}
@@ -152,7 +156,8 @@ function Member() {
               playing={hover}
               loop={true}
               muted={true}
-            />
+              />
+              </div>
           )}
         </div>
         <div className="md:hidden block">

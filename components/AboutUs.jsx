@@ -31,10 +31,13 @@ export default function () {
 
       <div className='flex md:flex-row flex-col items-center pt-[120px] md:w-[1050px]'>
         <div className='flex flex-col  items-center justify-center md:w-max'>
-          <p className='text-[#FEFEFE] md:text-[42px] text-[24px] font-[500] absolute md:mb-[250px] mb-[210px] md:ml-[250px] leading-[0.75] md:w-max'>
+            <Parallax translateY={10} speed={-20} >
+          <p className='text-[#FEFEFE] md:text-[42px] text-[24px] font-[500] absolute md:mb-[250px] mb-[210px] md:-ml-[210px] leading-[0.75] md:w-max'>
+
             A modern twist to the traditional
             <br /> private members' club
           </p>
+            </Parallax>
 
           <p className='text-[#FEFEFE] md:text-[22px] text-[14px] font-[400] opacity-70 md:w-[420px] w-[100%] md:mt-[80px] mt-[10px]'>
             As the proud Owner of Blacks Club, Soho, London (est. 1764) we are

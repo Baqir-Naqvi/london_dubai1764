@@ -93,7 +93,7 @@ function WorldWide() {
         </h1>
       </Parallax>
       <div className='flex flex-col justify-center items-center md:mt-10'>
-        <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white my-20 '>
+        <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white mt-10 my-5 '>
           we are <span className='text-[#c5a47e]'>WorldWide</span>
         </h2>
 
