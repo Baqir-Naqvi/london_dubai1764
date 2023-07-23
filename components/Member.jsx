@@ -148,6 +148,7 @@ function Member() {
             < div
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
+        
             >
             <DynamicReactPlayer
               url={videourl}
@@ -173,6 +174,9 @@ function Member() {
               />
             </div>
           ) : (
+            <div     onTouchStart={() => setHover(true)}
+            onClick={() => setHover(true)}
+            >
           <DynamicReactPlayer
             url={videourl}
             width={310}
@@ -181,6 +185,7 @@ function Member() {
             loop={true}
             muted={true}
           />
+          </div>
           )}
         </div>
       </div>

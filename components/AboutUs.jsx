@@ -32,7 +32,7 @@ export default function () {
       <div className='flex md:flex-row flex-col items-center pt-[120px] md:w-[1050px]'>
         <div className='flex flex-col  items-center justify-center md:w-max'>
             <Parallax translateY={10} speed={-20} >
-          <p className='text-[#FEFEFE] md:text-[42px] text-[24px] font-[500] absolute md:mb-[250px] mb-[210px] md:-ml-[210px] leading-[0.75] md:w-max'>
+          <p className='text-[#FEFEFE] md:text-[42px] text-[24px] font-[500] absolute md:mb-[250px] mb-[210px] -ml-[210px] leading-[0.75] w-max '>
 
             A modern twist to the traditional
             <br /> private members' club
