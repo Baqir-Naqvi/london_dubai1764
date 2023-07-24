@@ -26,7 +26,7 @@ function SideDiv() {
         width={60}
         src={Logo}
         alt="logo"
-        className="absolute left-[0px] top-[50px] flex md:hidden"
+        className="absolute left-[0px] top-[50px] flex md:hidden z-50"
         onClick={() => window.location.reload()}
       />
 

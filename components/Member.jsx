@@ -164,7 +164,7 @@ function Member() {
         <div className="md:hidden block">
           {city === "Dubai" ? (
              <div
-              className="flex flex-col justify-center items-center w-[90%] h-[500px] mb-10"
+              className="flex flex-col justify-center items-center w-[375px] mx-auto h-[500px] mb-10 text-center"
             >
               <DynamicCarousel
                 slides={slides}
@@ -197,8 +197,8 @@ function Member() {
       )}
       {city === "Dubai" ? (
         <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2">
-          Your Diamond Lifetime Membership NFT provides lifetime membership of
-          1764 Dubai. It’s your 21st Century membership card.
+          Your Diamond Lifetime Membership NFT provides<br/> lifetime membership of
+          1764 Dubai. It’s your 21st<br/> Century membership card.
         </p>
       ) : (
         <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px]">
