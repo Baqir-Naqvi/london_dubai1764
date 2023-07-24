@@ -252,7 +252,7 @@ function WorldWide() {
           })}
         </div>
 
-        <div className='flex md:flex-row flex-col justify-evenly items-center md:mt-[10rem] mt-10 bg-[#c5a47e] w-full md:px-20 md:py-20'>
+        <div className='flex md:flex-row flex-col justify-evenly items-center md:mt-[10rem] mt-10 bg-[#c5a47e] w-full md:px-20 md:py-20 py-6'>
           <h1 className='text-black md:text-[80px] text-[30px] font-[700] md:w-[35%] leading-[1] text-end'>
             A question <br />
             for you<span className='text-white'>?</span>

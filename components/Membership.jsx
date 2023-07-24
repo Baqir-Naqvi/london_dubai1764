@@ -8,7 +8,7 @@ function Membership() {
   const { city } = useGlobalContext();
   return (
     <div className='flex flex-col justify-center items-center ' id='membership'>
-      <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:my-20 my-10 '>
+      <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:my-20 mb-10 mt-5 '>
         lifetime <span className='text-[#c5a47e]'>membership</span>
       </h2>
       <button className='bg-[#c5a47e]  uppercase z-10 w-max md:py-5 md:px-5 py-5 rounded-[15px]'>

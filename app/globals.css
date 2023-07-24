@@ -123,3 +123,13 @@ body {
     margin-bottom: 600px;
   }
 }
+
+@media (min-width: 414px) and (max-width: 450px) {
+  .bg-world-map {
+    position: relative;
+    width: 95%;
+    height: 50vh;
+    margin-bottom: 550px;
+  }
+}
+

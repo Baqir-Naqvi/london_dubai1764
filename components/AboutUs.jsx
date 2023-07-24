@@ -6,10 +6,15 @@ import { useGlobalContext } from "@/utils/ContextProvider";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { Parallax } from "react-scroll-parallax";
+import Aos from "aos";
+import "aos/dist/aos.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function () {
   const { city } = useGlobalContext();
+    useEffect(() => {
+      Aos.init({ duration: 2000 });
+    }, []);
 
   return (
     <div
@@ -95,32 +100,31 @@ export default function () {
             Crypto, NFTs, Web3, AI & Tech.
           </p>
 
-          <div className="flex md:flex-row flex-col justify-center md:mt-20 mt-10 md:px-0 px-3">
-            <Parallax translateX={["-100px", "0px"]}>
-              <p
-                className="md:text-[22px] text-[14px] text-white opacity-60
+          <div
+            data-aos="fade-up"
+            className=" flex md:flex-row flex-col justify-center md:mt-20 mt-10 md:px-0 px-3"
+          >
+            <p
+              className="md:text-[22px] text-[14px] text-white opacity-60
               "
-              >
-                In May 2022 we purchased Blacks Club (www.blacksclub.com), which
-                could not possibly be a more perfect flagship. This vibrant and
-                historic private members’ club, located at 67 Dean Street in
-                Soho, London, was formed to be the antithesis of the traditional
-                London gentlemen’s clubs and is steeped in anti-establishment
-                history.
-              </p>
-            </Parallax>
-            <Parallax translateX={["200px", "50px"]}>
-              <p className="md:text-[22px] text-[14px] text-white opacity-60 md:pl-[40px] md:mt-0 mt-10">
-                The home of Charles Fortnum (of Fortnum & Mason), <br />
-                it’s where the first Supper Clubs were established (by Samuel
-                Johnson, Joshua Reynolds & David Garrick) and was a hang-out of
-                the suffragette movement in the 19th Century. Since 1764, it has
-                always been a venue where innovators, contrarians, pioneers and
-                disruptors assemble and has now firmly moved into the 21st
-                Century with a new focus, affiliating those <br />
-                involved in emerging technologies.
-              </p>
-            </Parallax>
+            >
+              In May 2022 we purchased Blacks Club (www.blacksclub.com), which
+              could not possibly be a more perfect flagship. This vibrant and
+              historic private members’ club, located at 67 Dean Street in Soho,
+              London, was formed to be the antithesis of the traditional London
+              gentlemen’s clubs and is steeped in anti-establishment history.
+            </p>
+
+            <p className="md:text-[22px] text-[14px] text-white opacity-60 md:pl-[40px] md:mt-0 mt-10">
+              The home of Charles Fortnum (of Fortnum & Mason), <br />
+              it’s where the first Supper Clubs were established (by Samuel
+              Johnson, Joshua Reynolds & David Garrick) and was a hang-out of
+              the suffragette movement in the 19th Century. Since 1764, it has
+              always been a venue where innovators, contrarians, pioneers and
+              disruptors assemble and has now firmly moved into the 21st Century
+              with a new focus, affiliating those <br />
+              involved in emerging technologies.
+            </p>
           </div>
 
           <div className="flex flex-col items-center justify-center md:mt-[50px]">

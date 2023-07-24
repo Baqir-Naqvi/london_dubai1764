@@ -4,8 +4,11 @@ import SideDiv from "./SideDiv";
 import { useGlobalContext } from "@/utils/ContextProvider";
 import { Parallax } from "react-scroll-parallax";
 
+
 export default function HeroSection() {
   const { city } = useGlobalContext();
+
+
 
   return (
     <div className='w-[100%] bg-[#131313] flex flex-col  items-center bg-opacity-0'>
