@@ -5,6 +5,7 @@ import Active from "@/public/Images/Active.png";
 import { useGlobalContext } from "@/utils/ContextProvider";
 import { useMediaQuery } from "react-responsive";
 import { Parallax } from "react-scroll-parallax";
+import Aos from "aos";
 
 function WorldWide() {
   const [showDubai, setShowDubai] = useState(false);
@@ -20,6 +21,10 @@ function WorldWide() {
     } else {
       setCitySize(20);
     }
+  }, []);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
   }, []);
 
   const { city } = useGlobalContext();
@@ -86,52 +91,52 @@ function WorldWide() {
     );
   };
   return (
-    <div className='mb-[50px] flex flex-col h-max'>
+    <div className="mb-[50px] flex flex-col h-max">
       <Parallax translateY={-20} speed={-20}>
-        <h1 className='text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-widest text-center absolute left-[10px] mt-[220px] opacity-10 '>
+        <h1 className="text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-widest text-center absolute left-[10px] mt-[220px] opacity-10 ">
           venues
         </h1>
       </Parallax>
-      <div className='flex flex-col justify-center items-center md:mt-10'>
-        <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white mt-10 md:mb-0 mb-20'>
-          we are <span className='text-[#c5a47e]'>WorldWide</span>
+      <div className="flex flex-col justify-center items-center md:mt-10">
+        <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white mt-10 md:mb-0 mb-20">
+          we are <span className="text-[#c5a47e]">WorldWide</span>
         </h2>
 
-        <div className='bg-world-map bg-center w-[90%] md:mt-0 -mt-40'>
+        <div className="bg-world-map bg-center w-[90%] md:mt-0 -mt-40">
           <Image
             src={Ellipse}
-            alt='Ellipse'
+            alt="Ellipse"
             height={citySize}
             width={citySize}
-            className='custom-shadow relative top-[40%] left-[27%] hover:animate-pulse cursor-pointer'
+            className="custom-shadow relative top-[40%] left-[27%] hover:animate-pulse cursor-pointer"
           />
           <Image
             src={Ellipse}
-            alt='Ellipse'
+            alt="Ellipse"
             height={citySize}
             width={citySize}
-            className='custom-shadow relative top-[45%] left-[24%] hover:animate-pulse cursor-pointer'
+            className="custom-shadow relative top-[45%] left-[24%] hover:animate-pulse cursor-pointer"
           />
           <Image
             src={Ellipse}
-            alt='Ellipse'
+            alt="Ellipse"
             height={citySize}
             width={citySize}
-            className='custom-shadow relative top-[35%] left-[43%] hover:animate-pulse cursor-pointer'
+            className="custom-shadow relative top-[35%] left-[43%] hover:animate-pulse cursor-pointer"
           />
           <Image
             src={Ellipse}
-            alt='Ellipse'
+            alt="Ellipse"
             height={citySize}
             width={citySize}
-            className='custom-shadow relative top-[41%] left-[59%] hover:animate-pulse cursor-pointer'
+            className="custom-shadow relative top-[41%] left-[59%] hover:animate-pulse cursor-pointer"
           />
           <Image
             src={Ellipse}
-            alt='Ellipse'
+            alt="Ellipse"
             height={citySize}
             width={citySize}
-            className='custom-shadow absolute right-[23%] bottom-[32%] hover:animate-pulse cursor-pointer'
+            className="custom-shadow absolute right-[23%] bottom-[32%] hover:animate-pulse cursor-pointer"
           />
 
           <div
@@ -139,14 +144,14 @@ function WorldWide() {
               showLondon ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div className='mb-2'>
-              <span className='capitalize font-medium text-sm tracking-wider '>
+            <div className="mb-2">
+              <span className="capitalize font-medium text-sm tracking-wider ">
                 LONDON
               </span>
               <hr />
             </div>
 
-            <span className='tracking-wider text-[.6rem] text-white'>
+            <span className="tracking-wider text-[.6rem] text-white">
               67 Dean St London WID 4QH
             </span>
           </div>
@@ -158,10 +163,10 @@ function WorldWide() {
               () => setShowLondon(true);
             }}
             src={Active}
-            alt='Active'
+            alt="Active"
             height={citySize}
             width={citySize}
-            className='custom-shadow absolute left-[45%] top-[32%] hover:animate-pulse cursor-pointer'
+            className="custom-shadow absolute left-[45%] top-[32%] hover:animate-pulse cursor-pointer"
           />
 
           <div
@@ -169,14 +174,14 @@ function WorldWide() {
               showDubai ? "opacity-100" : "opacity-0"
             }`}
           >
-            <span className='capitalize text-sm font-medium tracking-wider'>
+            <span className="capitalize text-sm font-medium tracking-wider">
               DUBAI
             </span>
           </div>
 
           <Image
             src={Active}
-            alt='Active'
+            alt="Active"
             height={citySize}
             width={citySize}
             onClick={() => {
@@ -184,41 +189,38 @@ function WorldWide() {
             }}
             onPointerEnter={() => setShowDubai(true)}
             onPointerLeave={() => setShowDubai(false)}
-            className='custom-shadow absolute right-[37%] top-[53%] hover:animate-pulse cursor-pointer show-on-hover'
+            className="custom-shadow absolute right-[37%] top-[53%] hover:animate-pulse cursor-pointer show-on-hover"
           />
 
-          <div className='md:w-[1030px] flex flex-col justify-left items-left md:ml-[50px] md:mt-[24rem] mt-[19rem] '>
-             {/* <Parallax translateY={5} speed={-20}> */}
-            <h1 className='text-white md:text-[42px] text-[24px] font-[500]  leading-[1] px-1'>
+          <div className="md:w-[1030px] flex flex-col justify-left items-left md:ml-[50px] md:mt-[24rem] mt-[19rem] ">
+            <h1 className="text-white md:text-[42px] text-[24px] font-[500]  leading-[1] px-1">
               Our vision is to quickly scale the <br />
               concept by launching affiliate venues
             </h1>
-            {/* </Parallax> */}
 
-
- <Parallax translateY={25} speed={-20}>
-            <p className='md:text-[22px] text-[14px] text-white opacity-60 mt-10 px-1'>
-              Venues which share the same ethos and are dedicated to the same
-              sector in major cities across the globe, starting with Dubai and
-              then adding Stockholm, Singapore, Miami, New York, Riyadh, Abu
-              Dhabi, Qatar & Lisbon, with the ultimate aim to have physical
-              clubs in every major city across the globe. Our proprietary
-              token-gated platform bridges the geographical divide between each
-              clubhouse and its associated membership, whilst providing an
-              online/virtual membership option for those not located near to a
-              physical venue. <br /> <br />
-              In addition to providing permanent physical spaces for members to
-              use for work & play, collaboration & networking, the club seeks to
-              develop a host of innovative products and services to further
-              support individuals, companies, communities, regulators and
-              governments to drive disruptive technology forward collectively
-              towards mass adoption.
-            </p>
-            </Parallax>
+            <div data-aos="fade-up">
+              <p className="md:text-[22px] text-[14px] text-white opacity-60 mt-10 px-1">
+                Venues which share the same ethos and are dedicated to the same
+                sector in major cities across the globe, starting with Dubai and
+                then adding Stockholm, Singapore, Miami, New York, Riyadh, Abu
+                Dhabi, Qatar & Lisbon, with the ultimate aim to have physical
+                clubs in every major city across the globe. Our proprietary
+                token-gated platform bridges the geographical divide between
+                each clubhouse and its associated membership, whilst providing
+                an online/virtual membership option for those not located near
+                to a physical venue. <br /> <br />
+                In addition to providing permanent physical spaces for members
+                to use for work & play, collaboration & networking, the club
+                seeks to develop a host of innovative products and services to
+                further support individuals, companies, communities, regulators
+                and governments to drive disruptive technology forward
+                collectively towards mass adoption.
+              </p>
+            </div>
           </div>
 
-          <div className='flex flex-row w-full justify-content justify-end h-max '>
-            <h1 className='text-white md:text-[42px] text-[24px] font-[500]  leading-[1] my-10 text-right md:mr-10'>
+          <div className="flex flex-row w-full justify-content justify-end h-max ">
+            <h1 className="text-white md:text-[42px] text-[24px] font-[500]  leading-[1] my-10 text-right md:mr-10">
               Importantly, we promote inclusivity <br />
               instead of exclusivity
             </h1>
@@ -227,19 +229,19 @@ function WorldWide() {
       </div>
       <Parallax translateY={-20} speed={-20}>
         <h1
-          className='text-[#c5a47e] md:flex hidden md:text-9xl font-bold tracking-wider absolute mt-[1em] right-[2em] opacity-10 h-max -z-10'
-          id='faq'
+          className="text-[#c5a47e] md:flex hidden md:text-9xl font-bold tracking-wider absolute mt-[1em] right-[2em] opacity-10 h-max -z-10"
+          id="faq"
         >
           faqs
         </h1>
       </Parallax>
 
-      <div className='flex flex-col justify-center items-center md:pt-10 z-100'>
-        <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white'>
-          What you need to <span className='text-[#c5a47e]'>know</span>
+      <div className="flex flex-col justify-center items-center md:pt-10 z-100">
+        <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white">
+          What you need to <span className="text-[#c5a47e]">know</span>
         </h2>
 
-        <div className='flex flex-col '>
+        <div className="flex flex-col ">
           {questions.map((que, index) => {
             return (
               <FAQtab
@@ -252,10 +254,10 @@ function WorldWide() {
           })}
         </div>
 
-        <div className='flex md:flex-row flex-col justify-evenly items-center md:mt-[10rem] mt-10 bg-[#c5a47e] w-full md:px-20 md:py-20 py-6'>
-          <h1 className='text-black md:text-[80px] text-[30px] font-[700] md:w-[35%] leading-[1] text-end'>
+        <div className="flex md:flex-row flex-col justify-evenly items-center md:mt-[10rem] mt-10 bg-[#c5a47e] w-full md:px-20 md:py-20 py-6">
+          <h1 className="text-black md:text-[80px] text-[30px] font-[700] md:w-[35%] leading-[1] text-end">
             A question <br />
-            for you<span className='text-white'>?</span>
+            for you<span className="text-white">?</span>
           </h1>
 
           {!city === "Dubai" ? (

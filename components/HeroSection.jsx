@@ -3,10 +3,16 @@ import Image from "next/image";
 import SideDiv from "./SideDiv";
 import { useGlobalContext } from "@/utils/ContextProvider";
 import { Parallax } from "react-scroll-parallax";
+import { useEffect } from "react";
 
 
 export default function HeroSection() {
   const { city } = useGlobalContext();
+  useEffect(()=>{
+    scrollTo(100,0);
+
+
+  },[city])
 
 
 
