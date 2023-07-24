@@ -164,7 +164,7 @@ function Member() {
         <div className="md:hidden block">
           {city === "Dubai" ? (
              <div
-              className="flex flex-col justify-center items-center w-[375px] mx-auto h-[500px] mb-10 text-center"
+              className="flex flex-col justify-center items-center w-[390px] h-[500px] mb-10 text-center"
             >
               <DynamicCarousel
                 slides={slides}
