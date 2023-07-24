@@ -96,7 +96,7 @@ export default function () {
           </p>
 
           <div className="flex md:flex-row flex-col justify-center md:mt-20 mt-10 md:px-0 px-3">
-            <Parallax translateX={["-200px", "300px"]}>
+            <Parallax translateX={["-100px", "0px"]}>
               <p
                 className="md:text-[22px] text-[14px] text-white opacity-60
               "
@@ -109,7 +109,7 @@ export default function () {
                 history.
               </p>
             </Parallax>
-            <Parallax translateX={["200px", "-300px"]}>
+            <Parallax translateX={["200px", "50px"]}>
               <p className="md:text-[22px] text-[14px] text-white opacity-60 md:pl-[40px] md:mt-0 mt-10">
                 The home of Charles Fortnum (of Fortnum & Mason), <br />
                 it’s where the first Supper Clubs were established (by Samuel
