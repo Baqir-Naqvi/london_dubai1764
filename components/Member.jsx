@@ -145,6 +145,11 @@ function Member() {
             </div>
           )}
           {city === "London" && (
+            < div
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+        
+            >
             <DynamicReactPlayer
               url={videourl}
               width={700}
@@ -152,13 +157,14 @@ function Member() {
               playing={hover}
               loop={true}
               muted={true}
-            />
+              />
+              </div>
           )}
         </div>
         <div className="md:hidden block">
           {city === "Dubai" ? (
              <div
-              className="flex flex-col justify-center items-center w-[380px] h-[500px] mb-10"
+              className="flex flex-col justify-center items-center w-[90%] h-[500px] mb-10"
             >
               <DynamicCarousel
                 slides={slides}
@@ -168,6 +174,9 @@ function Member() {
               />
             </div>
           ) : (
+            <div     onTouchStart={() => setHover(true)}
+            onClick={() => setHover(true)}
+            >
           <DynamicReactPlayer
             url={videourl}
             width={310}
@@ -176,6 +185,7 @@ function Member() {
             loop={true}
             muted={true}
           />
+          </div>
           )}
         </div>
       </div>

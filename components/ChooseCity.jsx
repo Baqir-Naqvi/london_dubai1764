@@ -12,7 +12,15 @@ export default function ChooseCity({ chooseCityRef }) {
           onClick={() => setCity("Dubai")}
           className="text-white my-auto md:my-0 text-[.9rem] md:text-[1.5rem] leading-5 md:leading-8 text-center uppercase tracking-wider hover:scale-110 cursor-pointer transition-all duration-500"
         >
-          Enter <br />
+          <span className="hidden md:block">
+            Enter
+            <br />
+          </span>
+          <span className="block md:hidden">
+            <br />
+            <br />
+          </span>
+
           <span className="text-[1rem] md:text-[2.5rem] text-center ">
             Dubai
           </span>
@@ -41,7 +49,15 @@ export default function ChooseCity({ chooseCityRef }) {
           onClick={() => setCity("London")}
           className="my-auto md:my-0 text-white text-[.9rem]  ms-12 md:text-[1.5rem] leading-5 md:leading-8 text-center uppercase tracking-wider hover:scale-110 cursor-pointer transition-all duration-500"
         >
-          Enter <br />
+          <span className="hidden md:block">
+            Enter
+            <br />
+          </span>
+          <span className="block md:hidden">
+            <br />
+            <br />
+          </span>
+
           <span className="text-[1rem] md:text-[2.5rem] text-center ">
             London
           </span>
