@@ -77,7 +77,7 @@ function WorldWide() {
             {question}
           </h3>
           <h3 className=' md:text-[20px] text-[14px] font-normal'>
-            {active == index ? "+" : "-"}
+            {active == index ? "-" : "+"}
           </h3>
         </div>
         <div
@@ -93,12 +93,12 @@ function WorldWide() {
   return (
     <div className="mb-[50px] flex flex-col h-max">
       <Parallax translateY={-20} speed={-20}>
-        <h1 className="text-[#c5a47e] md:flex hidden text-9xl font-bold tracking-widest text-center absolute left-[10px] mt-[220px] opacity-10 ">
+        <h2 className="text-[#c5a47e] md:flex hidden  md:text-[140px]  font-bold text-center absolute left-[10px] mt-[220px] opacity-10 ">
           venues
-        </h1>
+        </h2>
       </Parallax>
       <div className="flex flex-col justify-center items-center md:mt-10">
-        <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white mt-10 md:mb-0 mb-20">
+        <h2 className="font-oswald uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white mt-10 md:mb-0 mb-20">
           we are <span className="text-[#c5a47e]">WorldWide</span>
         </h2>
 
@@ -193,13 +193,13 @@ function WorldWide() {
           />
 
           <div className="md:w-[1030px] flex flex-col justify-left items-left md:ml-[50px] md:mt-[24rem] mt-[19rem] ">
-            <h1 className="text-white md:text-[42px] text-[24px] font-[500]  leading-[1] px-1">
+            <h2 className="text-white md:text-[40px] text-[24px] font-[500]  leading-[1] px-1">
               Our vision is to quickly scale the <br />
               concept by launching affiliate venues
-            </h1>
+            </h2>
 
             <div data-aos="fade-up">
-              <p className="md:text-[22px] text-[14px] text-white opacity-60 mt-10 px-1">
+              <p className="md:text-[22px] text-[14px] text-white opacity-90 mt-10 px-1">
                 Venues which share the same ethos and are dedicated to the same
                 sector in major cities across the globe, starting with Dubai and
                 then adding Stockholm, Singapore, Miami, New York, Riyadh, Abu
@@ -220,24 +220,24 @@ function WorldWide() {
           </div>
 
           <div className="flex flex-row w-full justify-content justify-end h-max ">
-            <h1 className="text-white md:text-[42px] text-[24px] font-[500]  leading-[1] my-10 text-right md:mr-10">
+            <h2 className="text-white md:text-[40px] text-[24px] font-[500]  leading-[1] my-10 text-right md:mr-10">
               Importantly, we promote inclusivity <br />
               instead of exclusivity
-            </h1>
+            </h2>
           </div>
         </div>
       </div>
       <Parallax translateY={-20} speed={-20}>
-        <h1
-          className="text-[#c5a47e] md:flex hidden md:text-9xl font-bold tracking-wider absolute mt-[1em] right-[2em] opacity-10 h-max -z-10"
+        <h2
+          className="text-[#c5a47e] md:flex hidden  md:text-[140px]  font-bold absolute mt-[1em] right-[1em] opacity-10 h-max -z-10"
           id="faq"
         >
           faqs
-        </h1>
+        </h2>
       </Parallax>
 
       <div className="flex flex-col justify-center items-center md:pt-10 z-100">
-        <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white">
+        <h2 className="font-oswald uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white">
           What you need to <span className="text-[#c5a47e]">know</span>
         </h2>
 
@@ -260,7 +260,7 @@ function WorldWide() {
             for you<span className="text-white">?</span>
           </h1>
 
-          {!city === "Dubai" ? (
+          {city !== "Dubai" ? (
             <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] md:leading-[1.2] leading-[10px] px-2">
               Isn't this the club that you wanted to exist and to which you
               always dreamed of being a member? Act now, before the club's full.

@@ -32,7 +32,7 @@ function Membership() {
         </div>
 
         <div className='flex flex-col justify-end items-center ml-5'>
-          {!city === "Dubai" ? (
+          {city !== "Dubai" ? (
             <h2 className=' uppercase text-[30px] font-normal tracking-[4px] text-center text-white '>
               Key Businesses
               <br /> Represented
@@ -45,13 +45,13 @@ function Membership() {
           )}
         </div>
         <Parallax translateY={-20} speed={-20}>
-          <h1
-            className='text-[#c5a47e] md:flex hidden text-[105px] font-bold  text-center absolute -right-24 mt-[0px] opacity-10
-          tracking-[0px]
+          <h2
+            className='text-[#c5a47e] md:flex hidden md:text-[105px] font-bold  text-center absolute -right-[350px] mt-[0px] opacity-10
+        
           '
           >
             represented
-          </h1>
+          </h2>
         </Parallax>
       </div>
       <p className='md:text-[18px] text-[14px] text-white opacity-60 my-10 md:pt-[50px] pt-[20px] md:px-[20%] md:text-center px-3'>

@@ -6,7 +6,7 @@ function Navbar() {
       className="absolute flex-row justify-center items-center h-16 bg-transparent navbar_heading text-white   w-full z-50"
       role="navigation"
     >
-      <ul className=" md:flex flex-row justify-center items-center md:h-16 text-white   w-full h-0 overflow-hidden">
+      <ul className=" md:flex flex-row justify-center items-center md:h-16 text-white font-[100] tracking-[3px] text-[12px] w-full h-0 overflow-hidden">
         <a
           className="hover:text-gray-300 navbar_heading  hover:cursor-pointer p-4"
           href="#about"

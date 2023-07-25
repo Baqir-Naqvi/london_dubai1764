@@ -173,9 +173,9 @@ function Team() {
   return (
     <>
       <Parallax translateY={-20} speed={-20}>
-        <h1 className='text-[#c5a47e] md:flex hidden md:text-9xl font-bold  text-center tracking-wider absolute right-[10px] mt-[150px] opacity-10 '>
+        <h2 className='text-[#c5a47e] md:flex hidden md:text-9xl font-bold  text-center absolute right-[10px] mt-[150px] opacity-10 '>
           founders
-        </h1>
+        </h2>
       </Parallax>
       <div className='flex flex-col items-center justify-center h-max bg-black mt-[0px]'>
         <h2

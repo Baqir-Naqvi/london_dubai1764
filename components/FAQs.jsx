@@ -56,7 +56,7 @@ function FAQs() {
             {question}
           </h3>
           <h3 className=" md:text-[20px] text-[14px] font-normal">
-            {active == index ? "+" : "-"}
+            {active == index ? "-" : "+"}
           </h3>
         </div>
         <div
@@ -92,7 +92,7 @@ function FAQs() {
           for you<span className="text-white">?</span>
         </h1>
 
-        {!city === "Dubai" ? (
+        {city !== "Dubai" ? (
           <p className="md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2] px-2 py-0 ">
             Isn't this the club that you wanted to exist and to which you always
             dreamed of being a member? Act now, before the club's full.

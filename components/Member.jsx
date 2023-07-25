@@ -124,7 +124,7 @@ function Member() {
 
   return (
     <div className="flex flex-col justify-center items-center   ">
-      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white my-20 ">
+      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal font-oswald tracking-[8px] text-center text-white my-20 ">
         become a <span className="text-[#c5a47e]">Member</span>
       </h2>
       <div
@@ -195,7 +195,7 @@ function Member() {
           limited to <span className="text-[#c5a47e]">1000</span>
         </h3>
       )}
-      {city === "Dubai" ? (
+      {city !== "Dubai" ? (
         <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2">
           Your Diamond Lifetime Membership NFT provides<br/> lifetime membership of
           1764 Dubai. It’s your 21st<br/> Century membership card.

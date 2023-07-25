@@ -6,7 +6,7 @@ import TwitterIcon from "@/public/Svgs/twitter.svg";
 import Vertical from "@/public/Images/VerticalLine.png";
 import SideBar from "@/public/Images/sidepng.png";
 import Image from "next/image";
-import Logo from "@/public/Svgs/logo.svg";
+import Logo from "@/public/Images/Logo_White.png"
 import { useGlobalContext } from "@/utils/ContextProvider";
 function SideDiv() {
   const { city } = useGlobalContext();
@@ -15,7 +15,7 @@ function SideDiv() {
     <>
       <Image
         height={700}
-        width={120}
+        width={160}
         src={Logo}
         alt="logo"
         className="absolute left-[30px] top-[40px] hidden md:flex cursor-pointer z-50"
@@ -37,9 +37,9 @@ function SideDiv() {
         alt="mobileBar"
         className="flex absolute left-0 top-[150px] md:hidden"
       />
-      <div className="hidden md:flex absolute left-0 mt-[160px] md:w-[190px] w-[30px] h-[680px] bg-black ">
+      <div className="hidden md:flex absolute left-0 mt-[160px] md:w-[190px] w-[30px] h-[83vh] bg-black ">
         <div
-          className="absolute text-center md:w-max bottom-[10px] md:left-10  -left-2 px-8 flex-col flex h-[300px] 
+          className="absolute text-center md:w-max bottom-[10px] md:left-10  -left-2 px-8 flex-col flex h-[40%]  
         justify-evenly
         "
         >
