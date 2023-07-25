@@ -154,7 +154,7 @@ function WorldWide() {
     );
   };
   return (
-    <div className='mb-[50px] relative flex flex-col '>
+    <div className='pb-[50px] relative flex flex-col bg-black'>
       <Parallax translateY={-5} speed={-10}>
         <h2 className='text-[#c5a47e] md:flex hidden  md:text-[140px]  font-bold text-center absolute left-[10px]  opacity-10 '>
           venues

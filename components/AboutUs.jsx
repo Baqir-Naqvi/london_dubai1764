@@ -18,7 +18,7 @@ export default function () {
 
   return (
     <div
-      className='welcome-text-about flex flex-col items-center justify-center h-max bg-black md:mt-[80px] mt-10'
+      className='welcome-text-about flex flex-col items-center justify-center h-max bg-black md:pt-[80px] pt-10'
       id='about'
     >
       <div>
@@ -138,12 +138,12 @@ export default function () {
                 never represents a sunk cost.
               </h2>
             ) : (
-              <h1 className='text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10'>
+              <h2 className='text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10'>
                 Inclusion is via the ownership of one of the club's Membership
                 NFTs, which bestow the possessor with lifetime membership of
                 1764 Dubai. By contrast to all other private members’ clubs,
                 membership is tradable and never represents a sunk cost.
-              </h1>
+              </h2>
             )}
 
             <button className='bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-full h-[57px] rounded-[30px] md:mt-[30px] '>

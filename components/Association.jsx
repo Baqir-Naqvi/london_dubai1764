@@ -21,7 +21,7 @@ const Assoications = [
 function Association() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-20 ">
+      <div className="flex bg-black flex-col justify-center items-center pt-20 ">
         <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-[100px] md:flex flex-grow">
           in <span className="text-[#c5a47e]">Association</span> with
         </h2>

@@ -7,7 +7,7 @@ import { Parallax } from "react-scroll-parallax";
 function Membership() {
   const { city } = useGlobalContext();
   return (
-    <div className='flex flex-col justify-center items-center ' id='membership'>
+    <div className='flex flex-col justify-center items-center bg-black ' id='membership'>
       <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:my-20 mb-10 mt-5 '>
         lifetime <span className='text-[#c5a47e]'>membership</span>
       </h2>

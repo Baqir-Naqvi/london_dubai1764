@@ -123,7 +123,7 @@ function Member() {
 
 
   return (
-    <div className="flex flex-col justify-center items-center   ">
+    <div className="flex bg-black flex-col justify-center items-center   ">
       <h2 className=" uppercase md:text-[35px] text-[24px] font-normal font-oswald tracking-[8px] text-center text-white my-20 ">
         become a <span className="text-[#c5a47e]">Member</span>
       </h2>
