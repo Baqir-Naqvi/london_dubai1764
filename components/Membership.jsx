@@ -44,7 +44,7 @@ function Membership() {
             </h2>
           )}
         </div>
-        <Parallax translateY={-20} speed={-20}>
+        <Parallax translateY={-5} speed={-10}>
           <h2
             className='text-[#c5a47e] md:flex hidden md:text-[105px] font-bold  text-center absolute -right-[350px] mt-[0px] opacity-10
         

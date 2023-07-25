@@ -172,8 +172,8 @@ function Team() {
   const { city } = useGlobalContext();
   return (
     <>
-      <Parallax translateY={-20} speed={-20}>
-        <h2 className='text-[#c5a47e] md:flex hidden md:text-9xl font-bold  text-center absolute right-[10px] mt-[150px] opacity-10 '>
+      <Parallax translateY={-5} speed={-10}>
+        <h2 className='text-[#c5a47e]  md:flex hidden md:text-9xl font-bold  text-center absolute right-[10px] mt-[150px] opacity-10 '>
           founders
         </h2>
       </Parallax>

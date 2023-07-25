@@ -20,7 +20,7 @@ export default function Animation({ chooseCityRef }) {
     tl.to(textRef.current, {
       y: -320,
       duration: 1,
-      delay: 4.5,
+      delay: 4,
       onStart: () => {},
       onComplete: () => {
         textRef.current.style.opacity = 0;
@@ -37,12 +37,12 @@ export default function Animation({ chooseCityRef }) {
         textRef.current.innerHTML = 1764;
         gsap.from(textRef.current, {
           textContent: 2023,
-          duration: 2,
+          duration: 1.5,
           ease: "power1.in",
           delay: 0.5,
           snap: { textContent: 1 },
           stagger: {
-            each: -9,
+            each: -12,
             onUpdate: function () {
               this.targets()[0].innerHTML = Math.ceil(
                 this.targets()[0].textContent
@@ -118,13 +118,16 @@ export default function Animation({ chooseCityRef }) {
         >
           <div className='h-full w-full flex items-center justify-center '>
             <div
-              className={`h-14 w-full flex items-center justify-start md:justify-center px-10  bg-[#c5a47ebc] ${
+              className={`h-14 w-full flex items-center justify-start md:justify-center px-10 cursor-pointer  bg-[#c5a47ebc] ${
                 makeFullScreen === "Dubai" && " justify-center"
               }`}
             >
-              <span className='text-white  text-lg sm:text-[1.5rem] lg:text-[2rem] tracking-widest'>
+              <div
+                onClick={() => handleClick("Dubai")}
+                className='text-white !cursor-pointer  text-lg sm:text-[1.5rem] lg:text-[2rem] tracking-widest'
+              >
                 DUBAI
-              </span>
+              </div>
             </div>
           </div>
         </div>
@@ -138,13 +141,16 @@ export default function Animation({ chooseCityRef }) {
         >
           <div className='h-full w-full flex items-center justify-center  '>
             <div
-              className={`h-14 w-full flex items-center justify-end md:justify-center p-5  bg-[#000000bc] ${
+              className={`h-14 w-full flex items-center justify-end md:justify-center p-5 cursor-pointer  bg-[#000000bc] ${
                 makeFullScreen === "London" && " justify-center"
               }`}
             >
-              <span className='text-white text-lg sm:text-[1.5rem] lg:text-[2rem]  font-extralight tracking-widest '>
+              <div
+                onClick={() => handleClick("London")}
+                className='text-white !cursor-pointer text-lg sm:text-[1.5rem] lg:text-[2rem]  font-extralight tracking-widest '
+              >
                 LONDON
-              </span>
+              </div>
             </div>
           </div>
         </div>
