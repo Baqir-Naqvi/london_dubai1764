@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,200&family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.bg-image {
+  background-image: url('/Images/DubHero.png'), url('/Images/outdated.png');
+  background-blend-mode: saturation;
+}
+
+.bg-dubai {
+  background-image: url('/Images/dubai_home.png');
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.navbar_heading {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+
+
+.nasa-bg-image {
+  background-image: url('/Images/EarthNasa.png');
+
+}
+
+.bg-world-map {
+  position: relative;
+  width: 90%;
+  height: 100vh;
+}
+
+.custom-shadow {
+  filter: drop-shadow(0 0px 6px rgba(197, 164, 126, 0.8)) drop-shadow(0 2px 4px rgba(197, 164, 126, 0.5));
+}
+
+/*{
+    -ms-overflow-style: none;
+}*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.bg-world-map::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/Images/map.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: 'Poppins', sans-serif !important;
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@media (max-width: 768px) {
+  .bg-world-map {
+    position: relative;
+    width: 95%;
+    height: 70vh;
+
+  }
+}
+
+/* medium mobile*/
+@media (max-width: 376px) {
+  .bg-world-map {
+    position: relative;
+    width: 90%;
+    height: 70vh;
+
+  }
+}
+
+@media (max-width: 322px) {
+  .bg-world-map {
+    position: relative;
+    width: 95%;
+    height: 50vh;
+
+  }
+}
+
+@media (min-width: 390px) and (max-width: 414px) {
+  .bg-world-map {
+    position: relative;
+    width: 95%;
+    height: 50vh;
+
+  }
+}
+
+@media (min-width: 414px) and (max-width: 450px) {
+  .bg-world-map {
+    position: relative;
+    width: 95%;
+    height: 50vh;
+    margin-bottom: 550px;
+  }
+}

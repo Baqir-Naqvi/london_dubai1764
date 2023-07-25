@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Orlande';
+    src: url('/Fonts/Orlande.ttf') format('truetype');
+}
+
+
+
+.anim-typewriter {
+    font-family: 'Orlande';
+}
+
+
+.dubai_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(197, 164, 126, 1);
+    /* Set the overlay color and opacity */
+    z-index: 1;
+    /* Adjust the stacking order if needed */
+    mix-blend-mode: color;
+
+}
+
+
+
+.dubai_section {
+    -webkit-clip-path: polygon(0 0, 100% 0, 66% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    flex: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60vw;
+    height: 100vh;
+    transition: 1s ease-in-out all;
+    background-image: url('/Images/dubai.jpg');
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+.dubai_section_fullscreen {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    height: 100vh;
+    width: 100vw;
+
+
+}
+
+/* RGBA(43, 43, 43, 1) */
+.london_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(7, 7, 7);
+    /* Set the overlay color and opacity */
+    z-index: 1;
+    /* Adjust the stacking order if needed */
+    mix-blend-mode: color;
+
+}
+
+.london_section {
+    -webkit-clip-path: polygon(33% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+    flex: 1;
+    position: absolute;
+    width: 60vw;
+    top: 0;
+    right: 0;
+
+    height: 100vh;
+    background-image: url('/Images/london.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: 1s ease-in-out all;
+
+
+
+}
+
+.london_section_fullscreen {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.left-triangle {
+    -webkit-clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.right-triangle {
+    -webkit-clip-path: polygon(100% 1%, 100% 1%, 100% 100%, 0% 100%);
+    clip-path: polygon(100% 1%, 100% 1%, 100% 100%, 0% 100%);
+}
+
+.map-card {
+    background-image: url('/Images/CompositeLayer.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5rem;
+    height: 6rem;
+
+}
