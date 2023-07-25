@@ -144,7 +144,7 @@ function WorldWide() {
           </h3>
         </div>
         <div
-          className={`md:text-[20px] text-[14px] font-normal text-white pl-10 opacity-60 py-10 overflow-hidden transition-all duration-500 ease-in-out
+          className={`md:text-[20px] text-[14px] font-normal text-white pl-10 opacity-90 py-10 overflow-hidden transition-all duration-500 ease-in-out
           
   ${active == index ? "h-max" : "hidden"}`}
         >
@@ -208,7 +208,7 @@ function WorldWide() {
             }`}
           >
             <div className='mb-2'>
-              <span className='capitalize font-medium text-sm tracking-wider '>
+              <span className='capitalize font-medium text-sm tracking-wider text-black'>
                 LONDON
               </span>
               <hr />
@@ -237,7 +237,7 @@ function WorldWide() {
               showDubai ? "opacity-100" : "opacity-0"
             }`}
           >
-            <span className='capitalize text-sm font-medium tracking-wider'>
+            <span className='capitalize text-sm font-medium tracking-wider text-black'>
               DUBAI
             </span>
           </div>
@@ -256,7 +256,7 @@ function WorldWide() {
           />
         </div>
         <div className='-mt-24'>
-          <div className='md:w-[1030px] flex flex-col justify-left items-left md:ml-[50px]  '>
+          <div className='md:w-[1280px] flex flex-col justify-left items-left md:ml-[50px]  '>
             <h2 className='text-white md:text-[40px] text-[24px] font-[500]  leading-[1] px-1'>
               Our vision is to quickly scale the <br />
               concept by launching affiliate venues
@@ -338,7 +338,7 @@ function WorldWide() {
             </h1>
 
             {city !== "Dubai" ? (
-              <p className='md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] md:leading-[1.2] leading-[10px] px-2'>
+              <p className='md:text-[20px] text-[14px] font-[500] opacity-90 text-black md:w-[35%] md:leading-[1.2] leading-[10px] px-2'>
                 Isn't this the club that you wanted to exist and to which you
                 always dreamed of being a member? Act now, before the club's
                 full. Otherwise, there'll still always be space for you, but
@@ -348,7 +348,7 @@ function WorldWide() {
                 sold out, have traded for as much as an 18x multiple.)
               </p>
             ) : (
-              <p className='md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:leading-[1.2] leading-5 md:w-[35%]  px-2'>
+              <p className='md:text-[20px] text-[14px] font-[500] opacity-90 text-black md:leading-[1.2] leading-5 md:w-[35%]  px-2'>
                 Isn't this the club that you’ve wanted to exist in Dubai and to
                 which you always dreamed of being a member? Act now, before the
                 club's full. Otherwise, there'll still always be space for you,

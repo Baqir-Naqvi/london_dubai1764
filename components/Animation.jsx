@@ -5,6 +5,8 @@ import { gsap, SteppedEase } from "gsap";
 import TypeIt from "typeit-react";
 import "./index.css";
 import { useGlobalContext } from "@/utils/ContextProvider";
+import Image from "next/image";
+import LondonImage from '../public/Images/londonmid.png'
 
 export default function Animation({ chooseCityRef }) {
   const textRef = useRef();
@@ -76,7 +78,7 @@ export default function Animation({ chooseCityRef }) {
   };
 
   return (
-    <div className='h-screen relative w-full  overflow-hidden flex items-center justify-center '>
+    <div className="h-screen relative w-full  overflow-hidden flex items-center justify-center ">
       <div
         style={{
           opacity: 0,
@@ -96,14 +98,16 @@ export default function Animation({ chooseCityRef }) {
           Back
         </button>
         <img
-          className=' h-12 md:lg-18 lg:h-24 left-[50%] top-2 translate-x-[-50%] mt-3  object-contain absolute z-20'
-          src='/Images/logo.png'
-          alt=''
+          className=" h-12 md:lg-18 lg:h-24 left-[50%] top-2 translate-x-[-50%] mt-3  object-contain absolute z-20"
+          src="/Images/logo.png"
+          alt=""
         />
 
         <span
           ref={textHeaderRef}
-          className='absolute top-[50%] z-40 left-[50%] translate-x-[-50%] translate-y-[-45%]  text-sm sm:text-xl lg:text-2xl  text-white choose_city_text'
+          className={`
+            ${makeFullScreen == "" ? "flex" : "hidden"}
+            absolute top-[50%] z-40 left-[50%] translate-x-[-50%] translate-y-[-45%]  text-sm sm:text-xl lg:text-2xl  text-white choose_city_text`}
         >
           CHOOSE YOUR CITY
         </span>
@@ -116,7 +120,7 @@ export default function Animation({ chooseCityRef }) {
           }  `}
           onClick={() => handleClick("Dubai")}
         >
-          <div className='h-full w-full flex items-center justify-center '>
+          <div className="h-full w-full flex items-center justify-center ">
             <div
               className={`h-14 w-full flex items-center justify-start md:justify-center px-10 cursor-pointer  bg-[#c5a47ebc] ${
                 makeFullScreen === "Dubai" && " justify-center"
@@ -124,7 +128,7 @@ export default function Animation({ chooseCityRef }) {
             >
               <div
                 onClick={() => handleClick("Dubai")}
-                className='text-white !cursor-pointer  text-lg sm:text-[1.5rem] lg:text-[2rem] tracking-widest'
+                className="text-white !cursor-pointer  text-lg sm:text-[1.5rem] lg:text-[2rem] tracking-widest"
               >
                 DUBAI
               </div>
@@ -139,17 +143,19 @@ export default function Animation({ chooseCityRef }) {
           }`}
           onClick={() => handleClick("London")}
         >
-          <div className='h-full w-full flex items-center justify-center  '>
+          <div className="h-full w-full flex items-center justify-center  ">
             <div
               className={`h-14 w-full flex items-center justify-end md:justify-center p-5 cursor-pointer  bg-[#000000bc] ${
                 makeFullScreen === "London" && " justify-center"
               }`}
             >
-              <div
-                onClick={() => handleClick("London")}
-                className='text-white !cursor-pointer text-lg sm:text-[1.5rem] lg:text-[2rem]  font-extralight tracking-widest '
-              >
-                LONDON
+              <div onClick={() => handleClick("London")}>
+                <Image
+                  src={LondonImage}
+                  height={100}
+                  width={200}
+                  alt="londonmid"
+                />
               </div>
             </div>
           </div>
@@ -158,7 +164,7 @@ export default function Animation({ chooseCityRef }) {
 
       <div
         ref={textRef}
-        className='text-[#c7a47c] text-7xl line-1 anim-typewriter z-50'
+        className="text-[#c7a47c] text-7xl line-1 anim-typewriter z-50"
       >
         <TypeIt>2023</TypeIt>
       </div>

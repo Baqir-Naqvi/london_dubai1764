@@ -21,7 +21,7 @@ import Feature_1 from "@/public/Images/Feature_1.png";
 import Feature_2 from "@/public/Images/Feature_2.png";
 import Feature_3 from "@/public/Images/Feature_3.png";
 import Feature_4 from "@/public/Images/Feature_4.png";
-import Feature_5 from "@/public/Svgs/Feature_5.svg";
+import Feature_5 from "@/public/Svgs/Feature5.svg";
 
 import { useGlobalContext } from "@/utils/ContextProvider";
 import { Parallax } from "react-scroll-parallax";
@@ -161,7 +161,7 @@ const ProfileCard = ({ image, name, position, linkedin }) => {
         />
       </div>
       <h3 className='text-white text-[20px] font-bold mt-1'>{name}</h3>
-      <p className='text-white  text-center text-[18px] opacity-60 font-normal'>
+      <p className='text-white  text-center text-[18px] opacity-90 font-normal'>
         {position}
       </p>
     </div>

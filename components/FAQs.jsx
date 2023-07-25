@@ -59,7 +59,7 @@ function FAQs() {
           </h3>
         </div>
         <div
-          className={`md:text-[20px] text-[14px] font-normal text-white pl-10 opacity-60 py-10 overflow-hidden transition-all duration-500 ease-in-out
+          className={`md:text-[20px] text-[14px] font-normal text-white pl-10 opacity-90 py-10 overflow-hidden transition-all duration-500 ease-in-out
           
   ${active == index ? "h-max" : "hidden"}`}
         >
@@ -90,7 +90,7 @@ function FAQs() {
         </h1>
 
         {city !== "Dubai" ? (
-          <p className='md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2] px-2 py-0 '>
+          <p className='md:text-[20px] text-[14px] font-[500] opacity-90 text-black md:w-[35%] leading-[1.2] px-2 py-0 '>
             Isn't this the club that you wanted to exist and to which you always
             dreamed of being a member? Act now, before the club's full.
             Otherwise, there'll still always be space for you, but you'll have
@@ -100,7 +100,7 @@ function FAQs() {
             as an 18x multiple.)
           </p>
         ) : (
-          <p className='md:text-[20px] text-[14px] font-[500] opacity-60 text-black md:w-[35%] leading-[1.2] px-2'>
+          <p className='md:text-[20px] text-[14px] font-[500] opacity-90 text-black md:w-[35%] leading-[1.2] px-2'>
             Isn't this the club that you’ve wanted to exist in Dubai and to
             which you always dreamed of being a member? Act now, before the
             club's full. Otherwise, there'll still always be space for you, but

@@ -8,7 +8,7 @@ function Membership() {
   const { city } = useGlobalContext();
   return (
     <div className='flex flex-col justify-center items-center bg-black ' id='membership'>
-      <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:my-20 mb-10 mt-5 '>
+      <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mb-10 mt-5 '>
         lifetime <span className='text-[#c5a47e]'>membership</span>
       </h2>
       <button className='bg-[#c5a47e]  uppercase z-10 w-max md:py-5 md:px-5 py-5 rounded-[15px]'>
@@ -16,7 +16,7 @@ function Membership() {
           click here to Immediately Mint a Lifetime Membership NFT
         </p>
       </button>
-      <p className='md:text-[20px] text-[14px] text-white opacity-60 my-10'>
+      <p className='md:text-[20px] text-[14px] text-white opacity-90 my-10'>
         It's in your MetaMask wallet in seconds - give it a go
       </p>
 
@@ -54,7 +54,7 @@ function Membership() {
           </h2>
         </Parallax>
       </div>
-      <p className='md:text-[18px] text-[14px] text-white opacity-60 my-10 md:pt-[50px] pt-[20px] md:px-[20%] md:text-center px-3'>
+      <p className='md:text-[18px] text-[14px] text-white opacity-90 my-10 md:pt-[50px] pt-[20px] md:px-[20%] md:text-center px-3'>
         Appold, Alteri-Enigma, Greengage, InCryptoHub, JadeVault, Crypto A.M.,
         Blockdaemon, House of Block, CEX.IO, Coinbase, Coinpass.com, Kraken,
         Archax, Deribit, Swissborg, Finserv Experts, British Business Bank,

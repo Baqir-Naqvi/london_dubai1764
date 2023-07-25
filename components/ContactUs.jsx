@@ -37,10 +37,10 @@ function ContactUs() {
       {/* create two cols grid */}
 
       <div className="flex md:flex-row flex-col md:w-[95%] md:mt-[100px] mt-[20px]">
-        <div className="flex flex-col justify-top items-center md:w-[30%] ">
-          <p className="text-white font-normal opacity-60">+44 800 123 4567</p>
-          <p className="text-white font-normal opacity-60">+44 088 123 4567</p>
-          <p className="text-white font-normal opacity-60">info@cc-gbl.io</p>
+        <div className="flex flex-col justify-top items-center md:w-[30%] pt-2">
+          <p className="text-white font-normal opacity-90">+44 800 123 4567</p>
+          <p className="text-white font-normal opacity-90">+44 088 123 4567</p>
+          <p className="text-white font-normal opacity-90">info@cc-gbl.io</p>
         </div>
 
         {/* <div className="flex md:flex-row flex-col justify-center items-center md:w-[60%] "> */}
@@ -58,25 +58,25 @@ function ContactUs() {
                 type="text"
                 placeholder="Name"
                 onChange={handleChange}
-                className="md:w-[210px] w-[80%] px-2 rounded-[10px] m-1 h-[50px] bg-[#323232]  border-white text-white font-normal opacity-60"
+                className="md:w-[210px] w-[80%] px-2 rounded-[10px] m-1 h-[50px] bg-[#323232]  border-white text-white font-normal opacity-90"
               />
               <input
                 type="text"
                 placeholder="Phone"
                 onChange={handleChange}
-                className="md:w-[210px] w-[80%] px-2 rounded-[10px] m-1 h-[50px] bg-[#323232]  border-white text-white font-normal opacity-60"
+                className="md:w-[210px] w-[80%] px-2 rounded-[10px] m-1 h-[50px] bg-[#323232]  border-white text-white font-normal opacity-90"
               />
               <input
                 type="text"
                 placeholder="Email"
                 onChange={handleChange}
-                className="md:w-[210px] w-[80%] px-2 rounded-[10px] m-1 h-[50px] bg-[#323232]  border-white text-white font-normal opacity-60"
+                className="md:w-[210px] w-[80%] px-2 rounded-[10px] m-1 h-[50px] bg-[#323232]  border-white text-white font-normal opacity-90"
               />
               <input
                 type="text"
                 placeholder="Company"
                 onChange={handleChange}
-                className="md:w-[210px] w-[80%] px-2 rounded-[10px] m-1 h-[50px] bg-[#323232]  border-white text-white font-normal opacity-60"
+                className="md:w-[210px] w-[80%] px-2 rounded-[10px] m-1 h-[50px] bg-[#323232]  border-white text-white font-normal opacity-90"
               />
             </div>
           </div>
@@ -85,7 +85,7 @@ function ContactUs() {
             <input
               type="text"
               placeholder="Message"
-              className="md:w-[350px] w-[100%] px-2 rounded-[10px] h-[110px] bg-[#323232]  border-white text-white font-normal opacity-60"
+              className="md:w-[350px] w-[100%] px-2 rounded-[10px] mt-[3px] h-[110px] bg-[#323232]  border-white text-white font-normal opacity-90"
             />
             <button
               className="bg-[#c5a47e]  uppercase z-10 w-max md:py-2 md:px-5 py-2 rounded-full"

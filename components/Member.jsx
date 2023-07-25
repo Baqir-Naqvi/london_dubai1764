@@ -196,12 +196,12 @@ function Member() {
         </h3>
       )}
       {city !== "Dubai" ? (
-        <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2">
+        <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2">
           Your Diamond Lifetime Membership NFT provides<br/> lifetime membership of
           1764 Dubai. It’s your 21st<br/> Century membership card.
         </p>
       ) : (
-        <p className="text-white text-center opacity-60 md:text-[22px] text-[14px] md:w-[800px]">
+        <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px]">
           Your Diamond Lifetime Membership NFT provides unlimited access to
           Blacks in Soho, London. It’s your 21st Century membership card. By
           contrast to all other private members’ clubs, which charge a

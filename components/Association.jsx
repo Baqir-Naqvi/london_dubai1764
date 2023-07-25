@@ -1,10 +1,10 @@
 import React from 'react'
 import A1 from '@/public/Images/Layer_15.png'
-import A2 from '@/public/Images/Layer_16.png'
-import A3 from '@/public/Images/Layer_17.png'
+import A2 from '@/public/Images/Layer16.png'
+import A3 from '@/public/Images/Layer17.png'
 import A4 from '@/public/Images/Layer_18.png'
 import A5 from '@/public/Images/Layer_19.png'
-import A6 from '@/public/Images/Layer_20.png'
+import A6 from '@/public/Images/Layer20.png'
 import A7 from '@/public/Images/Layer_21.png'
 import Image from 'next/image'
 

@@ -39,7 +39,7 @@ export default function HeroSection() {
 
         {city === "Dubai" ? (
           <Parallax translateY={20} speed={-20}>
-            <h3 className='md:text-[24px]  font-montserrat text-[12px] text-center  opacity-60 px-12 md:px-0 leading-none z-30'>
+            <h3 className='md:text-[24px]  font-montserrat text-[12px] text-center  opacity-90 px-12 md:px-0 leading-none z-30'>
               Dubai’s first Private Members' Club dedicated to Crypto, NFTs,
               Web3, DeFi & Tech. <br />
               Innovated by London’s first Private Members' Club devoted to the
