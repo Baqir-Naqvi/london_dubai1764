@@ -165,7 +165,7 @@ function WorldWide() {
           we are <span className='text-[#c5a47e]'>WorldWide</span>
         </h2>
 
-        <div className='bg-world-map bg-center w-[90%] mt-0 '>
+        <div className='bg-world-map relative bg-center w-[90%] mt-0 '>
           <Image
             src={Ellipse}
             alt='Ellipse'
@@ -203,7 +203,7 @@ function WorldWide() {
           />
 
           <div
-            className={`absolute left-[42.8%] scale-150 top-[15%] px-2 flex-col transition-all duration-500 pt-2  map-card flex justify-start p-1 ${
+            className={`absolute left-[42.8%] scale-[2] top-[12%] px-2 flex-col transition-all duration-500 pt-2  map-card flex justify-start p-1 ${
               showLondon ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -232,8 +232,16 @@ function WorldWide() {
             className='custom-shadow absolute left-[45%] top-[32%] hover:animate-pulse cursor-pointer'
           />
 
+          <Image
+            src={Ellipse}
+            alt='Active'
+            height={citySize}
+            width={citySize}
+            className='custom-shadow absolute left-[50.5%] top-[28%] hover:animate-pulse cursor-pointer'
+          />
+
           <div
-            className={`absolute right-[34.5%] scale-150 top-[37%] transition-all duration-500  map-card flex justify-center p-1 ${
+            className={`absolute right-[34.5%] scale-[2] top-[32%] transition-all duration-500  map-card flex justify-center p-1 ${
               showDubai ? "opacity-100" : "opacity-0"
             }`}
           >
