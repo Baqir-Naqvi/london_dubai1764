@@ -7,7 +7,10 @@ import { Parallax } from "react-scroll-parallax";
 function Membership() {
   const { city } = useGlobalContext();
   return (
-    <div className='flex flex-col justify-center items-center bg-black ' id='membership'>
+    <div
+      className='flex flex-col justify-center items-center bg-black '
+      id='membership'
+    >
       <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mb-10 mt-5 '>
         lifetime <span className='text-[#c5a47e]'>membership</span>
       </h2>
@@ -55,26 +58,33 @@ function Membership() {
         </Parallax>
       </div>
       <p className='md:text-[18px] text-[14px] text-white opacity-90 my-10 md:pt-[50px] pt-[20px] md:px-[20%] md:text-center px-3'>
-        Appold, Alteri-Enigma, Greengage, InCryptoHub, JadeVault, Crypto A.M.,
-        Blockdaemon, House of Block, CEX.IO, Coinbase, Coinpass.com, Kraken,
-        Archax, Deribit, Swissborg, Finserv Experts, British Business Bank,
-        Women in Blockchain Talks, Worldpay, MoonPay, Avalanche, Accubits,
-        Aikon, Athena Labs, Minima, British Blockchain Association, Kudos,
+        TPX Property Exchanges, Revolut, ByBit, Appold, IDnow, Alteri-Enigma,
+        Paiverse, OKX, Greengage, Labz, 3 Web Digital, WaveAccess, RarerThings,
+        Seba Bank, InCryptoHub, JadeVault, Crypto A.M., Blockdaemon, House of
+        Block, CEX, Excalibur FM, AI & Partners, Equiniti, Disintermediate,
+        Nebula Alpha, Chainergy, Chainalysis, Coinbase, Coinpass, Coin Metrics,
+        Aon, Push Entertainment, Millicent Labs, Neoswap AI, Stablecoin
+        Standard, Zonaris, Blockdaemon, Kraken, Archax, Deribit, Swissborg,
+        Finserv Experts, British Business Bank, Women in Blockchain Talks,
+        Worldpay, MoonPay, Myna, Damex, AS Legal, Grant Thornton UK, coIR,
+        Avalanche, Accubits, Penderyn Whisky, Aikon, Athena Labs, Minima,
+        British Blockchain Association, Cudos, CLC & Partners, Zodia Custody,
         Circle, Meta, Netflix, Spotify, Suprafin, BBC, Napster, Matrixport,
         Eleven Management, Zebu, Flight3, Crypto Curry Club, British Blockchain
-        Association, YC Capital, Ripple, Tezos, IBM, The Labz, Flare Network,
-        Salesforce, Innerplace, Commerce Block, FTA Advisory, Showcode,
-        Accubits, Citrix, Zscaler, Thales, Dream Factory, Deloitte, Ernst &
-        Young, PKF Francis Clark, Accenture, CMS, Asprey, De Beers, Penningtons
-        Manches Cooper LLP, diamonds4crypto, Diamond Ancestry, Pina Vida, Tutti,
-        Qredo, Thomas Murray, Pillar Project, Etherspot, Novum Insights, Crypto
-        Magazine, UK Parliament, UK Cabinet Office, National Health Service,
-        Tracer DAO, Factory DAO, Finance.vote, Block.One, Animoca Brands,
-        Cornucopia Capital, Cheeky Crypto, Crypto Gains, Crypto Banter, Ethereal
-        Collective, Poundtoken, Kwiktrust, Eton Blockchain Society, Move
-        Network, Bigfan, Nativz, Multiverse, Llamaverse, Bored Ape Yacht Club,
-        CryptoPunks, Doodles, CyberKongz, Anti-Social Ape Club, Ethereum London,
-        Trib3, Fanz.
+        Association, YC Capital, Ripple, Tezos, IBM, Flare Network, Salesforce,
+        Innerplace, Commerce Block, Zilliqa, FTA Advisory, Showcode, Accubits,
+        Citrix, Zscaler, Thales, Dream Factory, Deloitte, Ernst & Young,
+        Accenture, CMS, Asprey, De Beers, Penningtons Manches Cooper LLP,
+        diamonds4crypto, Diamond Ancestry, Pina Vida, Tutti, Stardom UK,
+        Posterity Entertainment, Mary Shelley’s House of Frankenstein, The Ideas
+        Factory, Ballabona Club, Marches Alternative Construction, Qredo, Thomas
+        Murray, Pillar Project, Etherspot, Novum Insights, Crypto Magazine, UK
+        Parliament, UK Cabinet Office, National Health Service, Tracer DAO,
+        Factory DAO, Finance.vote, Animoca Brands, Cornucopia Capital, Cheeky
+        Crypto, Crypto Gains, Crypto Banter, Ethereal Collective, Poundtoken,
+        Kwiktrust, Eton Blockchain Society, Move Network, Bigfan, Nativz,
+        Multiverse, Llamaverse, Bored Ape Yacht Club, CryptoPunks, Doodles,
+        CyberKongz, Anti-Social Ape Club, Ethereum London, Trib3, Fanz.
       </p>
     </div>
   );

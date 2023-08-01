@@ -25,12 +25,13 @@ export default function Home() {
   const { city, setCity } = useGlobalContext();
 
   useEffect(() => {
-    
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      
-      document.body.style.backgroundColor = '#000000';
-      document.body.style.color = '#fff';
-        }
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      document.body.style.backgroundColor = "#000000";
+      document.body.style.color = "#fff";
+    }
   }, []);
 
   useEffect(() => {
@@ -71,7 +72,6 @@ export default function Home() {
           <AboutUs />
           <Member />
           <WorldWide />
-          {/* <FAQs /> */}
           <Membership />
           <Team />
           <Association />

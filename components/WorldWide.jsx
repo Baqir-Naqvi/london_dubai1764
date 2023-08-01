@@ -10,7 +10,7 @@ import Aos from "aos";
 const DUBAI_QUESTIONS = [
   {
     q: "Why is this needed?",
-    a: "Before we purchased Blacks in London and proved the model, there were no such clubs around the world dedicated to the space, let alone a global network of them. We strongly feel that the deep tech & disruptive innovation communities both need and deserve permanent venues, especially in Dubai. Our aim is to create a worldwide community of physical and virtual venues, where enthusiasts who share an interest in the space can socialise and network, meet like-minded individuals, engage and present, offer collaborations, get funded, become educated, provide instruction and guidance and share valuable information and knowledge. Its virtual and physical spaces offer the ideal environment and opportunity for members to interact face-to-face, to share their ideas and work together on future projects, creating entities greater than the sum of their parts.",
+    a: "Before we purchased Blacks in London and proved the model, there were no such clubs around the world dedicated to the space, let alone a global network of them. We strongly feel that the digital assets & disruptive innovation communities both need and deserve permanent venues, especially in Dubai. Our aim is to create a worldwide community of physical and virtual venues, where enthusiasts who share an interest in the space can socialise and network, meet like-minded individuals, engage and present, offer collaborations, get funded, become educated, provide instruction and guidance and share valuable information and knowledge. Our physical & virtual venues offer the ideal environment and opportunity for members to interact face-to-face, to share their ideas and work together on future projects, creating entities greater than the sum of their parts.",
   },
   {
     q: "Why should I buy an NFT?",
@@ -34,7 +34,7 @@ const DUBAI_QUESTIONS = [
   },
   {
     q: "What are the main benefits of being a member of 1764 Dubai?",
-    a: "To join a fraternity of the smartest minds and most successful business people in the space today. We have already witnessed multiple ventures launched, capital raised, folk recruited and collaborations achieved all within the confines of the London club, between people who might well have never otherwise met. A phenomenal amount of opportunities will exist within the club and its membership for personal/career development and business expansion.",
+    a: "To join a fraternity of the smartest minds and most successful business people in the space today. We have already witnessed multiple ventures launched, capital raised, folk recruited and collaborations achieved all within the confines of the London club, between people who might well have never otherwise met. A phenomenal amount of opportunities will exist within the club and its membership, for personal/career development and business expansion.",
   },
   {
     q: "Will you accept payments for all services and membership in crypto?",
@@ -72,7 +72,7 @@ A younger version of the above, highly successful within the sector and enormous
 const LONDON_QUESTIONS = [
   {
     q: "Why is this needed?",
-    a: "Before we purchased Blacks and proved the model, there were no such clubs around the world dedicated to the space, let alone a global network of them. We strongly feel that the deep tech & disruptive innovation communities both need and deserve permanent venues. Our aim is to create a worldwide community of physical and virtual venues, where enthusiasts who share an interest in the space can socialise and network, meet like-minded individuals, engage and present, offer collaborations, get funded, become educated, provide instruction and guidance and share valuable information and knowledge. Its virtual and physical spaces offer the ideal environment and opportunity for members to interact face-to-face, to share their ideas and work together on future projects, creating entities greater than the sum of their parts.",
+    a: "Before we purchased Blacks and proved the model, there were no such clubs around the world dedicated to the space, let alone a global network of them. We strongly feel that the digital assets & disruptive innovation communities both need and deserve permanent venues. Our aim is to create a worldwide community of physical and virtual venues, where enthusiasts who share an interest in the space can socialise and network, meet like-minded individuals, engage and present, offer collaborations, get funded, become educated, provide instruction and guidance and share valuable information and knowledge. Our physical & virtual venues   spaces offer the ideal environment and opportunity for members to interact face-to-face, to share their ideas and work together on future projects, creating entities greater than the sum of their parts.",
   },
   {
     q: "Why should I buy an NFT?",
@@ -92,18 +92,48 @@ const LONDON_QUESTIONS = [
   },
   {
     q: "What are the main benefits of being a member of Blacks, Soho? ",
-    a: " To join a fraternity of the smartest minds and most successful business people in the space today. We have already witnessed multiple ventures launched, capital raised, folk recruited and collaborations achieved all within the confines of the club, between people who might well have never otherwise met. A phenomenal amount of opportunities exist within the club and its membership for personal/career development and business expansion. ",
+    a: " To join a fraternity of the smartest minds and most successful business people in the space today. We have already witnessed multiple ventures launched, capital raised, folk recruited and collaborations achieved all within the confines of the club, between people who might well have never otherwise met. A phenomenal amount of opportunities exist within the club and its membership, for personal/career development and business expansion. ",
   },
   {
     q: "Do you accept payments for all services and membership in crypto? ",
     a: " Yes. Blacks Club became the first private members’ club in the world to accept Bitcoin as payment.",
   },
 ];
+const FAQtab = ({ question, index, answer }) => {
+  const [active, setActive] = useState(null);
+  return (
+    <div className='h-max md:w-[800px]'>
+      {" "}
+      <div
+        className={`h-[60px] md:w-[800px] my-2 hover:bg-[#c5a47e]  hover:cursor-pointer  hover:text-black border-[1px] border-[#c5a47e] rounded-[10px]
+            flex justify-between items-center px-10
+            ${index == active ? "text-black bg-[#c5a47e]" : "text-white"}
+            `}
+        onClick={() => {
+          if (index == active) setActive(null);
+          else setActive(index);
+        }}
+      >
+        <h3 className=' md:text-[20px] text-[14px] font-normal'>{question}</h3>
+        <h3 className=' md:text-[20px] text-[14px] font-normal'>
+          {active == index ? "-" : "+"}
+        </h3>
+      </div>
+      <div
+        className={`md:text-[20px] text-[14px] font-normal text-white pl-10 opacity-90 py-10 overflow-hidden transition-all duration-500 ease-in-out
+          
+  ${active == index ? "h-max" : "hidden"}`}
+      >
+        {answer}
+      </div>
+    </div>
+  );
+};
 
 function WorldWide() {
   const [showDubai, setShowDubai] = useState(false);
   const [showLondon, setShowLondon] = useState(false);
-  const [active, setActive] = useState(null);
+
   const [citySize, setCitySize] = useState(10);
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
@@ -122,37 +152,6 @@ function WorldWide() {
 
   const { city } = useGlobalContext();
 
-  const FAQtab = ({ question, index, answer }) => {
-    return (
-      <div className='h-max md:w-[800px]'>
-        {" "}
-        <div
-          className={`h-[60px] md:w-[800px] my-2 hover:bg-[#c5a47e]  hover:cursor-pointer  hover:text-black border-[1px] border-[#c5a47e] rounded-[10px]
-            flex justify-between items-center px-10
-            ${index == active ? "text-black bg-[#c5a47e]" : "text-white"}
-            `}
-          onClick={() => {
-            if (index == active) setActive(null);
-            else setActive(index);
-          }}
-        >
-          <h3 className=' md:text-[20px] text-[14px] font-normal'>
-            {question}
-          </h3>
-          <h3 className=' md:text-[20px] text-[14px] font-normal'>
-            {active == index ? "-" : "+"}
-          </h3>
-        </div>
-        <div
-          className={`md:text-[20px] text-[14px] font-normal text-white pl-10 opacity-90 py-10 overflow-hidden transition-all duration-500 ease-in-out
-          
-  ${active == index ? "h-max" : "hidden"}`}
-        >
-          {answer}
-        </div>
-      </div>
-    );
-  };
   return (
     <div className='pb-[50px] relative flex flex-col bg-black'>
       <Parallax translateY={-5} speed={-10}>
@@ -165,7 +164,7 @@ function WorldWide() {
           we are <span className='text-[#c5a47e]'>WorldWide</span>
         </h2>
 
-        <div className='bg-world-map bg-center w-[90%] mt-0 '>
+        <div className='bg-world-map relative bg-center w-[90%] mt-0 '>
           <Image
             src={Ellipse}
             alt='Ellipse'
@@ -203,7 +202,7 @@ function WorldWide() {
           />
 
           <div
-            className={`absolute left-[42.8%] scale-150 top-[15%] px-2 flex-col transition-all duration-500 pt-2  map-card flex justify-start p-1 ${
+            className={`absolute left-[42.8%] scale-[2] top-[12%] px-2 flex-col transition-all duration-500 pt-2  map-card flex justify-start p-1 ${
               showLondon ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -214,8 +213,8 @@ function WorldWide() {
               <hr />
             </div>
 
-            <span className='tracking-wider text-[.6rem] text-white'>
-              67 Dean St London WID 4QH
+            <span className='tracking-wider  text-[.45rem] text-white'>
+              Blacks Club, 67 Dean Street, Soho, London W1D 4QH
             </span>
           </div>
 
@@ -232,13 +231,21 @@ function WorldWide() {
             className='custom-shadow absolute left-[45%] top-[32%] hover:animate-pulse cursor-pointer'
           />
 
+          <Image
+            src={Ellipse}
+            alt='Active'
+            height={citySize}
+            width={citySize}
+            className='custom-shadow absolute left-[50.5%] top-[28%] hover:animate-pulse cursor-pointer'
+          />
+
           <div
-            className={`absolute right-[34.5%] scale-150 top-[37%] transition-all duration-500  map-card flex justify-center p-1 ${
+            className={`absolute right-[34.5%] scale-[2] top-[32%] transition-all duration-500  map-card flex justify-center p-1 ${
               showDubai ? "opacity-100" : "opacity-0"
             }`}
           >
             <span className='capitalize text-sm font-medium tracking-wider text-black'>
-              DUBAI
+              Opening October
             </span>
           </div>
 
@@ -256,7 +263,7 @@ function WorldWide() {
           />
         </div>
         <div className='-mt-24'>
-          <div className='md:w-[1280px] flex flex-col justify-left items-left md:ml-[50px]  '>
+          <div className='md:w-4/5 lg:w-3/5 flex flex-col justify-left items-left md:ml-[50px]  '>
             <h2 className='text-white md:text-[40px] text-[24px] font-[500]  leading-[1] px-1'>
               Our vision is to quickly scale the <br />
               concept by launching affiliate venues

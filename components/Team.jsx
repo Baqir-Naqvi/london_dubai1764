@@ -99,7 +99,7 @@ const Members = [
   {
     image: P8,
     name: "Jason Tucker-Feltham",
-    position: "Global Head of Crypto & Fintech - IDnow",
+    position: "IDnow",
     linkedin: "https://www.linkedin.com/in/jacecrypto/",
   },
 
@@ -119,7 +119,7 @@ const Members = [
     image: P6,
     name: "Shelley Schachter-Cahm",
     position: "CEX.io",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/shelley-schachter-cahm-967434/",
   },
   {
     image: P3,
@@ -220,8 +220,8 @@ function Team() {
         <div className='flex md:flex-row flex-wrap gap-10 justify-center items-center mt-20'>
           {FeaturesArray.map((item, index) => {
             return (
-              <div key={index} className=' w-[250px]'>
-                <Image src={item} alt='Feature' height={300} width={300} />
+              <div key={index} className=' w-[220px]'>
+                <Image src={item} alt='Feature' height={250} width={250} />
               </div>
             );
           })}

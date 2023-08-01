@@ -108,11 +108,21 @@ export default function () {
               className='md:text-[22px] text-[14px] text-white opacity-80
               '
             >
-              In May 2022 we purchased Blacks Club (www.blacksclub.com), which
-              could not possibly be a more perfect flagship. This vibrant and
-              historic private members’ club, located at 67 Dean Street in Soho,
-              London, was formed to be the antithesis of the traditional London
-              gentlemen’s clubs and is steeped in anti-establishment history.
+              In May 2022 we purchased Blacks Club{" "}
+              <span
+                className='cursor-pointer'
+                onClick={() => {
+                  // open new tab on click
+                  window.open("https://www.blacksclub.com", "_blank");
+                }}
+              >
+                (www.blacksclub.com)
+              </span>{" "}
+              , which could not possibly be a more perfect flagship. This
+              vibrant and historic private members’ club, located at 67 Dean
+              Street in Soho, London, was formed to be the antithesis of the
+              traditional London gentlemen’s clubs and is steeped in
+              anti-establishment history.
             </p>
 
             <p className='md:text-[22px] text-[14px] text-white opacity-80 md:pl-[40px] md:mt-0 mt-10'>
@@ -127,9 +137,9 @@ export default function () {
             </p>
           </div>
 
-          <div className='flex flex-col items-center justify-center md:mt-[50px]'>
+          <div className='flex flex-col items-center justify-center px-3 md:px-0  md:mt-[50px]'>
             {city != "Dubai" ? (
-              <h2 className='text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10'>
+              <h2 className='text-white md:text-[38px] text-[16px] font-normal md:font-[500] text-center leading-[1] my-10'>
                 Inclusion is via the ownership of one of the club’s 3,500
                 <br />
                 Membership NFTs, which bestow the possessor with
@@ -138,7 +148,7 @@ export default function () {
                 never represents a sunk cost.
               </h2>
             ) : (
-              <h2 className='text-white md:text-[42px] text-[24px] font-[500] text-center leading-[1] my-10'>
+              <h2 className='text-white md:text-[38px] text-[16px] font-normal md:font-[500] text-center leading-[1] my-10'>
                 Inclusion is via the ownership of one of the club's Membership
                 NFTs, which bestow the possessor with lifetime membership of
                 1764 Dubai. By contrast to all other private members’ clubs,
