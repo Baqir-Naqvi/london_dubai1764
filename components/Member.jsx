@@ -172,7 +172,7 @@ function Member() {
       )}
       {city !== "Dubai" ? (
         <p className='text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2'>
-          Your Diamond Lifetime Membership NFT provides
+          Your Diamond Membership NFT provides
           <br /> lifetime membership of Blacks Club. It’s your 21st
           <br /> Century membership card.
         </p>

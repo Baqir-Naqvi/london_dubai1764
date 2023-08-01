@@ -6,42 +6,71 @@ import { Parallax } from "react-scroll-parallax";
 
 function Membership() {
   const { city } = useGlobalContext();
+
+  // on call opens a new email window
+  const handleEmail = () => {
+    window.open("mailto: victoria@blacksclub.com");
+  };
+
+  
   return (
     <div
-      className='flex flex-col justify-center items-center bg-black '
-      id='membership'
+      className="flex flex-col justify-center items-center bg-black "
+      id="membership"
     >
-      <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mb-10 mt-5 '>
-        lifetime <span className='text-[#c5a47e]'>membership</span>
+      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mb-10 mt-5 ">
+        lifetime <span className="text-[#c5a47e]">membership</span>
       </h2>
-      <button className='bg-[#c5a47e]  uppercase z-10 w-max md:py-5 md:px-5 py-5 rounded-[15px]'>
-        <p className='z-10 md:text-[20px] text-[10px] md:px-[20px] font-[600] text-white px-[10px] md:tracking-widest'>
+      <button className="bg-[#c5a47e]  uppercase z-10 w-max md:py-5 md:px-5 py-5 rounded-[15px]">
+        <p className="z-10 md:text-[20px] text-[10px] md:px-[20px] font-[600] text-white px-[10px] md:tracking-widest">
           click here to Immediately Mint a Lifetime Membership NFT
         </p>
       </button>
-      <p className='md:text-[20px] text-[14px] text-white opacity-90 my-10'>
+      <p className="md:text-[20px] text-[14px] text-white opacity-90 my-10">
         It's in your MetaMask wallet in seconds - give it a go
       </p>
+      {city ==="London" &&(
+        <>
+      <div className="flex md:flex-row flex-col justify-center md:mt-4 mt-5">
+        <p className="md:text-[20px] text-[14px] text-white leading-10">
+          To join by Payment Plan, Crypto or by Bank Transfer:
+          <br />
+          Contact Victoria Morrison-Low on +44 7908 994946
+        </p>
+      </div>
+      <p className="md:text-[20px] text-[14px] text-white leading-10">
+        Email:{" "}
+        <span
+          className="text-[#c5a47e]
+          hover:underline hover:cursor-pointer
+          "
+          onClick={handleEmail}
+          >
+          victoria@blacksclub.com
+        </span>
+      </p>
+          </>
+      )}
 
-      <div className='flex md:flex-row flex-col justify-center md:mt-[5rem] mt-10 '>
-        <div className='flex flex-col justify-start items-center'>
-          <h2 className=' uppercase text-[30px] font-normal tracking-[4px] text-white text-start'>
+      <div className="flex md:flex-row flex-col justify-center md:mt-[5rem] mt-10 ">
+        <div className="flex flex-col justify-start items-center">
+          <h2 className=" uppercase text-[30px] font-normal tracking-[4px] text-white text-start">
             Over
           </h2>
         </div>
 
-        <div className='flex flex-col justify-center items-center'>
-          <Image src={hundredimg} alt='hundred' width={400} height={200} />
+        <div className="flex flex-col justify-center items-center">
+          <Image src={hundredimg} alt="hundred" width={400} height={200} />
         </div>
 
-        <div className='flex flex-col justify-end items-center ml-5'>
+        <div className="flex flex-col justify-end items-center ml-5">
           {city !== "Dubai" ? (
-            <h2 className=' uppercase text-[30px] font-normal tracking-[4px] text-center text-white '>
+            <h2 className=" uppercase text-[30px] font-normal tracking-[4px] text-center text-white ">
               Key Businesses
               <br /> Represented
             </h2>
           ) : (
-            <h2 className=' uppercase text-[30px] font-normal tracking-[1px] text-center text-white '>
+            <h2 className=" uppercase text-[30px] font-normal tracking-[1px] text-center text-white ">
               Key Businesses Represented <br />
               in london already
             </h2>
@@ -49,15 +78,15 @@ function Membership() {
         </div>
         <Parallax translateY={-5} speed={-10}>
           <h2
-            className='text-[#c5a47e] md:flex hidden md:text-[105px] font-bold  text-center absolute -right-[350px] mt-[0px] opacity-10
+            className="text-[#c5a47e] md:flex hidden md:text-[105px] font-bold  text-center absolute -right-[350px] mt-[0px] opacity-10
         
-          '
+          "
           >
             represented
           </h2>
         </Parallax>
       </div>
-      <p className='md:text-[18px] text-[14px] text-white opacity-90 my-10 md:pt-[50px] pt-[20px] md:px-[20%] md:text-center px-3'>
+      <p className="md:text-[18px] text-[14px] text-white opacity-90 my-10 md:pt-[50px] pt-[20px] md:px-[20%] md:text-center px-3">
         TPX Property Exchanges, Revolut, ByBit, Appold, IDnow, Alteri-Enigma,
         Paiverse, OKX, Greengage, Labz, 3 Web Digital, WaveAccess, RarerThings,
         Seba Bank, InCryptoHub, JadeVault, Crypto A.M., Blockdaemon, House of

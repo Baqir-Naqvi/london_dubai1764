@@ -16,8 +16,8 @@ const Assoications = [
     url: "https://revolutbusiness.ngih.net/c/4470266/1582434/9943",
   },
   { name: A3, size: 250, url: "https://aspreystudio.com/home.html" },
-  { name: A4, size: 170, url: "www.the-labz.com" },
-  { name: A5, size: 300, url: "www.appold.com" },
+  { name: A4, size: 170, url: "https://the-labz.com/" },
+  { name: A5, size: 300, url: "https://www.appold.com/" },
   { name: A6, size: 300, url: "https://www.incryptohub.com" },
   { name: A7, size: 300, url: "https://theharleywellnessclub.com" },
 ];

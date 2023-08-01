@@ -40,8 +40,7 @@ export default function ChooseCity({ chooseCityRef }) {
           Our First Satellite to Open in Dubai 2023
         </span>
         <span className="md:block hidden italic text-[.6rem] w-[50%] md:w-[100%] text-center md:text-[1.1rem]">
-          And then Expand Globally allows us to raise your project to a higher
-          level.
+          And Then Expand Globally
         </span>
       </div>
       <div className="h-full flex items-end justify-center   md:justify-end p-16 absolute w-[25%] right-0  z-20 right-triangle bg-[#C5A47E]  ">
