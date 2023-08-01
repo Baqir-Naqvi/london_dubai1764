@@ -5,6 +5,7 @@ import Active from "@/public/Images/Active.png";
 import { useGlobalContext } from "@/utils/ContextProvider";
 import { useMediaQuery } from "react-responsive";
 import { Parallax } from "react-scroll-parallax";
+import Image_1764 from "@/public/Images/Latest2.png";
 import Aos from "aos";
 
 const DUBAI_QUESTIONS = [
@@ -294,6 +295,17 @@ function WorldWide() {
               </p>
             </div>
           </div>
+
+          <div className="flex flex-row md:w-[1200px] mt-5 mx-auto">
+            <Image 
+            src={Image_1764}
+            alt="Image_1764"
+            height={500}
+            width={500}
+            className="w-full"
+          />
+          </div>
+
 
           <div className="flex flex-row w-full justify-content justify-end h-max ">
             <h2 className="text-white md:text-[40px] text-[24px] font-[500]  leading-[1] my-10 text-right md:mr-10">

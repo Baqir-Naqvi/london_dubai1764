@@ -31,7 +31,7 @@ function SideDiv() {
 
       <Image
         height={700}
-        width={55}
+        width={60}
         src={SideBar}
         alt='mobileBar'
         className='flex absolute left-0 top-[150px] md:hidden'
