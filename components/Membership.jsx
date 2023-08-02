@@ -8,8 +8,8 @@ function Membership() {
   const { city } = useGlobalContext();
 
   // on call opens a new email window
-  const handleEmail = () => {
-    window.open("mailto: victoria@blacksclub.com");
+  const handleEmail = (email) => {
+    window.open(`mailto:${email}`);
   };
 
   
@@ -29,15 +29,15 @@ function Membership() {
       <p className="md:text-[20px] text-[14px] text-white opacity-90 my-10">
         It's in your MetaMask wallet in seconds - give it a go
       </p>
-      {city === "London" && (
+      {city === "London" ? (
         <>
           <div className="flex md:flex-row flex-col justify-center md:mt-4 mt-5">
             <p className="md:text-[20px] text-[14px] text-white text-center leading-10">
-              To join by Payment Plan, Crypto, Credit/Debit Card or by Bank Transfer
+              To join by Payment Plan, Crypto, Credit/Debit Card or by Bank
+              Transfer
               <br />& to discuss Corporate Membership:
-              <br/>
-              <br/> Contact Victoria
-              Morrison-Low on +44 7908 994946
+              <br />
+              <br /> Contact Victoria Morrison-Low on +44 7908 994946
             </p>
           </div>
           <p className="md:text-[20px] text-[14px] text-white leading-10">
@@ -46,9 +46,61 @@ function Membership() {
               className="text-[#c5a47e]
           hover:underline hover:cursor-pointer
           "
-              onClick={handleEmail}
+              onClick={() => handleEmail("victoria@blacksclub.com")}
             >
               victoria@blacksclub.com
+            </span>
+          </p>
+        </>
+      ) : (
+        <>
+          <div className="flex md:flex-row flex-col justify-center md:mt-4 mt-5">
+            <p className="md:text-[20px] text-[14px] text-white text-center leading-10">
+              To join by debit/credit card, choose the following link:
+              <br />
+              {/* list of buttons */}
+              <div className="flex flex-col gap-5 my-5 justify-center items-center ">
+                <button className="bg-[#c5a47e]  w-[320px] uppercase z-10  md:px-5 py-2 rounded-[15px]"
+                onClick={()=>{
+                  window.open("https://buy.stripe.com/eVa6qC3wp5tH6528xx");
+                }}
+                >
+                  <p className="z-10 md:text-[20px]  text-[10px]  font-[400] text-white px-[10px] md:tracking-widest">
+                    Diamond Member
+                  </p>
+                </button>
+                <button className="bg-[#c5a47e]  w-[320px] uppercase z-10  md:px-5 py-2 rounded-[15px]"
+                onClick={()=>{
+                  window.open("https://buy.stripe.com/9AQbKWgjb09nali5lm");
+                }}
+                >
+                  <p className="z-10 md:text-[20px]  text-[10px]  font-[400] text-white px-[10px] md:tracking-widest">
+                    Founder Member
+                  </p>
+                </button>
+                <button className="bg-[#c5a47e]  w-[320px] uppercase z-10  md:px-5 py-2 rounded-[15px]"
+                onClick={()=>{
+                  window.open("https://buy.stripe.com/dR64iu4At4pDfFCdRT]");
+                }}
+                >
+                  <p className="z-10 md:text-[20px]  text-[10px]  font-[400] text-white px-[10px] md:tracking-widest">
+                    Ambassador Member
+                  </p>
+                </button>
+              </div>
+              To join by Payment Plan, Crypto or by Bank Transfer:
+              <br /> Contact: Ahmed on +971 50 868 4288
+            </p>
+          </div>
+          <p className="md:text-[20px] text-[14px] text-white leading-10">
+            Email:{" "}
+            <span
+              className="text-[#c5a47e]
+          hover:underline hover:cursor-pointer
+          "
+              onClick={() => handleEmail("ahmed@1764.io")}
+            >
+              ahmed@1764.io
             </span>
           </p>
         </>

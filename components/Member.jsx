@@ -26,6 +26,7 @@ function Member() {
   const dubai3 = "/Videos/Dubai_NFT_3.mp4";
   const [activeSlide, setActiveSlide] = useState(1);
   const [carouselSize, setCarouselSize] = useState(350);
+  const [benefits, setBenefits] = useState("");
 
   useEffect(() => {
     if (isMobile) {
@@ -35,12 +36,38 @@ function Member() {
     }
   }, []);
 
+  useEffect(() => {
+    if (activeSlide === 1) {
+        setBenefits(`By recommendation link only, with VIP benefits, today are only
+      $5,000, for earlybird adopters. Subscriptions may rise at any time, subject to dynamic
+      pricing. See below for benefits.`);
+    
+} else if (activeSlide === 2) {
+      setBenefits(`By referral link only, today are only $2,500, for earlybird adopters.
+      Subscriptions may rise at any time, subject to dynamic pricing. See below for benefits.
+      Annual membership fees will start at $2,000 pa (minus community discounts, couples etc -
+      we’ll be in touch when this is due, with easipay monthly subscription options).
+      This compares favourably with existing Dubai private member institutions, such as the Arts
+      Club and the Capital Club. The Arts Club joining charge is $4,000, as a non-refundable
+      sunk cost, with an annual membership fee of $4,000 (and an 18-month waiting list). The
+      Capital Club’s joining charge is $13,000 with an annual fee of $5,500.
+      But with 1764 Dubai your joining fee is never a sunk cost; it is an investment that can be
+      traded, since it is a utility NFT.`);
+    } else {
+     
+       setBenefits(`By invitation link only, today are only $10,000, for earlybird
+adopters. Subscriptions may rise at any time, subject to dynamic pricing. See below for
+benefits.`);
+}
+    
+  }, [activeSlide]);
+
   const slides = [
     {
       key: 1,
       content: (
         <div
-          className='w-max z-50 hover:cursor-pointer'
+          className="w-max z-50 hover:cursor-pointer"
           onMouseEnter={() => setVideo1(true)}
           onMouseLeave={() => setVideo1(false)}
           onClick={() => setActiveSlide(3)}
@@ -61,7 +88,7 @@ function Member() {
       key: 2,
       content: (
         <div
-          className='w-max z-50 hover:cursor-pointer'
+          className="w-max z-50 hover:cursor-pointer"
           onMouseEnter={() => setVideo2(true)}
           onMouseLeave={() => setVideo2(false)}
           onClick={() => setActiveSlide(1)}
@@ -82,7 +109,7 @@ function Member() {
       key: 3,
       content: (
         <div
-          className='w-max z-50 hover:cursor-pointer'
+          className="w-max z-50 hover:cursor-pointer"
           onMouseEnter={() => setVideo3(true)}
           onMouseLeave={() => setVideo3(false)}
           onClick={() => setActiveSlide(2)}
@@ -102,17 +129,17 @@ function Member() {
   ];
 
   return (
-    <div className='flex bg-black flex-col justify-center items-center   '>
-      <h2 className=' uppercase md:text-[35px] text-[24px] font-normal font-oswald tracking-[8px] text-center text-white my-20 '>
-        become a <span className='text-[#c5a47e]'>Member</span>
+    <div className="flex bg-black flex-col justify-center items-center   ">
+      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal font-oswald tracking-[8px] text-center text-white my-20 ">
+        become a <span className="text-[#c5a47e]">Member</span>
       </h2>
       <div
-        id='member'
-        className='flex flex-col justify-center items-center md:mt-10 w-max'
+        id="member"
+        className="flex flex-col justify-center items-center md:mt-10 w-max"
       >
-        <div className='md:block hidden '>
+        <div className="md:block hidden ">
           {city === "Dubai" && (
-            <div className='flex flex-col justify-center items-center md:w-[1000px] h-[750px] mb-20'>
+            <div className="flex flex-col justify-center items-center md:w-[1000px] h-[750px] mb-20">
               <DynamicCarousel
                 slides={slides}
                 goToSlide={activeSlide}
@@ -137,9 +164,9 @@ function Member() {
             </div>
           )}
         </div>
-        <div className='md:hidden block'>
+        <div className="md:hidden block">
           {city === "Dubai" ? (
-            <div className='flex flex-col justify-center items-center w-[390px] h-[500px] mb-10 text-center'>
+            <div className="flex flex-col justify-center items-center w-[390px] h-[500px] mb-10 text-center">
               <DynamicCarousel
                 slides={slides}
                 goToSlide={activeSlide}
@@ -166,23 +193,19 @@ function Member() {
       </div>
 
       {!city === "Dubai" && (
-        <h3 className='text-[30px] mt-5 mb-10 font-[600]'>
-          limited to <span className='text-[#c5a47e]'>1000</span>
+        <h3 className="text-[30px] mt-5 mb-10 font-[600]">
+          limited to <span className="text-[#c5a47e]">1000</span>
         </h3>
       )}
       {city !== "Dubai" ? (
-        <p className='text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2'>
+        <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2">
           Your Diamond Membership NFT provides
           <br /> lifetime membership of Blacks Club. It’s your 21st
           <br /> Century membership card.
         </p>
       ) : (
-        <p className='text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px]'>
-          Your Diamond Lifetime Membership NFT provides unlimited access to
-          Blacks in Soho, London. It’s your 21st Century membership card. By
-          contrast to all other private members’ clubs, which charge a
-          considerable non-refundable joining fee, your membership is tradable
-          and never represents a sunk cost.
+        <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2">
+          {benefits}
         </p>
       )}
     </div>

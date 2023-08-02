@@ -7,7 +7,7 @@ function Clubs() {
       id="globalclubs"
     >
       <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:flex flex-grow">
-        reciprocal <span className="text-[#c5a47e] ml-5">{"  "} clubs</span>
+        reciprocal <span className="text-[#c5a47e] ml-10">{"  "} clubs</span>
       </h2>
 
       <div className="grid md:grid-cols-4  mt-20 mx-30 gap-0">

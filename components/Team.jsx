@@ -45,6 +45,24 @@ const Dubai_Memers = [
     position: "The Labz",
     linkedin: "https://www.linkedin.com/company/thelabz/",
   },
+  {
+    image: P4,
+    name: "Ché L Feenie",
+    position: "Blacks Club & 1764.io",
+    linkedin: "https://www.linkedin.com/in/ch%C3%A9-l-f-29304b15/",
+  },
+  {
+    image: P10,
+    name: "Adam Leon",
+    position: "Blacks Club & 1764.io",
+    linkedin: "https://www.linkedin.com/in/adam-leon-74090b14/",
+  },
+  {
+    image: P9,
+    name: "Dan Collingridge-Padbury",
+    position: "Blacks Club & 1764.io",
+    linkedin: "https://www.linkedin.com/in/dan-collingridge-padbury/",
+  },
 ];
 const Members = [
   {

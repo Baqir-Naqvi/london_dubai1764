@@ -15,7 +15,7 @@ const DUBAI_QUESTIONS = [
   },
   {
     q: "Why should I buy an NFT?",
-    a: "Originated by us ahead of anyone globally, it’s your 21st Century membership card. It represents access to the respective physical clubhouse for as long as you own it. By contrast to all other private members’ clubs, which charge a considerable non-refundable joining fee, your membership is tradable and never represents a sunk cost. The need for speed is proven by history: we purchased our first venue, Blacks Club, in London, in May 2023, which has fast become the UK’s vibrant Web3 central hub. Founder memberships sold out instantly. We are close to securing a suitable venue, have attracted investment capital and are engaged with local community Web3 groups, all of whom see the need for what we are soon to deliver. As with London, we very much look forward to providing an all-encompassing venue, which will act as Dubai’s Web3 social and commercial hub.",
+    a: "Originated by us ahead of anyone globally, it’s your 21st Century membership card. It represents access to the respective physical clubhouse for as long as you own it. By contrast to all other private members’ clubs, which charge a considerable non-refundable joining fee, your membership is tradable and never represents a sunk cost. The need for speed is proven by history: we purchased our first venue, Blacks Club, in London, in May 2022, which has fast become the UK’s vibrant Web3 central hub. Founder memberships sold out instantly. We have secured the most perfect venue, have attracted investment capital and are engaged with local community Web3 groups, all of whom see the need for what we are soon to deliver.",
   },
   {
     q: "How many NFTs are in the collection? ",
@@ -26,7 +26,7 @@ const DUBAI_QUESTIONS = [
     a: "As an Ethereum-based collection, London NFTs are listed on LooksRare & OpenSea, which are the largest NFT marketplaces, with arguably the easiest user interface to buy and sell. ",
   },
   {
-    q: "How long will it take to open the clubhouse in Dubai? ",
+    q: "Where is the clubhouse in Dubai?",
     a: "We have been offered several fabulous prospective venues and are already in talks. We opened our London flagship club 7 months ahead of schedule. Our current plan is to open in Dubai in 2023, possibly as early as October. The venue will be spacious, elegant, have multiple elements and will be central, targeting 15-minutes distance from the Marina, Palm, JBR and Downtown. We will announce the venue soonest we have signed documents.",
   },
   {
@@ -43,22 +43,15 @@ const DUBAI_QUESTIONS = [
   },
   {
     q: "Who is behind the venture?",
-    a: `A lot of significant people within the space (see list of London club members below) and within the sector, but primarily the following:
-
-Jonathan Willis (London)
-Co-Founder 1764 Dubai
-+44 7703 166773
-jonathan@1764.io
-LinkedIn: linkedin.com/in/jonathan-willis-5591291b5
-
-A serial entrepreneur, with a background in disruptive innovation, from publishing to property, film, theatre, visitor attractions and now clubs. Click on the LinkedIn profile for background.
-
-Veselin Velkov (Dubai)
-Co-Founder 1764 Dubai
-+971 542 737 599
-veselin@1764.ae
-
-A younger version of the above, highly successful within the sector and enormously respected within the space.
+    a: `  
+We are advocated by many significant people pioneering within the space, both in London
+and Dubai. 1764 Dubai is lead by Jonathan Willis and Veselin Velkov(see below). CoFounder Jonathan is a serial entrepreneur, with a background in disruptive innovation,
+from publishing to property, film, theatre, angel investment, visitor attractions and now
+hospitality. Co-Founder Veselin is a younger version of the aforementioned, an early NFT
+adopter, trader and now originator, who has proven to be highly successful within the
+sector. Both are supported by a wide, influential global team of credible, trustworthy and
+dependable players, which we call “suits & sandals”: Web3-passionate corporates &
+degens
 `,
   },
   {
@@ -66,8 +59,16 @@ A younger version of the above, highly successful within the sector and enormous
     a: "Unlikely. We have a huge history of delivery. Our projects always get accomplished, which is part of the satisfaction. But the primary satisfaction is in making new things happen. We’ve been originating and delivering for over 40 years. We dream (the idea of merging new-tech NFTs’ utility with old-school private members’ clubs), we identify gaps in the market (no web3 & tech home in either London or Dubai), we execute (creating a collection) and we deliver (buying Blacks in London, the perfect flagship home) and then we roll that out, the concept having been proven.",
   },
   {
+    q: "What about bad actors?",
+    a: "Not accepted. Our reputation is impeccable, as evidenced at Blacks in London, where if any bad apples accidentally slip through the net, they’re quietly spoken to and never appear again. 1764 Dubai is for genuine and legitimate, honourable, ethical and principled protagonists in the space, for which we have become renown.",
+  },
+  {
     q: "A question for you?",
-    a: "Not accepted. Our reputation is impeccable, as evidenced at Blacks in London, where if any bad apples accidentally slip through the net, they’re quietly spoken to and never appear again. 1764 Dubai is for genuine and legitimate, honourable, ethical and principled protagonists in the space, for which we will become renown.",
+    a: `Isn't this the club that you’ve wanted to exist in Dubai and to which you always dreamed of
+being a member? Act now, before the club's full. Otherwise, there'll still always be space
+for you, but you'll have to wait until a membership NFT appears on the secondary market,
+for which you perhaps will have to pay a considerable premium (our London Founder
+memberships, which quickly sold out, have traded for as much as an 18x multiple.)`,
   },
 ];
 const LONDON_QUESTIONS = [
@@ -269,7 +270,10 @@ function WorldWide() {
           />
         </div>
         <div className="-mt-24">
-          <div className="md:w-4/5 lg:w-3/5 flex flex-col justify-left items-left md:ml-[50px]  ">
+          <div
+            className={`md:w-4/5 lg:w-3/5 flex flex-col  md:mx-auto  
+          ${city === "Dubai" ? "justify-center items-center" : "justify-left items-left"}`}
+          >
             <h2 className="text-white md:text-[40px] text-[24px] font-[500]  leading-[1] px-1">
               Our vision is to quickly scale the <br />
               concept by launching affiliate venues
@@ -297,19 +301,18 @@ function WorldWide() {
           </div>
 
           <div className="flex flex-row md:w-[700px] mt-10 mx-auto">
-            <Image 
-            src={Image_1764}
-            alt="Image_1764"
-            height={500}
-            width={500}
-            className="w-full"
-          />
+            <Image
+              src={Image_1764}
+              alt="Image_1764"
+              height={500}
+              width={500}
+              className="w-full"
+            />
           </div>
-
 
           <div className="flex flex-row w-full justify-content justify-center h-max ">
             <h2 className="text-white md:text-[40px] text-[24px] font-[500]  leading-[1] my-10 text-center ">
-              Importantly, we promote inclusivity <br />
+              Importantly, we promote inclusivity
               instead of exclusivity
             </h2>
           </div>
@@ -385,8 +388,6 @@ function WorldWide() {
           </div>
         </div>
       </div>
-
-   
     </div>
   );
 }

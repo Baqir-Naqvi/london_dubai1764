@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useGlobalContext } from "@/utils/ContextProvider";
+
 function ContactUs() {
+  const { city } = useGlobalContext();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -42,13 +45,29 @@ function ContactUs() {
 
       <div className="flex md:flex-row flex-col md:w-[95%] md:mt-[100px] mt-[20px]">
         <div className="flex flex-col justify-top items-center md:w-[30%] pt-2">
-          <p className="text-white font-normal opacity-90">+44 7794 935708</p>
+          {city === "Dubai" ? (
+            <p className="text-white font-normal opacity-90">
+              +971 54 273 7599
+            </p>
+          ) : (
+            <p className="text-white font-normal opacity-90">+44 7794 935708</p>
+          )}
+
+           {city === "Dubai" ? (
+            <p
+            className="text-white font-normal opacity-90 hover:cursor-pointer"
+            onClick={openEmailTo}
+          >
+            dubai@1764.io
+          </p>
+          ) : (
           <p
             className="text-white font-normal opacity-90 hover:cursor-pointer"
             onClick={openEmailTo}
           >
             hello@1764.io
           </p>
+          )}
         </div>
 
         <form
