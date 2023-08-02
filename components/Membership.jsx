@@ -29,27 +29,29 @@ function Membership() {
       <p className="md:text-[20px] text-[14px] text-white opacity-90 my-10">
         It's in your MetaMask wallet in seconds - give it a go
       </p>
-      {city ==="London" &&(
+      {city === "London" && (
         <>
-      <div className="flex md:flex-row flex-col justify-center md:mt-4 mt-5">
-        <p className="md:text-[20px] text-[14px] text-white leading-10">
-          To join by Payment Plan, Crypto or by Bank Transfer:
-          <br />
-          Contact Victoria Morrison-Low on +44 7908 994946
-        </p>
-      </div>
-      <p className="md:text-[20px] text-[14px] text-white leading-10">
-        Email:{" "}
-        <span
-          className="text-[#c5a47e]
+          <div className="flex md:flex-row flex-col justify-center md:mt-4 mt-5">
+            <p className="md:text-[20px] text-[14px] text-white text-center leading-10">
+              To join by Payment Plan, Crypto, Credit/Debit Card or by Bank Transfer
+              <br />& to discuss Corporate Membership:
+              <br/>
+              <br/> Contact Victoria
+              Morrison-Low on +44 7908 994946
+            </p>
+          </div>
+          <p className="md:text-[20px] text-[14px] text-white leading-10">
+            Email:{" "}
+            <span
+              className="text-[#c5a47e]
           hover:underline hover:cursor-pointer
           "
-          onClick={handleEmail}
-          >
-          victoria@blacksclub.com
-        </span>
-      </p>
-          </>
+              onClick={handleEmail}
+            >
+              victoria@blacksclub.com
+            </span>
+          </p>
+        </>
       )}
 
       <div className="flex md:flex-row flex-col justify-center md:mt-[5rem] mt-10 ">

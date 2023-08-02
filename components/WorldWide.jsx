@@ -296,7 +296,7 @@ function WorldWide() {
             </div>
           </div>
 
-          <div className="flex flex-row md:w-[1200px] mt-5 mx-auto">
+          <div className="flex flex-row md:w-[700px] mt-10 mx-auto">
             <Image 
             src={Image_1764}
             alt="Image_1764"
@@ -307,8 +307,8 @@ function WorldWide() {
           </div>
 
 
-          <div className="flex flex-row w-full justify-content justify-end h-max ">
-            <h2 className="text-white md:text-[40px] text-[24px] font-[500]  leading-[1] my-10 text-right md:mr-10">
+          <div className="flex flex-row w-full justify-content justify-center h-max ">
+            <h2 className="text-white md:text-[40px] text-[24px] font-[500]  leading-[1] my-10 text-center ">
               Importantly, we promote inclusivity <br />
               instead of exclusivity
             </h2>
