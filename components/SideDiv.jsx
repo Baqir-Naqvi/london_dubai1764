@@ -6,7 +6,7 @@ import TwitterIcon from "@/public/Svgs/twitter.svg";
 import Vertical from "@/public/Images/VerticalLine.png";
 import SideBar from "@/public/Images/sidepng.png";
 import Image from "next/image";
-import Logo from "@/public/Images/Logo.png";
+import Logo from "@/public/Images/logo.png";
 import { useGlobalContext } from "@/utils/ContextProvider";
 function SideDiv() {
   const { city } = useGlobalContext();
