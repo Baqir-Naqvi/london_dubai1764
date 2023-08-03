@@ -175,8 +175,8 @@ benefits.`);
           )}
           {city === "London" && (
             <div
-              // onMouseEnter={() => setHover(true)}
-              // onMouseLeave={() => setHover(false)}
+            // onMouseEnter={() => setHover(true)}
+            // onMouseLeave={() => setHover(false)}
             >
               <DynamicReactPlayer
                 url={videourl}
@@ -191,7 +191,7 @@ benefits.`);
         </div>
         <div className="md:hidden block">
           {city === "Dubai" ? (
-            <div className="flex flex-col justify-center items-center w-[390px] h-[500px] text-center">
+            <div className="flex flex-col justify-center items-center w-[100vw] h-[500px] ">
               <DynamicCarousel
                 slides={slides}
                 goToSlide={activeSlide}
@@ -233,6 +233,8 @@ benefits.`);
           <h2 className="font-oswald uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white mt-10 md:mb-0 ">
             <span className="text-[#c5a47e]"> {tiermembership}</span> Membership
           </h2>
+         
+
           <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2 mb-10">
             {benefits}
           </p>

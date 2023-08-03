@@ -12,14 +12,17 @@ function Membership() {
     window.open(`mailto:${email}`);
   };
 
-  
   return (
     <div
       className="flex flex-col justify-center items-center bg-black "
       id="membership"
     >
-      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mb-10 mt-5 ">
+      <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mt-5 ">
         lifetime <span className="text-[#c5a47e]">membership</span>
+      </h2>
+      <h2 className="md:text-[24px] font-normal text-center text-white mb-10 my-5">
+        {" "}
+        Currently - £2,500 (incl. VAT)
       </h2>
       <button className="bg-[#c5a47e]  uppercase z-10 w-max md:py-5 md:px-5 py-5 rounded-[15px]">
         <p className="z-10 md:text-[20px] text-[10px] md:px-[20px] font-[600] text-white px-[10px] md:tracking-widest">
@@ -46,12 +49,12 @@ function Membership() {
                   </p>
                 </button>
               </span>
-              <br/>
+              <br />
               To join by Payment Plan, Crypto or by Bank Transfer:
               <br /> Contact Victoria Morrison-Low on +44 7908 994946
             </p>
           </div>
-          <p className="md:text-[20px] text-[14px] text-white leading-10">
+          <span className="md:text-[20px] text-[14px] text-white leading-10">
             Email:{" "}
             <span
               className="text-[#c5a47e]
@@ -61,12 +64,12 @@ function Membership() {
             >
               victoria@blacksclub.com
             </span>
-          </p>
+          </span>
         </>
       ) : (
         <>
           <div className="flex md:flex-row flex-col justify-center md:mt-4 mt-5">
-            <p className="md:text-[20px] text-[14px] text-white text-center leading-10">
+            <span className="md:text-[20px] text-[14px] text-white text-center leading-10">
               To join by debit/credit card, choose the following link:
               <br />
               {/* list of buttons */}
@@ -104,9 +107,9 @@ function Membership() {
               </div>
               To join by Payment Plan, Crypto or by Bank Transfer:
               <br /> Contact: Ahmed on +971 50 868 4288
-            </p>
+            </span>
           </div>
-          <p className="md:text-[20px] text-[14px] text-white leading-10">
+          <span className="md:text-[20px] text-[14px] text-white leading-10">
             Email:{" "}
             <span
               className="text-[#c5a47e]
@@ -116,7 +119,7 @@ function Membership() {
             >
               ahmed@1764.io
             </span>
-          </p>
+          </span>
         </>
       )}
 

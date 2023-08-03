@@ -195,32 +195,33 @@ function Team() {
   return (
     <>
       <Parallax translateY={-5} speed={-10}>
-        <h2 className="text-[#c5a47e]  md:flex hidden md:text-9xl font-bold  text-center absolute right-[10px] mt-[150px] opacity-10 ">
+        <h2 className='text-[#c5a47e]  md:flex hidden md:text-9xl font-bold  text-center absolute right-[10px] mt-[150px] opacity-10 '>
           founders
         </h2>
       </Parallax>
-      <div className="flex flex-col items-center justify-center h-max bg-black mt-[0px]">
-        {city==="London"&&(
-        <button className="bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-full h-[57px] rounded-[30px] md:mt-[30px] ">
-          <p className="z-10 text-[14px] tracking-wider font-[600] text-white hover:cursor-pointer"
-            onClick={() => {
-              handlenewWindow("https://www.blacksclub.com/");
-            }}
-          >
-            visit our london club
-          </p>
-        </button>
+      <div className='flex flex-col items-center justify-center h-max bg-black mt-[0px]'>
+        {city === "London" && (
+          <button className='bg-[#c5a47e]  uppercase z-10 md:w-[355px] w-full h-[57px] rounded-[30px] md:mt-[30px] '>
+            <p
+              className='z-10 text-[14px] tracking-wider font-[600] text-white hover:cursor-pointer'
+              onClick={() => {
+                handlenewWindow("https://www.blacksclub.com/");
+              }}
+            >
+              visit our london club
+            </p>
+          </button>
         )}
         <h2
-          className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:my-20 "
-          id="founders"
+          className=' uppercase md:text-[35px] mt-5 text-[24px] font-normal tracking-[8px] text-center text-white md:my-20 '
+          id='founders'
         >
-          our <span className="text-[#c5a47e]">team</span>
+          our <span className='text-[#c5a47e]'>team</span>
         </h2>
 
         {/* Profile Cards Container  */}
 
-        <div className="flex flex-wrap gap-10 justify-center items-center mt-20">
+        <div className='flex flex-wrap gap-10 justify-center items-center mt-20'>
           {city === "Dubai"
             ? Dubai_Memers.map((item, index) => {
                 return (
@@ -246,15 +247,15 @@ function Team() {
               })}
         </div>
 
-        <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mt-10 ">
-          as <span className="text-[#c5a47e]">featured</span>
+        <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mt-10 '>
+          as <span className='text-[#c5a47e]'>featured</span>
         </h2>
 
-        <div className="flex md:flex-row flex-wrap gap-10 justify-center items-center mt-20">
+        <div className='flex md:flex-row flex-wrap gap-10 justify-center items-center mt-20'>
           {FeaturesArray.map((item, index) => {
             return (
-              <div key={index} className=" w-[220px]">
-                <Image src={item} alt="Feature" height={250} width={250} />
+              <div key={index} className=' w-[220px]'>
+                <Image src={item} alt='Feature' height={250} width={250} />
               </div>
             );
           })}

@@ -12,19 +12,19 @@ export default function HeroSection() {
   }, [city]);
 
   return (
-    <div className="w-[100%] bg-[#131313] flex flex-col  items-center bg-opacity-0">
+    <div className='w-[100%] bg-[#131313] flex flex-col  items-center bg-opacity-0'>
       {city === "Dubai" ? (
-        <div className="absolute bg-cover bg-center w-full h-screen bg-dubai opacity-50" />
+        <div className='absolute bg-cover bg-center w-full h-screen bg-dubai opacity-50' />
       ) : (
-        <div className="absolute bg-cover bg-center w-full h-screen bg-image opacity-50" />
+        <div className='absolute bg-cover bg-center w-full h-screen bg-image opacity-50' />
       )}
 
-      <div className="flex flex-col items-center justify-center h-screen pt-40 z-30">
+      <div className='flex flex-col items-center justify-center h-screen pt-40 z-30'>
         <Parallax translateY={20} speed={-20}>
           <h1
-            className="md:text-[48px] text-[20px] text-center tracking-[10px] uppercase z-30
+            className='md:text-[48px]  w-[70%] md:w-full mx-auto text-[20px] text-center tracking-[10px] uppercase z-30
         leading-[1.1] font-[400]
-         "
+         '
           >
             {city === "Dubai" ? "Dubai’s" : "London’s"} Home of Digital Assets{" "}
             <br />
@@ -34,7 +34,7 @@ export default function HeroSection() {
 
         {city === "Dubai" ? (
           <Parallax translateY={20} speed={-20}>
-            <h3 className="md:text-[24px]  font-montserrat text-[12px] text-center  opacity-90 px-12 md:px-0 leading-none z-30">
+            <h3 className='md:text-[24px]  font-montserrat text-[12px] text-center  opacity-90 px-12 md:px-0 leading-none z-30'>
               Dubai’s first Private Members' Club dedicated to Crypto, NFTs,
               Web3, DeFi & Tech. <br />
               Innovated by London’s first Private Members' Club devoted to the
@@ -53,25 +53,16 @@ export default function HeroSection() {
           </Parallax>
         ) : (
           <Parallax translateY={20} speed={-20}>
-            <h3 className="md:text-[22px] font-montserrat font-[100]  text-[12px] text-center z-10 px-12 md:px-0 leading-none">
+            <h3 className='md:text-[22px] font-montserrat font-[100]  text-[12px] text-center z-10 px-12 md:px-0 leading-none'>
               The World’s first Private Members' Club dedicated to Web3 and the
               World’s
-              <div className="md:block hidden h-1">
+              <div className='md:block hidden h-1'>
                 <br />{" "}
               </div>
               first Private Members' Club to innovate NFTs as Membership Tokens
             </h3>
           </Parallax>
         )}
-        {/* {city !== "Dubai" && (
-          <Parallax translateY={20} speed={-20}>
-            <button className="bg-[#c5a47e]  uppercase z-10 md:w-[305px] w-max md:h-[50px] h-[40px] md:px-0 px-2 rounded-[30px]">
-              <p className="z-10 md:text-[14px] text-[10px] tracking-wider font-[600] text-white">
-                Enquire about membership
-              </p>
-            </button>
-          </Parallax>
-        )} */}
       </div>
       <SideDiv />
     </div>

@@ -6,7 +6,7 @@ import TypeIt from "typeit-react";
 import "./index.css";
 import { useGlobalContext } from "@/utils/ContextProvider";
 import Image from "next/image";
-import LondonImage from '../public/Images/londonmid.png'
+import LondonImage from "../public/Images/londonmid.png";
 
 export default function Animation({ chooseCityRef }) {
   const textRef = useRef();
@@ -78,7 +78,7 @@ export default function Animation({ chooseCityRef }) {
   };
 
   return (
-    <div className="h-screen relative w-full  overflow-hidden flex items-center justify-center ">
+    <div className='h-screen relative w-full  overflow-hidden flex items-center justify-center '>
       <div
         style={{
           opacity: 0,
@@ -120,7 +120,7 @@ export default function Animation({ chooseCityRef }) {
           }  `}
           onClick={() => handleClick("Dubai")}
         >
-          <div className="h-full w-full flex items-center justify-center ">
+          <div className='h-full w-full flex items-center justify-center '>
             <div
               className={`h-14 w-full flex items-center justify-start md:justify-center px-10 cursor-pointer  bg-[#c5a47ebc] ${
                 makeFullScreen === "Dubai" && " justify-center"
@@ -128,7 +128,7 @@ export default function Animation({ chooseCityRef }) {
             >
               <div
                 onClick={() => handleClick("Dubai")}
-                className="text-white !cursor-pointer  text-lg sm:text-[1.5rem] lg:text-[2rem] tracking-widest"
+                className='text-white !cursor-pointer  text-lg sm:text-[1.5rem] lg:text-[2rem] tracking-widest'
               >
                 DUBAI
               </div>
@@ -143,19 +143,17 @@ export default function Animation({ chooseCityRef }) {
           }`}
           onClick={() => handleClick("London")}
         >
-          <div className="h-full w-full flex items-center justify-center  ">
+          <div className='h-full w-full flex items-center justify-center  '>
             <div
               className={`h-14 w-full flex items-center justify-end md:justify-center p-5 cursor-pointer  bg-[#000000bc] ${
                 makeFullScreen === "London" && " justify-center"
               }`}
             >
-              <div onClick={() => handleClick("London")}>
-                <Image
-                  src={LondonImage}
-                  height={100}
-                  width={200}
-                  alt="londonmid"
-                />
+              <div
+                onClick={() => handleClick("London")}
+                className='text-white !cursor-pointer uppercase text-lg sm:text-[1.5rem] lg:text-[2rem] tracking-widest'
+              >
+                London
               </div>
             </div>
           </div>
