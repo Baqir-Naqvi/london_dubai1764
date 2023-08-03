@@ -99,7 +99,7 @@ export default function Animation({ chooseCityRef }) {
         </button>
         <img
           className=" h-12 md:lg-18 lg:h-24 left-[50%] top-2 translate-x-[-50%] mt-3  object-contain absolute z-20"
-          src="/Images/LoaderLogo2.png"
+          src="/Images/Logo.png"
           alt=""
         />
 
@@ -164,7 +164,7 @@ export default function Animation({ chooseCityRef }) {
 
       <div
         ref={textRef}
-        className="text-[#c7a47c] text-7xl line-1 anim-typewriter z-50"
+        className="text-[#c7a47c] text-8xl line-1 anim-typewriter z-50"
       >
         <TypeIt>2023</TypeIt>
       </div>

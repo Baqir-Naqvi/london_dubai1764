@@ -33,10 +33,7 @@ function Membership() {
         <>
           <div className="flex md:flex-row flex-col justify-center md:mt-4 mt-5">
             <p className="md:text-[20px] text-[14px] text-white text-center leading-10">
-              To join by Payment Plan, Crypto, Credit/Debit Card or by Bank
-              Transfer
-              <br />& to discuss Corporate Membership:
-              
+              To join by debit/credit card, use following link:
               <span className="flex flex-col justify-center items-center mt-8">
                 <button
                   className="bg-[#c5a47e]  md:w-max w-[70%] uppercase z-10  md:px-5 py-2 rounded-[15px]"
@@ -49,6 +46,8 @@ function Membership() {
                   </p>
                 </button>
               </span>
+              <br/>
+              To join by Payment Plan, Crypto or by Bank Transfer:
               <br /> Contact Victoria Morrison-Low on +44 7908 994946
             </p>
           </div>

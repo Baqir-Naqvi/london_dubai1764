@@ -163,7 +163,7 @@ function WorldWide() {
       </Parallax>
       <div className="flex flex-col justify-center items-center ">
         <h2 className="font-oswald uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white mt-10 md:mb-0 ">
-          we are <span className="text-[#c5a47e]">WorldWide</span>
+          we are <span className="text-[#c5a47e]">going global</span>
         </h2>
 
         <div className="bg-world-map relative bg-center w-[90%] mt-0 ">
@@ -271,8 +271,9 @@ function WorldWide() {
         </div>
         <div className="-mt-24">
           <div
+            id="ourvision"
             className={`md:w-4/5 lg:w-3/5 flex flex-col  md:mx-auto  
-          ${city === "Dubai" ? "justify-center items-center" : "justify-left items-left"}`}
+         justify-center items-center`}
           >
             <h2 className="text-white md:text-[40px] text-[24px] font-[500]  leading-[1] px-1">
               Our vision is to quickly scale the <br />
@@ -300,7 +301,7 @@ function WorldWide() {
             </div>
           </div>
 
-          <div className="flex flex-row md:w-[700px] mt-10 mx-auto">
+          <div className="flex flex-row md:w-[700px] md:mt-20 mx-auto">
             <Image
               src={Image_1764}
               alt="Image_1764"
@@ -310,10 +311,9 @@ function WorldWide() {
             />
           </div>
 
-          <div className="flex flex-row w-full justify-content justify-center h-max ">
+          <div className="flex flex-row w-full justify-content justify-center md:mt-10 h-max ">
             <h2 className="text-white md:text-[40px] text-[24px] font-[500]  leading-[1] my-10 text-center ">
-              Importantly, we promote inclusivity
-              instead of exclusivity
+              Importantly, we promote inclusivity instead of exclusivity
             </h2>
           </div>
         </div>

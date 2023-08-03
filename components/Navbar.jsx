@@ -1,6 +1,10 @@
 import React from 'react'
+import { useGlobalContext } from '@/utils/ContextProvider';
+
 
 function Navbar() {
+  const { setCity,city } = useGlobalContext();
+
   return (
     <div
       className="absolute flex-row justify-center items-center h-16 bg-transparent navbar_heading text-white   w-full z-50"
@@ -8,10 +12,11 @@ function Navbar() {
     >
       <ul className=" md:flex flex-row justify-center items-center md:h-16 text-white font-[100] tracking-[3px] text-[12px] w-full h-0 overflow-hidden">
         <a
-          className="hover:text-gray-300 navbar_heading  hover:cursor-pointer p-4"
-          href="#about"
+          className="hover:text-gray-300  hover:cursor-pointer p-4"
+          href="#"
+          onClick={() => window.location.reload()}
         >
-          ABOUT
+          HOME
         </a>
         <a
           className="hover:text-gray-300  hover:cursor-pointer p-4"
@@ -21,15 +26,9 @@ function Navbar() {
         </a>
         <a
           className="hover:text-gray-300  hover:cursor-pointer p-4"
-          href="#membership"
+          href="#ourvision"
         >
-          MEMBERSHIP
-        </a>
-        <a
-          className="hover:text-gray-300  hover:cursor-pointer p-4"
-          href="#globalclubs"
-        >
-          GLOBAL CLUBS
+          OUR VISION
         </a>
         <a
           className="hover:text-gray-300  hover:cursor-pointer p-4"
@@ -39,10 +38,29 @@ function Navbar() {
         </a>
         <a
           className="hover:text-gray-300  hover:cursor-pointer p-4"
+          href="#membership"
+        >
+          MEMBERSHIP
+        </a>
+        <a
+          className="hover:text-gray-300  hover:cursor-pointer p-4"
           href="#founders"
         >
           FOUNDERS
         </a>
+        {/* <a
+          className="hover:text-gray-300 navbar_heading  hover:cursor-pointer p-4"
+          href="#about"
+        >
+          ABOUT
+        </a> */}
+
+        {/* <a
+          className="hover:text-gray-300  hover:cursor-pointer p-4"
+          href="#globalclubs"
+        >
+          GLOBAL CLUBS
+        </a> */}
       </ul>
     </div>
   );

@@ -19,7 +19,7 @@ function Member() {
   const videourl =
     city === "Dubai" ? "/Videos/Dubai_NFT.mp4" : "/Videos/LondonNFT.mp4";
   const [dubaiurl, setDubaiurl] = useState("");
-  const [video1, setVideo1] = useState(false);
+  const [video1, setVideo1] = useState(true);
   const [video2, setVideo2] = useState(false);
   const [video3, setVideo3] = useState(false);
   const dubai2 = "/Videos/Dubai_NFT_2.mp4";
@@ -69,10 +69,19 @@ benefits.`);
       content: (
         <div
           className="w-max z-50 hover:cursor-pointer"
-          onMouseEnter={() => setVideo1(true)}
-          onMouseLeave={() => setVideo1(false)}
-          onClick={() => setActiveSlide(3)}
-          onTouchStart={() => setActiveSlide(3)}
+          // onMouseEnter={() => setVideo1(true)}
+          // onMouseLeave={() => setVideo1(false)}
+          onClick={() => {setActiveSlide(3) 
+            setVideo1(true)
+            setVideo2(false)
+            setVideo3(false)
+          }
+          }
+          onTouchStart={() => {setActiveSlide(3)
+            setVideo1(true)
+            setVideo2(false)
+            setVideo3(false)
+          }}
         >
           <DynamicReactPlayer
             url={videourl}
@@ -90,10 +99,18 @@ benefits.`);
       content: (
         <div
           className="w-max z-50 hover:cursor-pointer"
-          onMouseEnter={() => setVideo2(true)}
-          onMouseLeave={() => setVideo2(false)}
-          onClick={() => setActiveSlide(1)}
-          onTouchStart={() => setActiveSlide(1)}
+          // onMouseEnter={() => setVideo2(true)}
+          // onMouseLeave={() => setVideo2(false)}
+          onClick={() => {setActiveSlide(1)
+          setVideo2(true)
+          setVideo1(false)
+          setVideo3(false)
+          }}
+          onTouchStart={() => {setActiveSlide(1)
+          setVideo2(true)
+          setVideo1(false)
+          setVideo3(false)
+        }}
         >
           <DynamicReactPlayer
             url={dubai2}
@@ -111,10 +128,17 @@ benefits.`);
       content: (
         <div
           className="w-max z-50 hover:cursor-pointer"
-          onMouseEnter={() => setVideo3(true)}
-          onMouseLeave={() => setVideo3(false)}
-          onClick={() => setActiveSlide(2)}
-          onTouchStart={() => setActiveSlide(2)}
+          // onMouseEnter={() => setVideo3(true)}
+          // onMouseLeave={() => setVideo3(false)}
+          onClick={() => {setActiveSlide(2)
+            setVideo3(true)
+            setVideo1(false)
+            setVideo2(false)
+          }}
+          onTouchStart={() => {setActiveSlide(2)
+            setVideo3(true)
+            setVideo1(false)
+            setVideo2(false)}}
         >
           <DynamicReactPlayer
             url={dubai3}
@@ -151,14 +175,14 @@ benefits.`);
           )}
           {city === "London" && (
             <div
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
+              // onMouseEnter={() => setHover(true)}
+              // onMouseLeave={() => setHover(false)}
             >
               <DynamicReactPlayer
                 url={videourl}
                 width={700}
                 height={700}
-                playing={hover}
+                playing={true}
                 loop={true}
                 muted={true}
               />

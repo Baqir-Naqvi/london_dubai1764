@@ -5,16 +5,11 @@ import { useGlobalContext } from "@/utils/ContextProvider";
 import { Parallax } from "react-scroll-parallax";
 import { useEffect } from "react";
 
-
 export default function HeroSection() {
   const { city } = useGlobalContext();
-  useEffect(()=>{
-    scrollTo(100,0);
-
-
-  },[city])
-
-
+  useEffect(() => {
+    scrollTo(100, 0);
+  }, [city]);
 
   return (
     <div className="w-[100%] bg-[#131313] flex flex-col  items-center bg-opacity-0">
@@ -68,15 +63,15 @@ export default function HeroSection() {
             </h3>
           </Parallax>
         )}
-        {city!=="Dubai" &&
-        <Parallax translateY={20} speed={-20}>
-          <button className="bg-[#c5a47e]  uppercase z-10 md:w-[305px] w-max md:h-[50px] h-[40px] md:px-0 px-2 rounded-[30px]">
-            <p className="z-10 md:text-[14px] text-[10px] tracking-wider font-[600] text-white">
-              Enquire about membership
-            </p>
-          </button>
-        </Parallax>
-}
+        {/* {city !== "Dubai" && (
+          <Parallax translateY={20} speed={-20}>
+            <button className="bg-[#c5a47e]  uppercase z-10 md:w-[305px] w-max md:h-[50px] h-[40px] md:px-0 px-2 rounded-[30px]">
+              <p className="z-10 md:text-[14px] text-[10px] tracking-wider font-[600] text-white">
+                Enquire about membership
+              </p>
+            </button>
+          </Parallax>
+        )} */}
       </div>
       <SideDiv />
     </div>

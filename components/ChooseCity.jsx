@@ -30,7 +30,7 @@ export default function ChooseCity({ chooseCityRef }) {
         <span className="uppercase text-[.8rem] md:text-[1.8rem] text-center tracking-widest">
           The Home of Digital Assets and Disruptive Innovation
         </span>
-        <span className="md:block hidden w-[80%] md:w-[60%] text-center text-[.5rem] md:text-[.9rem] text-gray-400">
+        <span className="md:block hidden w-[80%] md:w-[60%] text-center text-[.5rem] md:text-[1.2rem] md:leading-8 text-gray-400">
           The World's first Private Members' Club dedicated to Web3 <br /> The
           World's first Private Members' Club to innovate NFTs as Membership
           Tokens <br /> Proud Owner of Blacks Club, Soho, London (est. 1764){" "}

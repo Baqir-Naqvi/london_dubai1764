@@ -17,7 +17,7 @@ function FAQs() {
     },
     {
       q: "How many NFTs are in the collection? ",
-      a: " There are approximately 5,000 NFTs per clubhouse, depending on venue size. This represents the typical membership for private members clubs, which are usually oversubscribed, with a long waiting list. It is important to us to ensure we have enough members to add real value to the community, without having so many that the exclusivity of being a member is diluted. Once memberships are sold out, the only way to become a member is to purchase one on the secondary market, whenever any become available. ",
+      a: " There are 3,500 memberships available to Blacks Club. It is important to us to ensure we have enough members to add real value to the community, without having so many that the exclusivity of being a member is diluted. Once memberships are sold out, the only way to become a member is to purchase one on the secondary market, whenever any become available. ",
     },
     {
       q: "Where are the NFTs listed? ",
