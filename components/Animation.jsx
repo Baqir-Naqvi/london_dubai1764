@@ -99,7 +99,7 @@ export default function Animation({ chooseCityRef }) {
         </button>
         <img
           className=" h-12 md:lg-18 lg:h-24 left-[50%] top-2 translate-x-[-50%] mt-3  object-contain absolute z-20"
-          src="/Images/Logo.png"
+          src="/Images/logo.png"
           alt=""
         />
 
