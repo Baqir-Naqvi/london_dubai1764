@@ -27,6 +27,7 @@ function Member() {
   const [activeSlide, setActiveSlide] = useState(1);
   const [carouselSize, setCarouselSize] = useState(350);
   const [benefits, setBenefits] = useState("");
+  const [tiermembership, setTiermembership] = useState("");
 
   useEffect(() => {
     if (isMobile) {
@@ -38,11 +39,11 @@ function Member() {
 
   useEffect(() => {
     if (activeSlide === 1) {
-        setBenefits(`By recommendation link only, with VIP benefits, today are only
+      setBenefits(`By recommendation link only, with VIP benefits, today are only
       $5,000, for earlybird adopters. Subscriptions may rise at any time, subject to dynamic
       pricing. See below for benefits.`);
-    
-} else if (activeSlide === 2) {
+      setTiermembership("Founder");
+    } else if (activeSlide === 2) {
       setBenefits(`By referral link only, today are only $2,500, for earlybird adopters.
       Subscriptions may rise at any time, subject to dynamic pricing. See below for benefits.
       Annual membership fees will start at $2,000 pa (minus community discounts, couples etc -
@@ -53,13 +54,13 @@ function Member() {
       Capital Club’s joining charge is $13,000 with an annual fee of $5,500.
       But with 1764 Dubai your joining fee is never a sunk cost; it is an investment that can be
       traded, since it is a utility NFT.`);
+      setTiermembership("Diamond");
     } else {
-     
-       setBenefits(`By invitation link only, today are only $10,000, for earlybird
+      setBenefits(`By invitation link only, today are only $10,000, for earlybird
 adopters. Subscriptions may rise at any time, subject to dynamic pricing. See below for
 benefits.`);
-}
-    
+      setTiermembership("Ambassador");
+    }
   }, [activeSlide]);
 
   const slides = [
@@ -135,11 +136,11 @@ benefits.`);
       </h2>
       <div
         id="member"
-        className="flex flex-col justify-center items-center md:mt-10 w-max"
+        className="flex flex-col justify-center items-center  w-max"
       >
         <div className="md:block hidden ">
           {city === "Dubai" && (
-            <div className="flex flex-col justify-center items-center md:w-[1000px] h-[750px] mb-20">
+            <div className="flex flex-col justify-center items-center md:w-[1000px] h-[750px] mt-5">
               <DynamicCarousel
                 slides={slides}
                 goToSlide={activeSlide}
@@ -166,7 +167,7 @@ benefits.`);
         </div>
         <div className="md:hidden block">
           {city === "Dubai" ? (
-            <div className="flex flex-col justify-center items-center w-[390px] h-[500px] mb-10 text-center">
+            <div className="flex flex-col justify-center items-center w-[390px] h-[500px] text-center">
               <DynamicCarousel
                 slides={slides}
                 goToSlide={activeSlide}
@@ -204,9 +205,14 @@ benefits.`);
           <br /> Century membership card.
         </p>
       ) : (
-        <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2">
-          {benefits}
-        </p>
+        <>
+          <h2 className="font-oswald uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white mt-10 md:mb-0 ">
+            <span className="text-[#c5a47e]"> {tiermembership}</span> Membership
+          </h2>
+          <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2 mb-10">
+            {benefits}
+          </p>
+        </>
       )}
     </div>
   );

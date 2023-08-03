@@ -36,7 +36,19 @@ function Membership() {
               To join by Payment Plan, Crypto, Credit/Debit Card or by Bank
               Transfer
               <br />& to discuss Corporate Membership:
-              <br />
+              
+              <span className="flex flex-col justify-center items-center mt-8">
+                <button
+                  className="bg-[#c5a47e]  md:w-max w-[70%] uppercase z-10  md:px-5 py-2 rounded-[15px]"
+                  onClick={() => {
+                    window.open("https://buy.stripe.com/9AQ5my9UN1dr7969BE");
+                  }}
+                >
+                  <p className="z-10 md:text-[20px]  text-[10px]  font-[400] text-white px-[10px] md:tracking-widest">
+                    Join by Debit/Credit Card
+                  </p>
+                </button>
+              </span>
               <br /> Contact Victoria Morrison-Low on +44 7908 994946
             </p>
           </div>
@@ -60,28 +72,31 @@ function Membership() {
               <br />
               {/* list of buttons */}
               <div className="flex flex-col gap-5 my-5 justify-center items-center ">
-                <button className="bg-[#c5a47e]  w-[320px] uppercase z-10  md:px-5 py-2 rounded-[15px]"
-                onClick={()=>{
-                  window.open("https://buy.stripe.com/eVa6qC3wp5tH6528xx");
-                }}
+                <button
+                  className="bg-[#c5a47e]  w-[320px] uppercase z-10  md:px-5 py-2 rounded-[15px]"
+                  onClick={() => {
+                    window.open("https://buy.stripe.com/eVa6qC3wp5tH6528xx");
+                  }}
                 >
                   <p className="z-10 md:text-[20px]  text-[10px]  font-[400] text-white px-[10px] md:tracking-widest">
                     Diamond Member
                   </p>
                 </button>
-                <button className="bg-[#c5a47e]  w-[320px] uppercase z-10  md:px-5 py-2 rounded-[15px]"
-                onClick={()=>{
-                  window.open("https://buy.stripe.com/9AQbKWgjb09nali5lm");
-                }}
+                <button
+                  className="bg-[#c5a47e]  w-[320px] uppercase z-10  md:px-5 py-2 rounded-[15px]"
+                  onClick={() => {
+                    window.open("https://buy.stripe.com/9AQbKWgjb09nali5lm");
+                  }}
                 >
                   <p className="z-10 md:text-[20px]  text-[10px]  font-[400] text-white px-[10px] md:tracking-widest">
                     Founder Member
                   </p>
                 </button>
-                <button className="bg-[#c5a47e]  w-[320px] uppercase z-10  md:px-5 py-2 rounded-[15px]"
-                onClick={()=>{
-                  window.open("https://buy.stripe.com/dR64iu4At4pDfFCdRT]");
-                }}
+                <button
+                  className="bg-[#c5a47e]  w-[320px] uppercase z-10  md:px-5 py-2 rounded-[15px]"
+                  onClick={() => {
+                    window.open("https://buy.stripe.com/dR64iu4At4pDfFCdRT]");
+                  }}
                 >
                   <p className="z-10 md:text-[20px]  text-[10px]  font-[400] text-white px-[10px] md:tracking-widest">
                     Ambassador Member
