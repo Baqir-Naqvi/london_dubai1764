@@ -24,91 +24,56 @@ function Member() {
   const [video3, setVideo3] = useState(true);
   const dubai2 = "/Videos/Dubai_NFT_2.mp4";
   const dubai3 = "/Videos/Dubai_NFT_3.mp4";
-  const [activeSlide, setActiveSlide] = useState(2);
+  const [activeSlide, setActiveSlide] = useState(1);
   const [carouselSize, setCarouselSize] = useState(350);
   // const [benefits, setBenefits] = useState("");
   const [tiermembership, setTiermembership] = useState("");
+  
 
   useEffect(() => {
     if (isMobile) {
       setCarouselSize(350);
+
     } else {
       setCarouselSize(700);
     }
   }, []);
 
-//   useEffect(() => {
-//     if (activeSlide === 1) {
-//       setBenefits(`By recommendation link only, with VIP benefits, today are only
-//       $5,000, for earlybird adopters. Subscriptions may rise at any time, subject to dynamic
-//       pricing. See below for benefits.`);
-//       setTiermembership("Founder");
-//     } else if (activeSlide === 2) {
-//       setBenefits(`By referral link only, today are only $2,500, for earlybird adopters.
-//       Subscriptions may rise at any time, subject to dynamic pricing. See below for benefits.
-//       Annual membership fees will start at $2,000 pa (minus community discounts, couples etc -
-//       we’ll be in touch when this is due, with easipay monthly subscription options).
-//       This compares favourably with existing Dubai private member institutions, such as the Arts
-//       Club and the Capital Club. The Arts Club joining charge is $4,000, as a non-refundable
-//       sunk cost, with an annual membership fee of $4,000 (and an 18-month waiting list). The
-//       Capital Club’s joining charge is $13,000 with an annual fee of $5,500.
-//       But with 1764 Dubai your joining fee is never a sunk cost; it is an investment that can be
-//       traded, since it is a utility NFT.`);
-//       setTiermembership("Diamond");
-//     } else {
-//       setBenefits(`By invitation link only, today are only $10,000, for earlybird
-// adopters. Subscriptions may rise at any time, subject to dynamic pricing. See below for
-// benefits.`);
-//       setTiermembership("Ambassador");
-//     }
-//   }, [activeSlide]);
+  useEffect(() => {
+    if (activeSlide === 1) {
+
+      setTiermembership("Ambassador");
+    } else if (activeSlide === 2) {
+      setTiermembership("Diamond");
+    } else {
+      setTiermembership("Founder");
+    }
+  }, [activeSlide]);
 
   const slides = [
-    {
-      key: 3,
-      content: (
-        <div
-          className="w-max z-50 hover:cursor-pointer"
-          // onMouseEnter={() => setVideo3(true)}
-          // onMouseLeave={() => setVideo3(false)}
-          onClick={() => {setActiveSlide(2)
-            setVideo3(true)
-            setVideo1(false)
-            setVideo2(false)
-          }}
-          onTouchStart={() => {setActiveSlide(2)
-            setVideo3(true)
-            setVideo1(false)
-            setVideo2(false)}}
-        >
-          <DynamicReactPlayer
-            url={dubai3}
-            width={carouselSize}
-            height={carouselSize}
-            playing={video3}
-            loop={true}
-            muted={true}
-          />
-        </div>
-      ),
-    },
     {
       key: 1,
       content: (
         <div
-          className="w-max z-50 hover:cursor-pointer"
-          // onMouseEnter={() => setVideo1(true)}
-          // onMouseLeave={() => setVideo1(false)}
-          onClick={() => {setActiveSlide(3) 
-            setVideo1(true)
-            setVideo2(false)
-            setVideo3(false)
-          }
-          }
-          onTouchStart={() => {setActiveSlide(3)
-            setVideo1(true)
-            setVideo2(false)
-            setVideo3(false)
+          className="w-max z-100 hover:cursor-pointer"
+          onClick={() => {
+            setVideo1(() => true);
+            setVideo2(false);
+            setVideo3(false);
+            setActiveSlide(3);
+          }}
+          onTouchStart={() => {
+            setVideo1(true);
+            setVideo2(false);
+            setVideo3(false);
+            setActiveSlide(3);
+          }}
+          //enable swipe
+          onTouchMove={() => {
+            setVideo1(true);
+            setVideo2(false);
+            setVideo3(false);
+            setActiveSlide(3);
           }}
         >
           <DynamicReactPlayer
@@ -118,6 +83,16 @@ function Member() {
             playing={video1}
             loop={true}
             muted={true}
+            controls={false}
+            config={{
+              // prevent full screen
+              file: {
+                attributes: {
+                  playsInline: true,
+
+                },
+              },
+            }}
           />
         </div>
       ),
@@ -126,19 +101,19 @@ function Member() {
       key: 2,
       content: (
         <div
-          className="w-max z-50 hover:cursor-pointer"
-          // onMouseEnter={() => setVideo2(true)}
-          // onMouseLeave={() => setVideo2(false)}
-          onClick={() => {setActiveSlide(1)
-          setVideo2(true)
-          setVideo1(false)
-          setVideo3(false)
+          className="w-max z-100 hover:cursor-pointer"
+          onClick={() => {
+            setVideo2(() => true);
+            setVideo1(false);
+            setVideo3(false);
+            setActiveSlide(1);
           }}
-          onTouchStart={() => {setActiveSlide(1)
-          setVideo2(true)
-          setVideo1(false)
-          setVideo3(false)
-        }}
+          onTouchStart={() => {
+            setVideo2(true);
+            setVideo1(false);
+            setVideo3(false);
+            setActiveSlide(1);
+          }}
         >
           <DynamicReactPlayer
             url={videourl}
@@ -147,11 +122,65 @@ function Member() {
             playing={video2}
             loop={true}
             muted={true}
+            controls={false}
+            config={{
+              // prevent full screen
+              file: {
+                attributes: {
+                  playsInline: true,
+                 
+                },
+              },
+            }}
           />
         </div>
       ),
     },
-    
+    {
+      key: 3,
+      content: (
+        <div
+          className="w-max z-100 hover:cursor-pointer"
+          onClick={() => {
+            setVideo3(() => true);
+            setVideo1(false);
+            setVideo2(false);
+            setActiveSlide(2);
+          }}
+          onTouchStart={() => {
+            setVideo3(true);
+            setVideo1(false);
+            setVideo2(false);
+            setActiveSlide(2);
+          }}
+          onTouchMove={() => {
+            setVideo3(true);
+            setVideo1(false);
+            setVideo2(false);
+            setActiveSlide(2);
+          }}
+        >
+          <DynamicReactPlayer
+            url={dubai3}
+            width={carouselSize}
+            height={carouselSize}
+            playing={video3}
+            loop={true}
+            muted={true}
+            controls={false}
+            config={{
+              // prevent full screen
+              file: {
+                attributes: {
+                  playsInline: true,
+
+                },
+              },
+            }}
+          />
+        </div>
+      ),
+    },
   ];
 
   return (
@@ -165,7 +194,9 @@ function Member() {
       >
         <div className="md:block hidden ">
           {city === "Dubai" && (
-            <div className="flex flex-col justify-center items-center md:w-[1000px] h-[750px] mt-5">
+            <div className="flex flex-col justify-center items-center md:w-[1000px] h-[750px] mt-5"
+            
+            >
               <DynamicCarousel
                 slides={slides}
                 goToSlide={activeSlide}
@@ -190,7 +221,7 @@ function Member() {
             </div>
           )}
         </div>
-        <div className="md:hidden block">
+        <div className="md:hidden block  mx-auto">
           {city === "Dubai" ? (
             <div className="flex flex-col justify-center items-center w-[100vw] h-[500px] ">
               <DynamicCarousel
@@ -198,6 +229,10 @@ function Member() {
                 goToSlide={activeSlide}
                 offsetRadius={2}
                 showNavigation={true}
+                // print console when slide change
+                onChange={(currentSlide) => {
+                  console.log(currentSlide);
+                }}
               />
             </div>
           ) : (
@@ -209,7 +244,7 @@ function Member() {
                 url={videourl}
                 width={310}
                 height={410}
-                playing={hover}
+                playing={true}
                 loop={true}
                 muted={true}
               />
@@ -234,11 +269,6 @@ function Member() {
           <h2 className="font-oswald uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white mt-10 md:mb-0 ">
             <span className="text-[#c5a47e]"> {tiermembership}</span> Membership
           </h2>
-         
-
-          {/* <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2 mb-10">
-            {benefits}
-          </p> */}
         </>
       )}
     </div>

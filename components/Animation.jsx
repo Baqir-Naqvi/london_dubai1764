@@ -162,7 +162,7 @@ export default function Animation({ chooseCityRef }) {
 
       <div
         ref={textRef}
-        className="text-[#c7a47c] text-8xl line-1 anim-typewriter z-50"
+        className="text-[#c7a47c] md:text-8xl text-6xl line-1 anim-typewriter z-50"
       >
         <TypeIt>2023</TypeIt>
       </div>
