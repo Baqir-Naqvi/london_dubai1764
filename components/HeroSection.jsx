@@ -34,17 +34,17 @@ export default function HeroSection() {
 
         {city === "Dubai" ? (
           <Parallax translateY={20} speed={-20}>
-            <h3 className='md:text-[24px]  font-montserrat text-[12px] text-center  opacity-90 px-12 md:px-0 leading-none z-30'>
+            <h3 className='md:text-[24px]  font-montserrat text-[12px] text-center  opacity-90 px-12 md:px-0 md:leading-8 z-30'>
               Dubai’s first Private Members' Club dedicated to Crypto, NFTs,
               Web3, DeFi & Tech. <br />
               Innovated by London’s first Private Members' Club devoted to the
               space.
-              <br /> By those who pioneered NFTs as Membership Tokens
+              <br /> By those who pioneered NFTs as Membership Tokens.
               <br />
               Proud Owners/Custodians of Blacks Club, London (est. 1764),
               London’s premier
               <br />
-              Community Hub for Web3 & Tech Professionals & Enthusiasts
+              Community Hub for Web3 & Tech Professionals & Enthusiasts.
               <br />
               Our First Satellite to Open in Dubai 2023
               <br />
@@ -59,7 +59,7 @@ export default function HeroSection() {
               <div className='md:block hidden h-1'>
                 <br />{" "}
               </div>
-              first Private Members' Club to innovate NFTs as Membership Tokens
+              first Private Members' Club to innovate NFTs as Membership Tokens.
             </h3>
           </Parallax>
         )}

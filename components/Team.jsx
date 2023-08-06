@@ -248,7 +248,7 @@ function Team() {
         </div>
 
         <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mt-10 '>
-          as <span className='text-[#c5a47e]'>featured</span>
+          as <span className='text-[#c5a47e]'>featured</span> in
         </h2>
 
         <div className='flex md:flex-row flex-wrap gap-10 justify-center items-center mt-20'>

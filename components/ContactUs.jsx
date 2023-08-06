@@ -36,7 +36,7 @@ function ContactUs() {
   };
 
   return (
-    <div className='contact-us flex flex-col py-10 bg-black'>
+    <div className='contact-us flex flex-col py-10 bg-black' id="contact">
       <h2 className=' uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white'>
         get <span className='text-[#c5a47e]'>in touch</span>
       </h2>

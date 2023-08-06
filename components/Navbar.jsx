@@ -24,6 +24,16 @@ function Navbar() {
         >
           OUR STORY
         </a>
+        {city === "Dubai" && (
+          <>
+            <a
+              className="hover:text-gray-300  hover:cursor-pointer p-4"
+              href="#globe"
+            >
+              GOING GLOBE
+            </a>
+          </>
+        )}
         <a
           className="hover:text-gray-300  hover:cursor-pointer p-4"
           href="#ourvision"
@@ -34,7 +44,7 @@ function Navbar() {
           className="hover:text-gray-300  hover:cursor-pointer p-4"
           href="#faq"
         >
-          FAQ
+          FAQs
         </a>
         <a
           className="hover:text-gray-300  hover:cursor-pointer p-4"
@@ -48,12 +58,12 @@ function Navbar() {
         >
           FOUNDERS
         </a>
-        {/* <a
+        <a
           className="hover:text-gray-300 navbar_heading  hover:cursor-pointer p-4"
-          href="#about"
+          href="#contact"
         >
-          ABOUT
-        </a> */}
+          CONTACT
+        </a>
 
         {/* <a
           className="hover:text-gray-300  hover:cursor-pointer p-4"

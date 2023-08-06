@@ -19,14 +19,14 @@ function Member() {
   const videourl =
     city === "Dubai" ? "/Videos/Dubai_NFT.mp4" : "/Videos/LondonNFT.mp4";
   const [dubaiurl, setDubaiurl] = useState("");
-  const [video1, setVideo1] = useState(true);
+  const [video1, setVideo1] = useState(false);
   const [video2, setVideo2] = useState(false);
-  const [video3, setVideo3] = useState(false);
+  const [video3, setVideo3] = useState(true);
   const dubai2 = "/Videos/Dubai_NFT_2.mp4";
   const dubai3 = "/Videos/Dubai_NFT_3.mp4";
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(2);
   const [carouselSize, setCarouselSize] = useState(350);
-  const [benefits, setBenefits] = useState("");
+  // const [benefits, setBenefits] = useState("");
   const [tiermembership, setTiermembership] = useState("");
 
   useEffect(() => {
@@ -37,92 +37,33 @@ function Member() {
     }
   }, []);
 
-  useEffect(() => {
-    if (activeSlide === 1) {
-      setBenefits(`By recommendation link only, with VIP benefits, today are only
-      $5,000, for earlybird adopters. Subscriptions may rise at any time, subject to dynamic
-      pricing. See below for benefits.`);
-      setTiermembership("Founder");
-    } else if (activeSlide === 2) {
-      setBenefits(`By referral link only, today are only $2,500, for earlybird adopters.
-      Subscriptions may rise at any time, subject to dynamic pricing. See below for benefits.
-      Annual membership fees will start at $2,000 pa (minus community discounts, couples etc -
-      we’ll be in touch when this is due, with easipay monthly subscription options).
-      This compares favourably with existing Dubai private member institutions, such as the Arts
-      Club and the Capital Club. The Arts Club joining charge is $4,000, as a non-refundable
-      sunk cost, with an annual membership fee of $4,000 (and an 18-month waiting list). The
-      Capital Club’s joining charge is $13,000 with an annual fee of $5,500.
-      But with 1764 Dubai your joining fee is never a sunk cost; it is an investment that can be
-      traded, since it is a utility NFT.`);
-      setTiermembership("Diamond");
-    } else {
-      setBenefits(`By invitation link only, today are only $10,000, for earlybird
-adopters. Subscriptions may rise at any time, subject to dynamic pricing. See below for
-benefits.`);
-      setTiermembership("Ambassador");
-    }
-  }, [activeSlide]);
+//   useEffect(() => {
+//     if (activeSlide === 1) {
+//       setBenefits(`By recommendation link only, with VIP benefits, today are only
+//       $5,000, for earlybird adopters. Subscriptions may rise at any time, subject to dynamic
+//       pricing. See below for benefits.`);
+//       setTiermembership("Founder");
+//     } else if (activeSlide === 2) {
+//       setBenefits(`By referral link only, today are only $2,500, for earlybird adopters.
+//       Subscriptions may rise at any time, subject to dynamic pricing. See below for benefits.
+//       Annual membership fees will start at $2,000 pa (minus community discounts, couples etc -
+//       we’ll be in touch when this is due, with easipay monthly subscription options).
+//       This compares favourably with existing Dubai private member institutions, such as the Arts
+//       Club and the Capital Club. The Arts Club joining charge is $4,000, as a non-refundable
+//       sunk cost, with an annual membership fee of $4,000 (and an 18-month waiting list). The
+//       Capital Club’s joining charge is $13,000 with an annual fee of $5,500.
+//       But with 1764 Dubai your joining fee is never a sunk cost; it is an investment that can be
+//       traded, since it is a utility NFT.`);
+//       setTiermembership("Diamond");
+//     } else {
+//       setBenefits(`By invitation link only, today are only $10,000, for earlybird
+// adopters. Subscriptions may rise at any time, subject to dynamic pricing. See below for
+// benefits.`);
+//       setTiermembership("Ambassador");
+//     }
+//   }, [activeSlide]);
 
   const slides = [
-    {
-      key: 1,
-      content: (
-        <div
-          className="w-max z-50 hover:cursor-pointer"
-          // onMouseEnter={() => setVideo1(true)}
-          // onMouseLeave={() => setVideo1(false)}
-          onClick={() => {setActiveSlide(3) 
-            setVideo1(true)
-            setVideo2(false)
-            setVideo3(false)
-          }
-          }
-          onTouchStart={() => {setActiveSlide(3)
-            setVideo1(true)
-            setVideo2(false)
-            setVideo3(false)
-          }}
-        >
-          <DynamicReactPlayer
-            url={videourl}
-            width={carouselSize}
-            height={carouselSize}
-            playing={video1}
-            loop={true}
-            muted={true}
-          />
-        </div>
-      ),
-    },
-    {
-      key: 2,
-      content: (
-        <div
-          className="w-max z-50 hover:cursor-pointer"
-          // onMouseEnter={() => setVideo2(true)}
-          // onMouseLeave={() => setVideo2(false)}
-          onClick={() => {setActiveSlide(1)
-          setVideo2(true)
-          setVideo1(false)
-          setVideo3(false)
-          }}
-          onTouchStart={() => {setActiveSlide(1)
-          setVideo2(true)
-          setVideo1(false)
-          setVideo3(false)
-        }}
-        >
-          <DynamicReactPlayer
-            url={dubai2}
-            width={carouselSize}
-            height={carouselSize}
-            playing={video2}
-            loop={true}
-            muted={true}
-          />
-        </div>
-      ),
-    },
     {
       key: 3,
       content: (
@@ -151,6 +92,66 @@ benefits.`);
         </div>
       ),
     },
+    {
+      key: 1,
+      content: (
+        <div
+          className="w-max z-50 hover:cursor-pointer"
+          // onMouseEnter={() => setVideo1(true)}
+          // onMouseLeave={() => setVideo1(false)}
+          onClick={() => {setActiveSlide(3) 
+            setVideo1(true)
+            setVideo2(false)
+            setVideo3(false)
+          }
+          }
+          onTouchStart={() => {setActiveSlide(3)
+            setVideo1(true)
+            setVideo2(false)
+            setVideo3(false)
+          }}
+        >
+          <DynamicReactPlayer
+            url={dubai2}
+            width={carouselSize}
+            height={carouselSize}
+            playing={video1}
+            loop={true}
+            muted={true}
+          />
+        </div>
+      ),
+    },
+    {
+      key: 2,
+      content: (
+        <div
+          className="w-max z-50 hover:cursor-pointer"
+          // onMouseEnter={() => setVideo2(true)}
+          // onMouseLeave={() => setVideo2(false)}
+          onClick={() => {setActiveSlide(1)
+          setVideo2(true)
+          setVideo1(false)
+          setVideo3(false)
+          }}
+          onTouchStart={() => {setActiveSlide(1)
+          setVideo2(true)
+          setVideo1(false)
+          setVideo3(false)
+        }}
+        >
+          <DynamicReactPlayer
+            url={videourl}
+            width={carouselSize}
+            height={carouselSize}
+            playing={video2}
+            loop={true}
+            muted={true}
+          />
+        </div>
+      ),
+    },
+    
   ];
 
   return (
@@ -235,9 +236,9 @@ benefits.`);
           </h2>
          
 
-          <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2 mb-10">
+          {/* <p className="text-white text-center opacity-90 md:text-[22px] text-[14px] md:w-[800px] md:mt-4 w-full px-2 mb-10">
             {benefits}
-          </p>
+          </p> */}
         </>
       )}
     </div>
