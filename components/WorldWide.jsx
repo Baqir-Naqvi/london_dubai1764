@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 import { Parallax } from "react-scroll-parallax";
 import Image_1764 from "@/public/Images/Latest2.png";
 import Aos from "aos";
+import { Tooltip } from "react-tooltip";
 
 const DUBAI_QUESTIONS = [
   {
@@ -149,6 +150,46 @@ function WorldWide() {
 
   return (
     <div className="pb-[50px] relative flex flex-col bg-black">
+      <Tooltip id="my-tooltip" className="map-card">
+        <div className="overlaybg">
+          <div className="mb-2 mx-auto ">
+            <p className="text-center mx-auto capitalize font-medium text-[24px] tracking-wider text-black">
+              LONDON
+            </p>
+            <hr />
+          </div>
+
+          <p className="tracking-wider  text-[14px] text-white">
+            Blacks Club, 67
+            <br /> Dean Street,
+            <br /> Soho, London
+            <br /> W1D 4QH
+          </p>
+        </div>
+      </Tooltip>
+      <Tooltip id="my-tooltipdubai" className="map-card">
+        <div className="overlaybg">
+          <div className="mb-2 mx-auto ">
+            <p className="text-center mx-auto capitalize font-medium text-[24px] tracking-wider text-black">
+              DUBAI
+            </p>
+            <hr />
+          </div>
+
+          <p className="text-center capitalize text-[24px] font-medium tracking-wider text-black">
+            Opening October
+          </p>
+        </div>
+      </Tooltip>
+
+      <Tooltip id="restcity" className="map-card">
+        <div className="overlaybg">
+          <p className="text-center capitalize text-[24px] font-medium tracking-wider text-black">
+            Coming Soon
+          </p>
+        </div>
+      </Tooltip>
+
       <Parallax translateY={-5} speed={-10}>
         <h2 className="text-[#c5a47e] md:flex hidden  md:text-[140px]  font-bold text-center absolute left-[10px]  opacity-30 z-100">
           venues
@@ -163,6 +204,7 @@ function WorldWide() {
           <Image
             src={Ellipse}
             alt="Ellipse"
+            data-tooltip-id="restcity"
             height={citySize}
             width={citySize}
             className="custom-shadow absolute top-[45%] md:top-[40%] left-[27%] hover:animate-pulse cursor-pointer"
@@ -171,6 +213,7 @@ function WorldWide() {
           <Image
             src={Ellipse}
             alt="Ellipse"
+            data-tooltip-id="restcity"
             height={citySize}
             width={citySize}
             className="custom-shadow absolute top-[48%] md:top-[47%] left-[24%] hover:animate-pulse cursor-pointer"
@@ -181,6 +224,7 @@ function WorldWide() {
             alt="Ellipse"
             height={citySize}
             width={citySize}
+            data-tooltip-id="restcity"
             className="custom-shadow absolute top-[44%] md:top-[40%] left-[43%] hover:animate-pulse cursor-pointer"
           />
 
@@ -189,38 +233,20 @@ function WorldWide() {
             alt="Ellipse"
             height={citySize}
             width={citySize}
+            data-tooltip-id="restcity"
             className="custom-shadow relative top-[49.5%] md:top-[48%] left-[59%] hover:animate-pulse cursor-pointer"
           />
           <Image
             src={Ellipse}
+            data-tooltip-id="restcity"
             alt="Ellipse"
             height={citySize}
             width={citySize}
             className="custom-shadow absolute right-[23%] bottom-[41%] md:bottom-[32%] hover:animate-pulse cursor-pointer"
           />
-          <div
-            className={`absolute left-[42.8%] scale-[2] top-[12%] px-2 flex-col transition-all duration-500 pt-2  map-card flex justify-start p-1 ${
-              showLondon ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="mb-2">
-              <span className="capitalize font-medium text-sm tracking-wider text-black">
-                LONDON
-              </span>
-              <hr />
-            </div>
-
-            <span className="tracking-wider  text-[.45rem] text-white">
-              Blacks Club, 67 Dean Street, Soho, London W1D 4QH
-            </span>
-          </div>
 
           <Image
-            onPointerEnter={() => setShowLondon(true)}
-            onPointerLeave={() => setShowLondon(false)}
-            onClick={() => {
-              () => setShowLondon(true);
-            }}
+            data-tooltip-id="my-tooltip"
             src={Active}
             alt="Active"
             height={citySize}
@@ -232,34 +258,17 @@ function WorldWide() {
             src={Ellipse}
             alt="Active"
             height={citySize}
+            data-tooltip-id="restcity"
             width={citySize}
             className="custom-shadow  absolute left-[50.5%] top-[38%] md:top-[28%] hover:animate-pulse cursor-pointer"
           />
-          <div
-            className={`absolute right-[34.5%] scale-[2] top-[32%] transition-all duration-500  map-card flex flex-col justify-center p-1 ${
-              showDubai ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="mb-2">
-              <span className="uppercase font-medium text-sm tracking-wider text-black ">
-                Dubai
-              </span>
-              <hr />
-            </div>
-            <span className="capitalize text-sm font-medium tracking-wider text-black">
-              Opening October
-            </span>
-          </div>
+
           <Image
             src={Active}
             alt="Active"
             height={citySize}
             width={citySize}
-            onClick={() => {
-              () => setShowDubai(true);
-            }}
-            onPointerEnter={() => setShowDubai(true)}
-            onPointerLeave={() => setShowDubai(false)}
+            data-tooltip-id="my-tooltipdubai"
             className="custom-shadow absolute right-[36%] top-[51.5%] md:right-[37%] md:top-[53%] hover:animate-pulse cursor-pointer show-on-hover"
           />
         </div>

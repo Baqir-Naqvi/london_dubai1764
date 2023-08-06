@@ -109,11 +109,22 @@
 }
 
 .map-card {
+    width: 80px;
+    height: max;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    background-color:#c5a47e !important;
+    z-index:100;
+}
+
+.overlaybg{
+    padding-top:10px;
+
     background-image: url('/Images/CompositeLayer.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 5rem;
-    height: 6rem;
-
+    width:130px;
+    height:max;
 }
