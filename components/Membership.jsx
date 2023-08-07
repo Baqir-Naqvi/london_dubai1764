@@ -252,6 +252,12 @@ function Membership() {
               victoria@blacksclub.com
             </span>
           </span>
+          <br />
+            <p className="z-10 md:text-[20px]  text-[10px] ">
+
+          (Please note: if preferred, we are happy to hold your NFT in a
+          Custodial Wallet, on your behalf.)
+            </p>
         </>
       ) : (
         <>

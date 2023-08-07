@@ -46,7 +46,7 @@ export default function () {
           <p className='text-[#FEFEFE] md:text-[22px] text-[14px] font-[400] opacity-80 leading-[1.5] md:w-[420px] w-[100%] md:mt-[80px] mt-[10px] md:px-0 px-3'>
             As the proud Owner of Blacks Club, Soho, London (est. 1764) we are
             London’s premier Community Hub for Web3 & Tech Professionals &
-            Enthusiasts with our First Satellite to Open in Dubai 2023.
+            Enthusiasts, with our First Satellite to Open in Dubai 2023.
           </p>
         </div>
         {city === "Dubai" ? (

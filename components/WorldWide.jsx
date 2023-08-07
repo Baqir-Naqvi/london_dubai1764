@@ -60,7 +60,7 @@ We are advocated by many significant people pioneering within the space, both in
 const LONDON_QUESTIONS = [
   {
     q: "Why is this needed?",
-    a: "Before we purchased Blacks and proved the model, there were no such clubs around the world dedicated to the space, let alone a global network of them. We strongly feel that the digital assets & disruptive innovation communities both need and deserve permanent venues. Our aim is to create a worldwide community of physical and virtual venues, where enthusiasts who share an interest in the space can socialise and network, meet like-minded individuals, engage and present, offer collaborations, get funded, become educated, provide instruction and guidance and share valuable information and knowledge. Our physical & virtual venues   spaces offer the ideal environment and opportunity for members to interact face-to-face, to share their ideas and work together on future projects, creating entities greater than the sum of their parts.",
+    a: "Before we purchased Blacks and proved the model, there were no such clubs around the world dedicated to the space, let alone a global network of them. We strongly feel that the digital assets & disruptive innovation communities both need and deserve permanent venues. Our aim is to create a worldwide community of physical and virtual venues, where enthusiasts who share an interest in the space can socialise and network, meet like-minded individuals, engage and present, offer collaborations, get funded, become educated, provide instruction and guidance and share valuable information and knowledge. Our physical & virtual spaces offer the ideal environment and opportunity for members to interact face-to-face, to share their ideas and work together on future projects, creating entities greater than the sum of their parts.",
   },
   {
     q: "Why should I buy an NFT?",
@@ -68,7 +68,7 @@ const LONDON_QUESTIONS = [
   },
   {
     q: "How many NFTs are in the collection? ",
-    a: " There are approximately 5,000 NFTs per clubhouse, depending on venue size. This represents the typical membership for private members clubs, which are usually oversubscribed, with a long waiting list. It is important to us to ensure we have enough members to add real value to the community, without having so many that the exclusivity of being a member is diluted. Once memberships are sold out, the only way to become a member is to purchase one on the secondary market, whenever any become available. ",
+    a: " There are 3,500 memberships available to Blacks Club. It is important to us to ensure we have enough members to add real value to the community, without having so many that the exclusivity of being a member is diluted. Once memberships are sold out, the only way to become a member is to purchase one on the secondary market, whenever any become available. ",
   },
   {
     q: "Where are the NFTs listed? ",

@@ -10,6 +10,10 @@ import Logo from "@/public/Images/logo.png";
 import { useGlobalContext } from "@/utils/ContextProvider";
 function SideDiv() {
   const { city } = useGlobalContext();
+  const whatsapplink =
+    city === "Dubai"
+      ? "https://chat.whatsapp.com/HXJedimHaF18ceRdNJSDPM"
+      : "https://chat.whatsapp.com/LqpcygwdEYkFUYnHb74awB";
 
   return (
     <>
@@ -55,9 +59,7 @@ function SideDiv() {
             className="-ml-2 hover:cursor-pointer"
             alt="i_"
             onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/jonathan-willis-5591291b5/"
-              )
+              window.open("https://www.instagram.com/blacksclubsoho/")
             }
           />
           <Image
@@ -66,11 +68,7 @@ function SideDiv() {
             src={TwitterIcon}
             className="-ml-2 hover:cursor-pointer"
             alt="t_"
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/jonathan-willis-5591291b5/"
-              )
-            }
+            onClick={() => window.open("https://twitter.com/CryptoClubGBL")}
           />
           <Image
             width={10}
@@ -78,11 +76,7 @@ function SideDiv() {
             src={FbIcon}
             className="-ml-2 hover:cursor-pointer"
             alt="f_"
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/jonathan-willis-5591291b5/"
-              )
-            }
+            onClick={() => window.open(whatsapplink)}
           />
           <Image
             width={25}

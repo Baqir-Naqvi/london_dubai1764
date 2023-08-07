@@ -30,7 +30,7 @@ function Navbar() {
               className="hover:text-gray-300  hover:cursor-pointer p-4"
               href="#globe"
             >
-              GOING GLOBE
+              GOING GLOBAL
             </a>
           </>
         )}
