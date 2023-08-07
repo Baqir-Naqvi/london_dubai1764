@@ -19,12 +19,12 @@ function Member() {
   const videourl =
     city === "Dubai" ? "/Videos/Dubai_NFT.mp4" : "/Videos/LondonNFT.mp4";
   const [dubaiurl, setDubaiurl] = useState("");
-  const [video1, setVideo1] = useState(false);
+  const [video1, setVideo1] = useState(true);
   const [video2, setVideo2] = useState(false);
-  const [video3, setVideo3] = useState(true);
+  const [video3, setVideo3] = useState(false);
   const dubai2 = "/Videos/Dubai_NFT_2.mp4";
   const dubai3 = "/Videos/Dubai_NFT_3.mp4";
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(3);
   const [carouselSize, setCarouselSize] = useState(350);
   // const [benefits, setBenefits] = useState("");
   const [tiermembership, setTiermembership] = useState("");
@@ -44,9 +44,9 @@ function Member() {
 
       setTiermembership("Ambassador");
     } else if (activeSlide === 2) {
-      setTiermembership("Diamond");
-    } else {
       setTiermembership("Founder");
+    } else {
+      setTiermembership("Diamond");
     }
   }, [activeSlide]);
 
@@ -77,7 +77,7 @@ function Member() {
           }}
         >
           <DynamicReactPlayer
-            url={dubai2}
+            url={dubai3}
             width={carouselSize}
             height={carouselSize}
             playing={video1}
@@ -161,7 +161,7 @@ function Member() {
           }}
         >
           <DynamicReactPlayer
-            url={dubai3}
+            url={dubai2}
             width={carouselSize}
             height={carouselSize}
             playing={video3}
