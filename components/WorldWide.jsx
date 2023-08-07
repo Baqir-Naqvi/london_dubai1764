@@ -28,7 +28,7 @@ const DUBAI_QUESTIONS = [
   },
   {
     q: "Where is the clubhouse in Dubai?",
-    a: "We have been offered several fabulous prospective venues and are already in talks. We opened our London flagship club 7 months ahead of schedule. Our current plan is to open in Dubai in 2023, possibly as early as October. The venue will be spacious, elegant, have multiple elements and will be central, targeting 15-minutes distance from the Marina, Palm, JBR and Downtown. We will announce the venue soonest we have signed documents.",
+    a: "1764's clubhouse is located in the Al Barsha district, equally accessible from the Marina, Downtown, the Palm & JBR. It is a venue that has been used for many Web3 events and is now exclusively the home of 1764 Dubai. 5-star facilities include: 24/7 access, lounge networking and social space, plus three meeting rooms, a smoking & shisha terrace, free wifi, catering and a licensed bar, access to a conference & seminar facilities, ballroom & exhibition space and cinema. All members benefit from: discounted accommodation, free valet parking, a choice of 8 restaurants, and VIP members can avail of a pool, gym & spa facilities. We fully intend to launch in October and will bring further details and pictures soonest we have completed the refurb. Members will be informed of the location once accepted into the club.",
   },
   {
     q: "How long will it take to open other clubhouses across the globe?",
@@ -43,16 +43,9 @@ const DUBAI_QUESTIONS = [
     a: `Yes. Blacks in London became the first private members’ club in the world to accept Bitcoin as payment. Dubai will accept a variety of tokens.`,
   },
   {
-    q: "Who is behind the venture?",
+    q: "Who is behind this venture?",
     a: `  
-We are advocated by many significant people pioneering within the space, both in London
-and Dubai. 1764 Dubai is lead by Jonathan Willis and Veselin Velkov(see below). CoFounder Jonathan is a serial entrepreneur, with a background in disruptive innovation,
-from publishing to property, film, theatre, angel investment, visitor attractions and now
-hospitality. Co-Founder Veselin is a younger version of the aforementioned, an early NFT
-adopter, trader and now originator, who has proven to be highly successful within the
-sector. Both are supported by a wide, influential global team of credible, trustworthy and
-dependable players, which we call “suits & sandals”: Web3-passionate corporates &
-degens
+We are advocated by many significant people pioneering within the space, both in London and Dubai. 1764 Dubai is lead by Jonathan Willis and Veselin Velkov (see below). CoFounder Jonathan is a serial entrepreneur, with a background in disruptive innovation, from publishing to property, film, theatre, angel investment, visitor attractions and now hospitality. Co-Founder Veselin is a younger version of the aforementioned, an early NFT adopter, trader and now originator, who has proven to be highly successful within the sector. Both are supported by a wide, influential global team of credible, trustworthy and dependable players, which we call “suits & sandals”: Web3-passionate corporates & degens.
 `,
   },
   {
@@ -63,7 +56,6 @@ degens
     q: "What about bad actors?",
     a: "Not accepted. Our reputation is impeccable, as evidenced at Blacks in London, where if any bad apples accidentally slip through the net, they’re quietly spoken to and never appear again. 1764 Dubai is for genuine and legitimate, honourable, ethical and principled protagonists in the space, for which we have become renown.",
   },
-
 ];
 const LONDON_QUESTIONS = [
   {
