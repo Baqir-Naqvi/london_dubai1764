@@ -19,10 +19,10 @@ export default function HeroSection() {
         <div className='absolute bg-cover bg-center w-full h-screen bg-image opacity-50' />
       )}
 
-      <div className='flex flex-col items-center justify-center h-screen pt-40 z-30'>
+      <div className='flex flex-col items-center justify-center h-screen pt-40 '>
         <Parallax translateY={20} speed={-20}>
           <h1
-            className='md:text-[48px]  w-[70%] md:w-full mx-auto text-[20px] text-center tracking-[10px] uppercase z-30
+            className='md:text-[48px]  w-[70%] md:w-full mx-auto text-[20px] text-center tracking-[10px] uppercase 
         leading-[1.1] font-[400]
          '
           >

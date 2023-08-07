@@ -46,7 +46,7 @@ function SideDiv() {
         alt="mobileBar"
         className="flex absolute left-0 top-[150px] md:hidden"
       /> */}
-      <div className="flex absolute left-0 md:mt-[140px] mt-[23%] md:w-[190px] w-[50px] h-[85vh] bg-black ">
+      <div className="flex absolute left-0 md:mt-[140px] mt-[24%] md:w-[190px] w-[50px] h-[86vh] bg-black ">
         <div
           className="absolute text-center md:w-max bottom-[10px] md:left-10  -left-2 px-8 flex-col flex h-[40%]  
         justify-evenly
@@ -61,7 +61,7 @@ function SideDiv() {
             width={20}
             height={10}
             src={InstaIcon}
-            className="-ml-2 hover:cursor-pointer md:mb-0 my-2 md:my-0"
+            className="-ml-2 hover:cursor-pointer md:mb-0 my-2 md:my-0 z-100"
             alt="i_"
             onClick={() => window.open(instaLink)}
           />
