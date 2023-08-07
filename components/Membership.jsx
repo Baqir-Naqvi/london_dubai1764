@@ -115,6 +115,11 @@ function Membership() {
       <h2 className=" uppercase md:text-[35px] text-[24px] font-normal tracking-[8px] text-center text-white md:mt-20 mt-5 ">
         lifetime <span className="text-[#c5a47e]">membership</span>
       </h2>
+      <button
+        className="w-max py-3 px-8 bg-[#c5a47e] rounded-md md:text-[24px] my-5">
+        CONNECT WALLET
+      </button>
+
       <h2 className="md:text-[24px] font-normal text-center text-white mb-10 my-5">
         {`
         ${

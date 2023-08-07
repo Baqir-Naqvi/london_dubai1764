@@ -1,6 +1,6 @@
 import React from "react";
 import InstaIcon from "@/public/Svgs/Instagram.svg";
-import FbIcon from "@/public/Svgs/facebook.svg";
+import Whatsapp_Logo from "@/public/Svgs/Whatsapp_Logo.svg";
 import LinkedInIcom from "@/public/Images/LinkedIn.svg";
 import TwitterIcon from "@/public/Svgs/twitter.svg";
 import Vertical from "@/public/Images/VerticalLine.png";
@@ -74,9 +74,9 @@ function SideDiv() {
             onClick={() => window.open("https://twitter.com/CryptoClubGBL")}
           />
           <Image
-            width={10}
+            width={25}
             height={10}
-            src={FbIcon}
+            src={Whatsapp_Logo}
             className="-ml-2 hover:cursor-pointer"
             alt="f_"
             onClick={() => window.open(whatsapplink)}
@@ -85,7 +85,7 @@ function SideDiv() {
             width={25}
             height={10}
             src={LinkedInIcom}
-            className="-ml-4 hover:cursor-pointer"
+            className="-ml-3 hover:cursor-pointer"
             alt="f_"
             onClick={() =>
               window.open(

@@ -24,7 +24,7 @@ const DUBAI_QUESTIONS = [
   },
   {
     q: "Where will the NFTs be listed? ",
-    a: "As an Ethereum-based collection, Dubai NFTs are listed on LooksRare & OpenSea, which are the largest NFT marketplaces, with arguably the easiest user interface to buy and sell. ",
+    a: "As an Ethereum-based collection, Dubai NFTs are listed on LooksRare & OpenSea, which are the largest NFT marketplaces, with arguably the easiest user interface to buy and sell.Please note that your NFT is supported by membership of a physical venue, something never previously achieved. NFTs are vested for 12 months, to protect the business during its first year, after which time you will be at liberty to sell, trade or transfer your NFT. ",
   },
   {
     q: "Where is the clubhouse in Dubai?",
