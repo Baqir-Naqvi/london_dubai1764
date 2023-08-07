@@ -79,7 +79,7 @@ function Membership() {
               window.open(stripelink);
             }}
           >
-            STRIPE
+           DEBIT/CREDIT
           </button>
 
           <button className="w-max py-3 px-8 bg-[#c5a47e] rounded-md ">
@@ -276,7 +276,7 @@ function Membership() {
         </>
       )}
 
-      <div className="flex md:flex-row flex-col justify-center md:mt-[5rem] mt-10 ">
+      <div className="flex md:flex-row md:justify-center flex-col justify-center md:mt-[5rem] mt-10 ">
         <div className="flex flex-col justify-start items-center">
           <h2 className=" uppercase text-[30px] font-normal tracking-[4px] text-white text-start">
             Over
@@ -302,9 +302,10 @@ function Membership() {
         </div>
         <Parallax translateY={-5} speed={-10}>
           <h2
-            className="text-[#c5a47e] md:flex hidden md:text-[105px] font-bold  text-center absolute -right-[350px] mt-[0px] opacity-10
-        
-          "
+            className={`text-[#c5a47e] md:flex hidden md:text-[105px] font-bold  text-center absolute 
+            ${city === "Dubai" ? "  -left-[450px] " : "-right-[350px]"}
+          
+            mt-[0px] opacity-10`}
           >
             represented
           </h2>
