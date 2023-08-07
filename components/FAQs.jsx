@@ -21,11 +21,11 @@ function FAQs() {
     },
     {
       q: "Where are the NFTs listed? ",
-      a: " As an Ethereum-based collection, London NFTs are listed on LooksRare & OpenSea, which are the largest NFT marketplaces, with arguably the easiest user interface to buy and sell. ",
+      a: " As an Ethereum-based collection, Dubai NFTs are listed on LooksRare & OpenSea, which are the largest NFT marketplaces, with arguably the easiest user interface to buy and sell. ",
     },
     {
       q: "How long will it take to open other clubhouses across the globe? ",
-      a: " We opened our London flagship club, Blacks, in May 2022, which was 7 months ahead of schedule. Our current plan is to open in Dubai in 2023 and possibly also Stockholm and roll-out further, more quickly through 2024 and beyond.",
+      a: " We opened our London flagship club, Blacks, in May 2022, which was 7 months ahead of schedule. Our current plan is to open in Dubai in October 2023 and possibly also Stockholm and roll-out further, more quickly through 2024 and beyond.",
     },
     {
       q: "What are the main benefits of being a member of Blacks, Soho? ",

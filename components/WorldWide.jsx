@@ -24,7 +24,7 @@ const DUBAI_QUESTIONS = [
   },
   {
     q: "Where will the NFTs be listed? ",
-    a: "As an Ethereum-based collection, London NFTs are listed on LooksRare & OpenSea, which are the largest NFT marketplaces, with arguably the easiest user interface to buy and sell. ",
+    a: "As an Ethereum-based collection, Dubai NFTs are listed on LooksRare & OpenSea, which are the largest NFT marketplaces, with arguably the easiest user interface to buy and sell. ",
   },
   {
     q: "Where is the clubhouse in Dubai?",
@@ -32,7 +32,7 @@ const DUBAI_QUESTIONS = [
   },
   {
     q: "How long will it take to open other clubhouses across the globe?",
-    a: "Our current plan is to open in Dubai in 2023 and possibly also Stockholm and roll-out further, more quickly through 2024 and beyond.",
+    a: "Our current plan is to open in Dubai in October 2023 and possibly also Stockholm and roll-out further, more quickly through 2024 and beyond.",
   },
   {
     q: "What are the main benefits of being a member of 1764 Dubai?",
@@ -45,7 +45,7 @@ const DUBAI_QUESTIONS = [
   {
     q: "Who is behind this venture?",
     a: `  
-We are advocated by many significant people pioneering within the space, both in London and Dubai. 1764 Dubai is lead by Jonathan Willis and Veselin Velkov (see below). CoFounder Jonathan is a serial entrepreneur, with a background in disruptive innovation, from publishing to property, film, theatre, angel investment, visitor attractions and now hospitality. Co-Founder Veselin is a younger version of the aforementioned, an early NFT adopter, trader and now originator, who has proven to be highly successful within the sector. Both are supported by a wide, influential global team of credible, trustworthy and dependable players, which we call “suits & sandals”: Web3-passionate corporates & degens.
+We are advocated by many significant people pioneering within the space, both in London and Dubai. 1764 Dubai is lead by Jonathan Willis and Veselin Velkov (see below). Co-Founder Jonathan is a serial entrepreneur, with a background in disruptive innovation, from publishing to property, film, theatre, angel investment, visitor attractions and now hospitality. Co-Founder Veselin is a younger version of the aforementioned, an early NFT adopter, trader and now originator, who has proven to be highly successful within the sector. Both are supported by a wide, influential global team of credible, trustworthy and dependable players, which we call “suits & sandals”: Web3-passionate corporates & degens.
 `,
   },
   {

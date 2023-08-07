@@ -15,6 +15,11 @@ function SideDiv() {
       ? "https://chat.whatsapp.com/HXJedimHaF18ceRdNJSDPM"
       : "https://chat.whatsapp.com/LqpcygwdEYkFUYnHb74awB";
 
+  const instaLink =
+    city === "Dubai"
+      ?"https://instagram.com/club.1764?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+      :"https://www.instagram.com/blacksclubsoho/"
+
   return (
     <>
       <Image
@@ -58,9 +63,7 @@ function SideDiv() {
             src={InstaIcon}
             className="-ml-2 hover:cursor-pointer"
             alt="i_"
-            onClick={() =>
-              window.open("https://www.instagram.com/blacksclubsoho/")
-            }
+            onClick={() => window.open(instaLink)}
           />
           <Image
             width={20}

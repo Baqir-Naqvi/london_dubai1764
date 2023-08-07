@@ -137,18 +137,20 @@ function Membership() {
                 <span className="text-[#c5a47e]">Diamond </span>
                 Memberships today are only $2,500, for earlybird adopters.
                 Subscriptions may rise at any time, subject to dynamic pricing.
-                See below for benefits. <br /> Annual membership fees will start
-                at $2,000 pa (minus community discounts, couples etc - we’ll be
-                in touch when this is due, with easipay monthly subscription
-                options).
+                See below for benefits. <br />
+                <br /> Annual membership fees will start at $2,000 pa (minus
+                community discounts, couples etc - we’ll be in touch when this
+                is due, with easipay monthly subscription options).
+                <br />
                 <br /> This compares favourably with existing Dubai private
                 member institutions, such as the Arts Club and the Capital Club.
                 The Arts Club joining charge is $4,000, as a non-refundable sunk
                 cost, with an annual membership fee of $4,000 (and an 18-month
                 waiting list). The Capital Club’s joining charge is $13,000 with
                 an annual fee of $5,500. <br />
+                <br />
                 But with 1764 Dubai your joining fee is never a sunk cost; it is
-                an investment that can be traded, since it is a utility NFT
+                an investment that can be traded, since it is a utility NFT.
               </p>
 
               <p className="z-10 md:text-[22px]  text-[14px]  font-[400] text-white px-[10px] text-left mt-5">
@@ -162,11 +164,12 @@ function Membership() {
                 <span className="text-[#c5a47e]">Ambassador </span>
                 Memberships, with VIP benefits, today are only $10,000, for
                 earlybird adopters. Subscriptions may rise at any time, subject
-                to dynamic pricing. See below for benefits. Once all memberships
-                are sold, the only way to become a member will be to buy a
-                membership NFT on the secondary market, with the value
-                determined by demand. (Our London Founder NFTs have traded for
-                as much as an 18x multiple.)
+                to dynamic pricing. See below for benefits.
+                <br />
+                <br /> Once all memberships are sold, the only way to become a
+                member will be to buy a membership NFT on the secondary market,
+                with the value determined by demand. (Our London Founder NFTs
+                have traded for as much as an 18x multiple.)
               </p>
             </div>
 
@@ -193,7 +196,7 @@ function Membership() {
                 imgsrc={AmbassadorNFT}
                 benefits={AmbassadorBenefits}
                 title="Ambassador Member ($10,000)"
-                stripelink="https://buy.stripe.com/dR64iu4At4pDfFCdRT]"
+                stripelink="https://buy.stripe.com/dR64iu4At4pDfFCdRT"
               />
             </div>
 
@@ -253,11 +256,6 @@ function Membership() {
             </span>
           </span>
           <br />
-            <p className="z-10 md:text-[20px]  text-[10px] ">
-
-          (Please note: if preferred, we are happy to hold your NFT in a
-          Custodial Wallet, on your behalf.)
-            </p>
         </>
       ) : (
         <>
@@ -281,6 +279,10 @@ function Membership() {
           </span>
         </>
       )}
+      <p className="z-10 md:text-[20px]  text-[10px] ">
+        (Please note: if preferred, we are happy to hold your NFT in a Custodial
+        Wallet, on your behalf.)
+      </p>
 
       <div className="flex md:flex-row md:justify-center flex-col justify-center md:mt-[5rem] mt-10 ">
         <div className="flex flex-col justify-start items-center">
